@@ -1,5 +1,6 @@
 /* #970747 */
 .search-bar {
+    background-image: url('../src/img/bg3.jpeg');
     background-size: cover; /* Ceci s'assure que l'image couvre toute la largeur */
     padding: 80px 0; /* Image plus grande verticalement */
     text-align: center; /* Centrer la barre de recherche */

@@ -21,7 +21,7 @@ include 'DAO.php';
     <?php include './template/header.php'; ?>
 
     <!-- Search Bar Background Image -->
-    <div class="search-bar" style="background-image: url('./src/img/bg3.jpeg');">
+    <div class="search-bar">
         <div class="container text-center">
             <input type="text" class="search-input" placeholder="Recherche...">
         </div>
