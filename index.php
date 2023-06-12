@@ -1,6 +1,6 @@
 <?php
-include 'db.php';
-
+include 'database.php';
+include 'DAO.php';
 ?>
 
 <!DOCTYPE html>
@@ -32,11 +32,9 @@ include 'db.php';
         <!-- Categories -->
         <div class="row">
             <?php
-            include 'DAO.php';
             $categories = get_categories();
-            if (is_array($categories) && count($categories) >= 6) {
-                for ($i = 0; $i < 6; $i++) :
-                    $category = $categories[$i];
+            if (!empty($categories)) {
+                foreach ($categories as $category) :
             ?>
                     <div class="col-md-4">
                         <div class="card">
@@ -47,7 +45,7 @@ include 'db.php';
                         </div>
                     </div>
             <?php
-                endfor;
+                endforeach;
             }
             ?>
         </div>
@@ -56,9 +54,8 @@ include 'db.php';
         <div class="row">
             <?php
             $dishes = get_most_sold_dishes();
-            if (is_array($dishes) && count($dishes) >= 3) {
-                for ($i = 0; $i < 3; $i++) :
-                    $dish = $dishes[$i];
+            if (!empty($dishes)) {
+                foreach ($dishes as $dish) :
             ?>
                     <div class="col-md-4">
                         <div class="card">
@@ -69,11 +66,10 @@ include 'db.php';
                         </div>
                     </div>
             <?php
-                endfor;
+                endforeach;
             }
             ?>
         </div>
-
 
         <!-- Footer Social Media -->
         <?php include './template/footer.php'; ?>
