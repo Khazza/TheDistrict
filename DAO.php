@@ -17,7 +17,8 @@ function get_categories()
 }
 
 function get_popular_categories($limit = 6) {
-    global $pdo;
+    $database = new Database();
+    $db = $database->getConnection();
 
     $query = "
         SELECT categorie.id, categorie.libelle, categorie.image, SUM(commande.quantite) as total_quantity
@@ -30,7 +31,7 @@ function get_popular_categories($limit = 6) {
         LIMIT :limit
     ";
 
-    $stmt = $pdo->prepare($query);
+    $stmt = $db->prepare($query);
     $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
     $stmt->execute();
 
