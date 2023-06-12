@@ -13,7 +13,7 @@
 
 <body>
     <!-- Navbar -->
-    <?php include 'header.php'; ?>
+    <?php include './template/header.php'; ?>
 
     <!-- Search Bar Background Image -->
     <div class="search-bar" style="background-image: url('./src/img/bg3.jpeg');">
@@ -71,7 +71,7 @@
 
 
         <!-- Footer Social Media -->
-        <?php include 'footer.php'; ?>
+        <?php include './template/footer.php'; ?>
 
         <!-- Bootstrap JS, jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
