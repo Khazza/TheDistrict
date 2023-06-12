@@ -1,6 +1,6 @@
 <?php
 
-require_once 'database.php';
+require_once 'db.php';
 
 function get_categories()
 {
