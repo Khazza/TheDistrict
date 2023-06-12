@@ -2,19 +2,19 @@
 
 require_once 'database.php';
 
-function get_categories()
-{
-    $database = new Database();
-    $db = $database->getConnection();
+// function get_categories()
+// {
+//     $database = new Database();
+//     $db = $database->getConnection();
 
-    $query = "SELECT * FROM categorie WHERE active = 'Yes' LIMIT 6";
-    $stmt = $db->prepare($query);
-    $stmt->execute();
+//     $query = "SELECT * FROM categorie WHERE active = 'Yes' LIMIT 6";
+//     $stmt = $db->prepare($query);
+//     $stmt->execute();
 
-    $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//     $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    return $categories;
-}
+//     return $categories;
+// }
 
 function get_popular_categories($limit = 6) {
     $database = new Database();
