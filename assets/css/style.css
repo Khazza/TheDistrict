@@ -1,12 +1,13 @@
+/* #970747 */
 .search-bar {
     background-size: cover; /* Ceci s'assure que l'image couvre toute la largeur */
-    padding: 80px 0; /* Augmenter cette valeur pour rendre l'image plus grande verticalement */
+    padding: 80px 0; /* Image plus grande verticalement */
     text-align: center; /* Centrer la barre de recherche */
 }
 
 .search-input {
     width: 50%; /* Définir la largeur de la barre de recherche */
-    padding: 15px; /* Augmenter l'espace interne dans la barre de recherche */
+    padding: 10px; /* Augmenter l'espace interne dans la barre de recherche */
     font-size: 18px; /* Taille de la police dans la barre de recherche */
     border: 2px solid #970747; /* Bordure plus épaisse autour de la barre de recherche avec la couleur spécifiée */
     border-radius: 5px; /* Coins arrondis de la barre de recherche */
@@ -17,4 +18,3 @@
     background-color: #970747 !important; /* Définir la couleur de la navbar */
 }
 
-/* #970747 */
