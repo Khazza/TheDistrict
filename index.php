@@ -32,7 +32,7 @@ include 'DAO.php';
         <!-- Categories -->
         <div class="row">
             <?php
-            $categories = get_categories();
+            $categories = get_popular_categories();
             if (!empty($categories)) {
                 foreach ($categories as $category) :
             ?>

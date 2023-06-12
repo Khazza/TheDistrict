@@ -16,6 +16,27 @@ function get_categories()
     return $categories;
 }
 
+function get_popular_categories($limit = 6) {
+    global $pdo;
+
+    $query = "
+        SELECT categorie.id, categorie.libelle, categorie.image, SUM(commande.quantite) as total_quantity
+        FROM categorie
+        JOIN plat ON categorie.id = plat.id_categorie
+        JOIN commande ON plat.id = commande.id_plat
+        WHERE categorie.active = 'Yes'
+        GROUP BY categorie.id
+        ORDER BY total_quantity DESC
+        LIMIT :limit
+    ";
+
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
 function get_most_sold_dishes()
 {
     $database = new Database();
