@@ -26,11 +26,15 @@ function render_header() {
 
 function render_footer() {
     ?>
-    <footer class="footer text-center">
-        <a href="#"><img src="path/to/facebook-icon.png" alt="Facebook"></a>
-        <a href="#"><img src="path/to/twitter-icon.png" alt="Twitter"></a>
-        <a href="#"><img src="path/to/instagram-icon.png" alt="Instagram"></a>
+    <footer class="footer text-center py-3" style="background-color: #f8f9fa; position: relative; width: 100%; bottom: 0;">
+        <div class="container">
+            <a href="#" class="mr-3"><i class="fab fa-facebook-f" style="font-size: 24px; color: #3b5998;"></i></a>
+            <a href="#" class="mr-3"><i class="fab fa-twitter" style="font-size: 24px; color: #00acee;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="font-size: 24px; color: #C13584;"></i></a>
+        </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <?php
 }
+
 ?>
