@@ -26,7 +26,7 @@ function render_header() {
 
 function render_footer() {
     ?>
-    <footer class="footer text-center py-3" style="background-color: #f8f9fa; position: absolute; width: 100%; bottom: 0; left:0;">
+    <footer class="footer text-center py-3" style="background-color: #f8f9fa; position: relative; width: 100%; bottom: 0;">
         <div class="container">
             <a href="#" class="mr-3"><i class="fab fa-facebook-f" style="font-size: 24px; color: #3b5998;"></i></a>
             <a href="#" class="mr-3"><i class="fab fa-twitter" style="font-size: 24px; color: #00acee;"></i></a>

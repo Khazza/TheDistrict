@@ -41,7 +41,7 @@ include './template/functions.php';
             ?>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="<?= $category['image'] ?>" alt="Catégorie <?= $category['libelle'] ?>" class="card-img-top">
+                            <img src="src/img/category/<?= $category['image'] ?>" alt="Catégorie <?= $category['libelle'] ?>" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $category['libelle'] ?></h5>
                             </div>
@@ -62,7 +62,7 @@ include './template/functions.php';
             ?>
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="<?= $dish['image'] ?>" alt="Plat <?= $dish['libelle'] ?>" class="card-img-top">
+                            <img src="src/img/food/<?= $dish['image'] ?>" alt="Plat <?= $dish['libelle'] ?>" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $dish['libelle'] ?></h5>
                             </div>

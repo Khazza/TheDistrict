@@ -2,6 +2,7 @@
 
 require_once 'database.php';
 
+
 // function get_categories()
 // {
 //     $database = new Database();
