@@ -6,6 +6,7 @@
     text-align: center; /* Centrer la barre de recherche */
 }
 
+/* SearchBar */
 .search-input {
     width: 50%; /* Définir la largeur de la barre de recherche */
     padding: 10px; /* Augmenter l'espace interne dans la barre de recherche */
@@ -15,10 +16,24 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre sous la barre de recherche */
 }
 
+/* Navbar */
 .navbar {
     background-color: #970747 !important; /* Définir la couleur de la navbar */
 }
 
+/* Footer */
 .footer {
-    background-color: #f8f9fa; position: relative; width: 100%; bottom: 0;
+    background-color: #f8f9fa;
+    position: relative;
+    width: 90%; /* Réduire la largeur du background du footer */
+    max-width: 1200px; /* Définir une largeur maximale pour éviter qu'il ne devienne trop grand sur les grands écrans */
+    margin: 0 auto; /* Centrer le footer */
+    padding: 20px; /* Ajouter du padding autour du contenu du footer */
+    bottom: 0;
+}
+
+/* Icones de médias sociaux */
+.footer a {
+    margin: 0 15px; /* Augmenter l'espace entre les icônes */
+    color: inherit; /* Utiliser la couleur héritée (peut être modifiée si nécessaire) */
 }
