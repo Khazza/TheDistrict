@@ -2,8 +2,10 @@
 function render_header() {
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand"><img src="../src/img/the_district_brand/logo.png" alt="Logo" height="60"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand">
+            <img src="../src/img/the_district_brand/logo.png" alt="Logo" style="height: 100%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -30,6 +32,7 @@ function render_header() {
     </nav>
     <?php
 }
+
 
 
 
