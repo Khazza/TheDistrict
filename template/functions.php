@@ -42,7 +42,6 @@ function render_footer() {
             <a href="#"><i class="fab fa-instagram" style="font-size: 24px; color: #C13584;"></i></a>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <?php
 }
 
