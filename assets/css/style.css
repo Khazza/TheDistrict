@@ -23,7 +23,6 @@
 }
 
 .navbar-brand img {
-    height: 100%; /* Hauteur de l'image égale à la hauteur de la navbar */
     object-fit: contain; /* Ajuster l'image sans déformation */
 }
 
@@ -54,7 +53,7 @@
 .footer {
     background-color: #f8f9fa;
     position: relative;
-    width: 90%; /* Réduire la largeur du background du footer */
+    width: 50%; /* Réduire la largeur du background du footer */
     max-width: 1200px; /* Définir une largeur maximale pour éviter qu'il ne devienne trop grand sur les grands écrans */
     margin: 0 auto; /* Centrer le footer */
     padding: 20px; /* Ajouter du padding autour du contenu du footer */
