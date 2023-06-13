@@ -19,3 +19,6 @@
     background-color: #970747 !important; /* Définir la couleur de la navbar */
 }
 
+.footer {
+    background-color: #f8f9fa; position: relative; width: 100%; bottom: 0;
+}
