@@ -1,6 +1,7 @@
 <?php
 include 'database.php';
 include 'DAO.php';
+include './template/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +18,8 @@ include 'DAO.php';
 </head>
 
 <body>
-    <!-- Navbar -->
-    <?php include './template/header.php'; ?>
+    <!-- Appel de la fonction pour afficher le header -->
+    <?php render_header(); ?>
 
     <!-- Search Bar Background Image -->
     <div class="search-bar" style="background-image: url('./src/img/bg3.jpeg');">
@@ -27,11 +28,12 @@ include 'DAO.php';
         </div>
     </div>
 
-        <!-- Footer Social Media -->
-        <?php include './template/footer.php'; ?>
+        <!-- Appel de la fonction pour afficher le footer -->
+        <?php render_footer(); ?>
 
         <!-- Bootstrap JS, jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

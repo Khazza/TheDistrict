@@ -23,7 +23,7 @@ function render_header() {
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
             </ul>
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a href="login.php" class="nav-link login-button">S'identifier</a>
                 </li>
