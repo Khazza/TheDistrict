@@ -1,218 +1,229 @@
 /* #970747 */
 /* SearchBar */
 .search-bar {
-    background-image: url('../../src/img/bg2.jpeg');
-    background-size: cover; /* L'image couvre toute la largeur */
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 350px;
-    margin-top: 20px;     
+  background-image: url("../../src/img/bg2.jpeg");
+  background-size: cover; /* L'image couvre toute la largeur */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  margin-top: 20px;
 }
 .search-input {
-    width: 50%; /* Définir la largeur de la barre de recherche */
-    padding: 10px; /* Augmenter l'espace interne dans la barre de recherche */
-    font-size: 18px; /* Taille de la police dans la barre de recherche */
-    border-radius: 30px; /* Coins arrondis */
-    border: none; /* Enlever la bordure */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajouter une ombre */
-    margin-top: 200px;
-    text-align: center;
+  width: 50%; /* Définir la largeur de la barre de recherche */
+  padding: 10px; /* Augmenter l'espace interne dans la barre de recherche */
+  font-size: 18px; /* Taille de la police dans la barre de recherche */
+  border-radius: 30px; /* Coins arrondis */
+  border: none; /* Enlever la bordure */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajouter une ombre */
+  margin-top: 200px;
+  text-align: center;
 }
-
 
 /* Navbar */
 .navbar {
-    background-color: #970747 !important; /* Couleur de fond de la navbar */
-    height: 80px; /* Hauteur fixe pour la navbar */
+  background-color: #970747 !important; /* Couleur de fond de la navbar */
+  height: 80px; /* Hauteur fixe pour la navbar */
 }
 
 .navbar-brand img {
-    object-fit: contain; /* Ajuster l'image sans déformation */
+  object-fit: contain; /* Ajuster l'image sans déformation */
 }
 
 .nav-link {
-    color: #ffffff !important; /* Couleur de texte blanche pour une meilleure lisibilité */
-    font-size: 18px; /* Taille de police plus grande */
-    margin-right: 30px; /* Espace entre les liens */
+  color: #ffffff !important; /* Couleur de texte blanche pour une meilleure lisibilité */
+  font-size: 18px; /* Taille de police plus grande */
+  margin-right: 30px; /* Espace entre les liens */
 }
 
 .nav-link:hover {
-    color: #f8f9fa !important; /* Changement de couleur au survol */
+  color: #f8f9fa !important; /* Changement de couleur au survol */
 }
 
 .login-button {
-    color: #ffffff !important; /* Couleur du texte du bouton */
-    background-color: #3a3f44 !important; /* Couleur de fond du bouton */
-    border: none; /* Pas de bordure */
-    padding: 10px 20px; /* Padding intérieur */
-    border-radius: 5px; /* Coins arrondis */
+  color: #ffffff !important; /* Couleur du texte du bouton */
+  background-color: #3a3f44 !important; /* Couleur de fond du bouton */
+  border: none; /* Pas de bordure */
+  padding: 10px 20px; /* Padding intérieur */
+  border-radius: 5px; /* Coins arrondis */
 }
 
 .login-button:hover {
-    background-color: #30353a !important; /* Changement de couleur de fond au survol */
+  background-color: #30353a !important; /* Changement de couleur de fond au survol */
 }
-
 
 /* Footer */
 .footer {
-    background-color: #f8f9fa;
-    position: relative;
-    width: 50%; /* Réduire la largeur du background du footer */
-    max-width: 1200px; /* Définir une largeur maximale pour éviter qu'il ne devienne trop grand sur les grands écrans */
-    margin: 0 auto; /* Centrer le footer */
-    padding: 20px; /* Ajouter du padding autour du contenu du footer */
-    bottom: 0;
+  background-color: #f8f9fa;
+  position: relative;
+  width: 50%; /* Réduire la largeur du background du footer */
+  max-width: 1200px; /* Définir une largeur maximale pour éviter qu'il ne devienne trop grand sur les grands écrans */
+  margin: 0 auto; /* Centrer le footer */
+  padding: 20px; /* Ajouter du padding autour du contenu du footer */
+  bottom: 0;
 }
 
 /* Icones de médias sociaux */
 .footer a {
-    margin: 0 15px; /* Augmenter l'espace entre les icônes */
-    color: inherit; /* Utiliser la couleur héritée (peut être modifiée si nécessaire) */
+  margin: 0 15px; /* Augmenter l'espace entre les icônes */
+  color: inherit; /* Utiliser la couleur héritée (peut être modifiée si nécessaire) */
 }
 
 /* Profile Cards */
 .profile-card-2 {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #30353a;
-    width: 100%;
-    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-    margin-bottom: 20px;
-    height: 240px; /* Hauteur fixe pour la carte, ajustez selon vos besoins */
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #30353a;
+  width: 100%;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  height: 240px; /* Hauteur fixe pour la carte, ajustez selon vos besoins */
 }
 
 .profile-card-2 img {
-    height: 100%; /* Hauteur à 100% de la carte */
-    width: 100%; /* Largeur à 100% de la carte */
-    object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  height: 100%; /* Hauteur à 100% de la carte */
+  width: 100%; /* Largeur à 100% de la carte */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .profile-card-2 .profile-name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 10px; /* Réduire le padding pour rendre le fond plus fin */
-    color: #fff;
-    text-align: center;
-    background-color: rgba(151, 7, 71, 0.8);
-    font-family: 'Arial', sans-serif; /* Changer la police */
-    font-size: 18px; /* Ajuster la taille de la police */
-    font-weight: bold; /* Mettre le texte en gras */
-    transform: translateY(0);
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10px; /* Réduire le padding pour rendre le fond plus fin */
+  color: #fff;
+  text-align: center;
+  background-color: rgba(151, 7, 71, 0.8);
+  font-family: "Arial", sans-serif; /* Changer la police */
+  font-size: 18px; /* Ajuster la taille de la police */
+  font-weight: bold; /* Mettre le texte en gras */
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .profile-card-2:hover img {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .profile-card-2:hover .profile-name {
-    background-color: rgba(161, 8, 54, 0.616); /* Couleur de fond lors du survol */
-    transform: translateY(-30px); /* Déplace le texte vers le haut lors du survol */
+  background-color: rgba(
+    161,
+    8,
+    54,
+    0.616
+  ); /* Couleur de fond lors du survol */
+  transform: translateY(
+    -30px
+  ); /* Déplace le texte vers le haut lors du survol */
 }
 
 /* Profile Cards Plats */
 .profile-card-3 {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #30353a;
-    width: 100%;
-    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-    margin-bottom: 20px;
-    height: 180px; /* Hauteur fixe pour la carte, ajustez selon vos besoins */
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #30353a;
+  width: 100%;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  height: 180px; /* Hauteur fixe pour la carte, ajustez selon vos besoins */
 }
 
 .profile-card-3 img {
-    height: 100%; /* Hauteur à 100% de la carte */
-    width: 100%; /* Largeur à 100% de la carte */
-    object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  height: 100%; /* Hauteur à 100% de la carte */
+  width: 100%; /* Largeur à 100% de la carte */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .profile-card-3 .profile-name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 10px; /* Réduire le padding pour rendre le fond plus fin */
-    color: #fff;
-    text-align: center;
-    background-color: rgba(151, 7, 71, 0.8);
-    font-family: 'Arial', sans-serif; /* Changer la police */
-    font-size: 18px; /* Ajuster la taille de la police */
-    font-weight: bold; /* Mettre le texte en gras */
-    transform: translateY(0);
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10px; /* Réduire le padding pour rendre le fond plus fin */
+  color: #fff;
+  text-align: center;
+  background-color: rgba(151, 7, 71, 0.8);
+  font-family: "Arial", sans-serif; /* Changer la police */
+  font-size: 18px; /* Ajuster la taille de la police */
+  font-weight: bold; /* Mettre le texte en gras */
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .profile-card-3:hover img {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .profile-card-3:hover .profile-name {
-    background-color: rgba(161, 8, 54, 0.616); /* Couleur de fond lors du survol */
-    transform: translateY(-30px); /* Déplace le texte vers le haut lors du survol */
+  background-color: rgba(
+    161,
+    8,
+    54,
+    0.616
+  ); /* Couleur de fond lors du survol */
+  transform: translateY(
+    -30px
+  ); /* Déplace le texte vers le haut lors du survol */
 }
-
 
 /* Image Settings */
 .card-img-top {
-    height: 200px; /* Hauteur fixe pour les images */
-    object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse l'espace sans étirer */
+  height: 200px; /* Hauteur fixe pour les images */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse l'espace sans étirer */
 }
 
 /* Card Content */
 .card-body h5 {
-    font-size: 20px; /* Taille de la police pour le nom de la catégorie ou du plat */
-    font-weight: bold; /* Forme de la police */
+  font-size: 20px; /* Taille de la police pour le nom de la catégorie ou du plat */
+  font-weight: bold; /* Forme de la police */
 }
 
 /* Profile Card Hoover Background */
 .profile-card-2:hover .profile-name {
-    background-color: rgba(161, 8, 54, 0.616); /* Couleur de fond lors du survol */
+  background-color: rgba(
+    161,
+    8,
+    54,
+    0.616
+  ); /* Couleur de fond lors du survol */
 }
 
 /* Main Container */
 .main-content-container {
-    margin-top: 30px;
+  margin-top: 30px;
 }
-
-
-
-
-
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
 
 /* En mode responsive, cacher la barre de recherche mais conserver l'image de fond */
-@media screen and (max-width: 768px) {
-    .search-input {
-        display: none;
-    }
-    
-    /* Cacher les catégories en mode responsive */
-    .category-row {
-        display: none;
-    }
-
-    /* Afficher les plats 4, 5 et 6 en affichage responsive */
-    .dish-row .col-md-4:nth-child(4),
-    .dish-row .col-md-4:nth-child(5),
-    .dish-row .col-md-4:nth-child(6) {
-        display: block;
-    }
-}
-
 /* Cacher les plats 4, 5 et 6 en affichage grand écran */
 .dish-row .col-md-4:nth-child(4),
 .dish-row .col-md-4:nth-child(5),
 .dish-row .col-md-4:nth-child(6) {
-    display: none;
+  display: none;
 }
+@media screen and (max-width: 768px) {
+  .search-input {
+    display: none;
+  }
+
+  /* Cacher les catégories en mode responsive */
+  .category-row {
+    display: none;
+  }
+
+  /* Afficher les plats 4, 5 et 6 en affichage responsive */
+  .dish-row .col-md-4:nth-child(4),
+  .dish-row .col-md-4:nth-child(5),
+  .dish-row .col-md-4:nth-child(6) {
+    display: block;
+  }
+}
+
 
