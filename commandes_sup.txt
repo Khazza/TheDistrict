@@ -1,4 +1,3 @@
--- Insertion de données supplémentaires dans la table `commande`
 INSERT INTO `commande` (`id_plat`, `quantite`, `total`, `date_commande`, `etat`, `nom_client`, `telephone_client`, `email_client`, `adresse_client`) VALUES
 (4, 2, 16.00, "2023-06-15 12:00:00", "Livrée", "Sarah Connor", "1234567890", "sarah.connor@example.com", "123 Main Street"),
 (5, 1, 14.00, "2023-06-15 12:30:00", "Livrée", "John Smith", "0987654321", "john.smith@example.com", "456 Elm Street"),
@@ -21,15 +20,11 @@ INSERT INTO `commande` (`id_plat`, `quantite`, `total`, `date_commande`, `etat`,
 (4, 3, 24.00, "2023-06-16 12:00:00", "Livrée", "Charlotte Allen", "2020202020", "charlotte.allen@example.com", "258 Elm Road"),
 (5, 1, 14.00, "2023-06-16 12:30:00", "En préparation", "Liam Wright", "2121212121", "liam.wright@example.com", "369 Birch Avenue"),
 (12, 2, 20.00, "2023-06-16 13:00:00", "En cours de livraison", "Olivia Scott", "2222222222", "olivia.scott@example.com", "102 Pine Street"),
-(11, 1, 9.00, "2023-06-16 13:30:00", "Livrée", "Noah King", "2323232323", "noah.king@example.com", "678 Cedar Lane"),
 (7, 2, 18.00, "2023-06-16 14:00:00", "En cours de livraison", "Isabella Green", "2424242424", "isabella.green@example.com", "256 Oak Road"),
 (14, 1, 14.00, "2023-06-16 14:30:00", "En préparation", "Elijah Adams", "2525252525", "elijah.adams@example.com", "123 Cherry Avenue"),
 (10, 3, 24.00, "2023-06-16 15:00:00", "Livrée", "Aria Baker", "2626262626", "aria.baker@example.com", "789 Birch Street"),
 (16, 2, 24.00, "2023-06-16 15:30:00", "Livrée", "Mason Nelson", "2727272727", "mason.nelson@example.com", "654 Pine Lane"),
-(8, 2, 16.00, "2023-06-16 16:00:00", "En cours de livraison", "Harper Carter", "2828282828", "harper.carter@example.com", "321 Cedar Road"),
 (13, 3, 21.00, "2023-06-16 16:30:00", "Livrée", "Logan Mitchell", "2929292929", "logan.mitchell@example.com", "963 Spruce Avenue"),
 (12, 1, 10.00, "2023-06-16 17:00:00", "En préparation", "Ella Perez", "3030303030", "ella.perez@example.com", "147 Maple Lane"),
 (15, 2, 26.00, "2023-06-16 17:30:00", "En cours de livraison", "Sebastian Coleman", "3131313131", "sebastian.coleman@example.com", "789 Oak Road"),
-(7, 3, 27.00, "2023-06-16 18:00:00", "Livrée", "Lily Collins", "3232323232", "lily.collins@example.com", "258 Elm Avenue"),
-(9, 2, 10.00, "2023-06-16 18:30:00", "Livrée", "Gabriel Morris", "3333333333", "gabriel.morris@example.com", "369 Birch Street"),
-(6, 1, 8.00, "2023-06-16 19:00:00", "En cours de livraison", "Zoe Stewart", "3434343434", "zoe.stewart@example.com", "102 Pine Lane");
+(9, 2, 10.00, "2023-06-16 18:30:00", "Livrée", "Gabriel Morris", "3333333333", "gabriel.morris@example.com", "369 Birch Street");
