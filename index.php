@@ -43,11 +43,9 @@ include './template/functions.php';
                 foreach ($categories as $category) :
             ?>
                     <div class="col-md-4">
-                        <div class="card">
-                            <img src="src/img/category/<?= $category['image'] ?>" alt="Catégorie <?= $category['libelle'] ?>" class="card-img-top card-image-index">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $category['libelle'] ?></h5>
-                            </div>
+                        <div class="profile-card-2">
+                            <img src="src/img/category/<?= $category['image'] ?>" alt="Catégorie <?= $category['libelle'] ?>" class="img img-responsive">
+                            <div class="profile-name"><?= $category['libelle'] ?></div>
                         </div>
                     </div>
             <?php
@@ -64,11 +62,9 @@ include './template/functions.php';
                 foreach ($dishes as $dish) :
             ?>
                     <div class="col-md-4">
-                        <div class="card">
-                            <img src="src/img/food/<?= $dish['image'] ?>" alt="Plat <?= $dish['libelle'] ?>" class="card-img-top card-image-index">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $dish['libelle'] ?></h5>
-                            </div>
+                        <div class="profile-card-2">
+                            <img src="src/img/food/<?= $dish['image'] ?>" alt="Plat <?= $dish['libelle'] ?>" class="img img-responsive">
+                            <div class="profile-name"><?= $dish['libelle'] ?></div>
                         </div>
                     </div>
             <?php
@@ -76,15 +72,16 @@ include './template/functions.php';
             }
             ?>
         </div>
+    </div>
 
-        <!-- Appel de la fonction pour afficher le footer -->
-        <?php render_footer(); ?>
+    <!-- Appel de la fonction pour afficher le footer -->
+    <?php render_footer(); ?>
 
-        <!-- Bootstrap JS, jQuery -->
-        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
