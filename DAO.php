@@ -49,7 +49,7 @@ function get_most_sold_dishes()
               WHERE plat.active = 'Yes'
               GROUP BY plat.id
               ORDER BY total_sold DESC
-              LIMIT 3";
+              LIMIT 6";
               
     $stmt = $db->prepare($query);
     $stmt->execute();
