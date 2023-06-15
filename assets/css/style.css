@@ -196,3 +196,14 @@
         display: none;
     }
 }
+@media screen and (max-width: 768px) {
+    /* Cacher les catégories en mode responsive */
+    .category-row {
+        display: none;
+    }
+
+    /* Afficher seulement 5 plats en mode responsive */
+    .dish-row .col-md-4:nth-child(n + 6) {
+        display: none;
+    }
+}

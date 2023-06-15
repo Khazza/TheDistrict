@@ -16,7 +16,7 @@ include './template/functions.php';
     <!-- Main Content -->
     <div class="container main-content-container">
         <!-- Categories -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center category-row">
             <?php
             $categories = get_popular_categories();
             if (!empty($categories)) {
@@ -35,7 +35,7 @@ include './template/functions.php';
         </div>
 
         <!-- Most Sold Dishes -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center dish-row">
             <?php
             $dishes = get_most_sold_dishes();
             if (!empty($dishes)) {
