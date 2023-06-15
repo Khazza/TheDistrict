@@ -69,22 +69,24 @@
 }
 
 /* Title Cards */
-.section-title {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #333;
+.section-title, .section-title2 {
+    text-align: center; /* Centrer le texte */
+    padding: 20px; /* Espacement autour du texte */
+    margin: 0 auto 30px; /* Centrer horizontalement et ajouter une marge en dessous */
+    max-width: 80%; /* Limiter la largeur du titre */
+    font-weight: bold; /* Gras */
+    color: #333; /* Couleur du texte */
+    letter-spacing: 1px; /* Espacement des lettres */
+    border-bottom: 3px solid #f8c301; /* Ligne sous le titre */
 }
 
-.section-title2 {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #333;
+.section-title::before, .section-title2::before {
+    content: ''; /* contenu vide pour le pseudo-élément */
+    display: block;
+    margin: 0 auto 10px; /* Centrer horizontalement et ajouter une marge en dessous */
+    width: 50px; /* Largeur de la ligne */
+    height: 3px; /* Hauteur de la ligne */
+    background-color: #f8c301; /* Couleur de la ligne */
 }
 
 /* Profile Cards */
