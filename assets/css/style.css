@@ -198,7 +198,8 @@
 }
 /* Cacher les plats 4 et 5 en affichage grand écran */
 .dish-row .col-md-4:nth-child(4),
-.dish-row .col-md-4:nth-child(5) {
+.dish-row .col-md-4:nth-child(5),
+.dish-row .col-md-4:nth-child(6) {
     display: none;
 }
 
@@ -210,7 +211,8 @@
 
     /* Afficher les plats 4 et 5 en affichage responsive */
     .dish-row .col-md-4:nth-child(4),
-    .dish-row .col-md-4:nth-child(5) {
+    .dish-row .col-md-4:nth-child(5),
+    .dish-row .col-md-4:nth-child(6) {
         display: block;
     }
 }
