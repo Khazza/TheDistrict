@@ -42,7 +42,7 @@ include './template/functions.php';
                 foreach ($dishes as $dish) :
             ?>
                     <div class="col-md-4">
-                        <div class="profile-card-2">
+                        <div class="profile-card-3">
                             <img src="src/img/food/<?= $dish['image'] ?>" alt="Plat <?= $dish['libelle'] ?>" class="img img-responsive">
                             <div class="profile-name"><?= $dish['libelle'] ?></div>
                         </div>
