@@ -17,35 +17,43 @@
 
 
 /* Navbar */
-.navbar {
-    background-color: #970747 !important; /* Couleur de fond de la navbar */
-    height: 80px; /* Hauteur fixe pour la navbar */
+.split-navigation {
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
 }
 
-.navbar-brand img {
-    object-fit: contain; /* Ajuster l'image sans déformation */
+.split-navigation__item {
+    margin-right: 0.25rem;
 }
 
-.nav-link {
-    color: #ffffff !important; /* Couleur de texte blanche pour une meilleure lisibilité */
-    font-size: 18px; /* Taille de police plus grande */
-    margin-right: 30px; /* Espace entre les liens */
+.split-navigation__item a.nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 30px;
 }
 
-.nav-link:hover {
-    color: #f8f9fa !important; /* Changement de couleur au survol */
+.split-navigation__item a.nav-link:hover {
+    color: #f8f9fa;
+}
+
+.split-navigation__item--right {
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .login-button {
-    color: #ffffff !important; /* Couleur du texte du bouton */
-    background-color: #3a3f44 !important; /* Couleur de fond du bouton */
-    border: none; /* Pas de bordure */
-    padding: 10px 20px; /* Padding intérieur */
-    border-radius: 5px; /* Coins arrondis */
+    color: #ffffff;
+    background-color: #3a3f44;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .login-button:hover {
-    background-color: #30353a !important; /* Changement de couleur de fond au survol */
+    background-color: #30353a;
 }
 
 
