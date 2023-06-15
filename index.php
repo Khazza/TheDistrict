@@ -38,7 +38,7 @@ include './template/functions.php';
 
     <!-- Most Sold Dishes -->
     <!-- Titre pour les plats -->
-    <h2 class="section-title">Nos plats les plus populaires</h2>
+    <h2 class="section-title2">Nos plats les plus populaires</h2>
     <div class="row justify-content-center dish-row">
         <?php
         $dishes = get_most_sold_dishes();

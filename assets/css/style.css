@@ -78,6 +78,15 @@
     color: #333;
 }
 
+.section-title2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
 /* Profile Cards */
 .profile-card-2 {
   position: relative;
@@ -229,11 +238,20 @@
         display: none;
     }
 
+    .section-title {
+        display: none;
+    }
+
     /* Afficher les plats 4, 5 et 6 en affichage responsive */
     .dish-row .col-md-4:nth-child(4),
     .dish-row .col-md-4:nth-child(5),
     .dish-row .col-md-4:nth-child(6) {
         display: block;
+    }    
+    
+    .section-title2 {
+        font-size: 1.4em;
+        margin-top: 30px;
     }
 }
 
