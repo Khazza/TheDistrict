@@ -2,32 +2,31 @@
 function render_header() {
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <ul class="split-navigation">
-            <li class="split-navigation__item">
-                <a class="navbar-brand">
-                    <img src="../src/img/the_district_brand/logo.png" alt="Logo" height="60">
-                </a>
-            </li>
-            <li class="split-navigation__item">
-                <a class="nav-link" href="index.php">Accueil</a>
-            </li>
-            <li class="split-navigation__item">
-                <a class="nav-link" href="categories.php">Catégories</a>
-            </li>
-            <li class="split-navigation__item">
-                <a class="nav-link" href="plats.php">Plats</a>
-            </li>
-            <li class="split-navigation__item">
-                <a class="nav-link" href="contact.php">Contact</a>
-            </li>
-            <li class="split-navigation__item split-navigation__item--right">
-                <a href="login.php" class="nav-link login-button">S'identifier</a>
-            </li>
-        </ul>
+        <a class="navbar-brand"><img src="../src/img/the_district_brand/logo.png" alt="Logo" height="60"></a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.php">Catégories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="plats.php">Plats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="login.php" class="nav-link login-button">S'identifier</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <?php
 }
-
 
 
 function render_footer() {
