@@ -34,7 +34,7 @@ include './template/functions.php';
     </div>
 
     <!-- Main Content -->
-    <div class="container">
+    <div class="container main-content-container">
         <!-- Categories -->
         <div class="row justify-content-center">
             <?php

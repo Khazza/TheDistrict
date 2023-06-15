@@ -100,7 +100,6 @@
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-
 .profile-card-2:hover img {
     transform: scale(1.15);
 }
@@ -126,4 +125,9 @@
 /* Profile Card Hoover Background */
 .profile-card-2:hover .profile-name {
     background-color: rgba(161, 8, 54, 0.616); /* Couleur de fond lors du survol */
+}
+
+/* Main Container */
+.main-content-container {
+    margin-top: 30px;
 }
