@@ -206,24 +206,26 @@
 .dish-row .col-md-4:nth-child(4),
 .dish-row .col-md-4:nth-child(5),
 .dish-row .col-md-4:nth-child(6) {
-  display: none;
+    display: none;
 }
+
 @media screen and (max-width: 768px) {
-  .search-input {
-    display: none;
-  }
+    .search-input {
+        display: none;
+    }
 
-  /* Cacher les catégories en mode responsive */
-  .category-row {
-    display: none;
-  }
+    /* Cacher les catégories en mode responsive */
+    .category-row {
+        display: none;
+    }
 
-  /* Afficher les plats 4, 5 et 6 en affichage responsive */
-  .dish-row .col-md-4:nth-child(4),
-  .dish-row .col-md-4:nth-child(5),
-  .dish-row .col-md-4:nth-child(6) {
-    display: block;
-  }
+    /* Afficher les plats 4, 5 et 6 en affichage responsive */
+    .dish-row .col-md-4:nth-child(4),
+    .dish-row .col-md-4:nth-child(5),
+    .dish-row .col-md-4:nth-child(6) {
+        display: block;
+    }
 }
+
 
 
