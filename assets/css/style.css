@@ -66,12 +66,6 @@
     color: inherit; /* Utiliser la couleur héritée (peut être modifiée si nécessaire) */
 }
 
-/* Images index */
-.card-image-index {
-    height: 200px; /* Hauteur fixe pour toutes les images */
-    object-fit: cover; /* Recadrer l'image pour remplir la boîte */
-}
-
 /* Profile Cards */
 .profile-card-2 {
     position: relative;
@@ -105,4 +99,20 @@
 
 .profile-card-2:hover .profile-name {
     transform: translateY(-30px);
+}
+/* Image Settings */
+.card-img-top {
+    height: 200px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse l'espace sans étirer */
+}
+
+/* Card Content */
+.card-body h5 {
+    font-size: 20px; /* Taille de la police pour le nom de la catégorie ou du plat */
+    font-weight: bold; /* Forme de la police */
+}
+
+/* Profile Card Hoover Background */
+.profile-card-2:hover .profile-name {
+    background-color: rgba(255, 0, 0, 0.8); /* Couleur de fond lors du survol */
 }
