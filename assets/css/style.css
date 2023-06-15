@@ -65,3 +65,9 @@
     margin: 0 15px; /* Augmenter l'espace entre les icônes */
     color: inherit; /* Utiliser la couleur héritée (peut être modifiée si nécessaire) */
 }
+
+/* Images index */
+.card-image-index {
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Recadrer l'image pour remplir la boîte */
+}
