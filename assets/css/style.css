@@ -2,10 +2,10 @@
 /* SearchBar */
 .search-bar {
     background-image: url('../src/img/bg3.jpeg');
-    background-size: cover; /* L'image couvre toute la largeur */
-    padding: 80px 0; /* Image plus grande verticalement */
     margin-top: 20px; /* Ajustez cette valeur en fonction de vos préférences */
-    text-align: center; /* Centrer la barre de recherche */
+    background-size: cover;
+    text-align: center;
+    padding-top: 40%; /* Positionne la barre de recherche à 40% de la hauteur de l'image */
 }
 .search-input {
     width: 50%; /* Définir la largeur de la barre de recherche */
@@ -14,6 +14,7 @@
     border-radius: 30px; /* Coins arrondis */
     border: none; /* Enlever la bordure */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajouter une ombre */
+    display: inline-block; /* Cela rend la barre de recherche en tant que bloc en ligne pour qu'elle puisse être centrée avec text-align */
 }
 
 
