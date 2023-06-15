@@ -89,13 +89,17 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 30px 10px;
+    padding: 10px 10px; /* Réduire le padding pour rendre le fond plus fin */
     color: #fff;
     text-align: center;
-    background-color: rgba(151, 7, 71, 0.8); /* #970747 with opacity */
+    background-color: rgba(151, 7, 71, 0.8);
+    font-family: 'Arial', sans-serif; /* Changer la police */
+    font-size: 18px; /* Ajuster la taille de la police */
+    font-weight: bold; /* Mettre le texte en gras */
     transform: translateY(0);
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
 
 .profile-card-2:hover img {
     transform: scale(1.15);
