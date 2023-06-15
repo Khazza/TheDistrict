@@ -227,17 +227,14 @@
     display: none;
 }
 
-/* En mode responsive, cacher la barre de recherche mais conserver l'image de fond */
+/* Styles en mode responsive */
 @media screen and (max-width: 768px) {
     .search-input {
         display: none;
     }
 
-    /* Cacher les catégories en mode responsive */
-    .category-row {
-        display: none;
-    }
-
+    /* Cacher les catégories et le titre des catégories en mode responsive */
+    .category-row,
     .section-title {
         display: none;
     }
@@ -247,17 +244,10 @@
     .dish-row .col-md-4:nth-child(5),
     .dish-row .col-md-4:nth-child(6) {
         display: block;
-    }    
-    
-    .section-title2 {
-        font-size: 1.4em;
-        margin-top: 30px;
     }
-}
-
-/* Responsive title */
-@media screen and (max-width: 768px) {
-    .section-title {
+    
+    /* Styles pour le titre des plats en mode responsive */
+    .section-title2 {
         font-size: 1.4em;
         margin-top: 30px;
     }
