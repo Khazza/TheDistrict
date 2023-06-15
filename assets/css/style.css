@@ -18,12 +18,8 @@
 
 /* Navbar */
 .navbar {
-    background-color: #970747 !important;
-    height: 80px;
-}
-
-.nav-link, .login-button {
-    transition: all 0.3s ease; /* Ajout de transitions */
+    background-color: #970747 !important; /* Couleur de fond de la navbar */
+    height: 80px; /* Hauteur fixe pour la navbar */
 }
 
 .navbar-brand img {

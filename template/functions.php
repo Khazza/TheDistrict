@@ -2,13 +2,8 @@
 function render_header() {
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand">
-            <img src="../src/img/the_district_brand/logo.png" alt="Logo" height="60">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="navbar-brand"><img src="../src/img/the_district_brand/logo.png" alt="Logo" height="60"></a>
+        <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Accueil</a>
@@ -23,7 +18,7 @@ function render_header() {
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
             </ul>
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="login.php" class="nav-link login-button">S'identifier</a>
                 </li>
@@ -32,8 +27,6 @@ function render_header() {
     </nav>
     <?php
 }
-
-
 
 
 function render_footer() {
