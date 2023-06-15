@@ -3,6 +3,8 @@
 .search-bar {
     background-image: url('../../src/img/bg2.jpeg');
     background-size: cover; /* L'image couvre toute la largeur */
+    background-position: center;
+    background-repeat: no-repeat;
     height: 400px;
     margin-top: 20px;     
 }
