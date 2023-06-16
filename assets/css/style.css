@@ -1,4 +1,8 @@
 /* #970747 */
+body{
+  background-color: #e9e9e9;
+}
+
 /* SearchBar */
 .search-bar {
   background-image: url("../../src/img/fosyyyy.jpg");
@@ -72,19 +76,30 @@
 
 /* Footer */
 .footer {
-  background-color: #f8f9fa;
+  background-color: rgba(
+    151,
+    7,
+    71,
+    0.9
+  ) !important;
   position: relative;
+  height: 50px;
   width: 50%; /* Réduire la largeur du background du footer */
   max-width: 1200px; /* Définir une largeur maximale pour éviter qu'il ne devienne trop grand sur les grands écrans */
   margin: 0 auto; /* Centrer le footer */
   padding: 20px; /* Ajouter du padding autour du contenu du footer */
   bottom: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de décollage */
+
 }
 
 /* Icones de médias sociaux */
 .footer a {
   margin: 0 15px; /* Augmenter l'espace entre les icônes */
   color: inherit; /* Utiliser la couleur héritée (peut être modifiée si nécessaire) */
+}
+.fa-facebook, .fa-twitter, .fa-instagram{
+  color: #ffffff;
 }
 
 /* Title Cards */

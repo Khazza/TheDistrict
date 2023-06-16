@@ -16,7 +16,7 @@ function render_header()
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome CSS-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -55,18 +55,17 @@ function render_header()
 function render_footer()
 {
     ?>
-        <footer class="footer text-center py-3">
-            <div class="container">
-                <a href="#" class="mr-3"><i class="fab fa-facebook-f" style="font-size: 24px; color: #3b5998;"></i></a>
-                <a href="#" class="mr-3"><i class="fab fa-twitter" style="font-size: 24px; color: #00acee;"></i></a>
-                <a href="#"><i class="fab fa-instagram" style="font-size: 24px; color: #C13584;"></i></a>
+        <footer class="footer text-center py-3 mt-2 mb-3">
+            <div class="container d-flex align-items-center justify-content-center h-100">
+                <a href="#" class="mr-3"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                <a href="#" class="mr-3"><i class="fab fa-twitter fa-2xl"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
             </div>
         </footer>
 
 
         <!-- Bootstrap JS, jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
