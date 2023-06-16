@@ -6,8 +6,6 @@ include './template/functions.php';
 <!-- Appel de la fonction pour afficher le header -->
 <?php render_header(); ?>
 
-
-
 Politique de confidentialité
 
 Chez The District, notre mission est d’aider les restaurateurs à augmenter leur chiffre d’affaires, en proposant leurs plats à la vente à emporter, 
