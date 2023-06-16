@@ -18,11 +18,11 @@ Siège social :
 XXX avenue d'XXXXXX,XXXXX XXXXXXXXX
 
 Tél : -- -- -- -- --
-Mail : contact@thedistrict.com
+Mail : reply@thedistrict.com
 
 Directeur de publication
 Prenom NOM
-Mail : contact@thedistrict.com
+Mail : reply@thedistrict.com
 
 Hébergeur du site
 OVH
