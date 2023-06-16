@@ -57,9 +57,9 @@ function render_footer()
     ?>
         <footer class="footer text-center py-3 mt-2 mb-3">
             <div class="container d-flex align-items-center justify-content-center h-100">
-                <a href="#" class="mr-3"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                <a href="#" class="mr-3"><i class="fab fa-facebook fa-2xl"></i></a>
                 <a href="#" class="mr-3"><i class="fab fa-twitter fa-2xl"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2xl"></i></a>
             </div>
         </footer>
 
