@@ -58,8 +58,8 @@ function render_footer()
         <footer class="footer text-center py-3 mt-2 mb-3">
             <div class="container d-flex align-items-center justify-content-between h-100">
                 <div>
-                    <a href="#" class="mr-auto footer-link">Mentions légales</a> <!-- Lien vers Mentions légales -->
-                    <a href="#" class="mr-auto footer-link">Politique de confidentialité</a> <!-- Lien vers Politique de confidentialité -->
+                    <a href="../legal-notice.php" class="mr-auto footer-link">Mentions légales</a> <!-- Lien vers Mentions légales -->
+                    <a href="../privacy-policy.php" class="mr-auto footer-link">Politique de confidentialité</a> <!-- Lien vers Politique de confidentialité -->
                 </div>
                 <div>
                     <a href="#" class="ms-3"><i class="fab fa-facebook fa-2xl"></i></a>
