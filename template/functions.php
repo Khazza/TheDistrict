@@ -57,12 +57,13 @@ function render_footer()
     ?>
         <footer class="footer text-center py-3 mt-2 mb-3">
             <div class="container d-flex align-items-center justify-content-center h-100">
-                <a href="#" class="mr-3"><i class="fab fa-facebook fa-2xl"></i></a>
+                <a href="#" class="mr-auto nav-link">Mentions légales</a> <!-- Lien vers Mentions légales -->
+                <a href="#" class="mr-3"><i class="fa-brands fa-facebook fa-2xl"></i></a>
                 <a href="#" class="mr-3"><i class="fab fa-twitter fa-2xl"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-2xl"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a href="#" class="ml-auto nav-link">Politique de confidentialité</a> <!-- Lien vers Politique de confidentialité -->
             </div>
         </footer>
-
 
         <!-- Bootstrap JS, jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>

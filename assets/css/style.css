@@ -104,6 +104,15 @@ body{
 .fa-facebook, .fa-twitter, .fa-instagram{
   color: #ffffff;
 }
+.footer-link {
+    color: #ffffff; /* Couleur du texte des liens */
+    margin: 0 15px; /* Espace autour des liens */
+    text-decoration: none; /* Enlever le soulignement */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
 
 /* Title Cards */
 .section-title,
