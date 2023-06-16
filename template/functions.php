@@ -36,11 +36,12 @@ function render_header()
                     <li class="nav-item">
                         <a class="nav-link <?php echo $current_page === 'plats.php' ? 'active' : ''; ?>" href="plats.php">Plats</a>
                     </li>
+
+                </ul>
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link <?php echo $current_page === 'contact.php' ? 'active' : ''; ?>" href="contact.php">Contact</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a href="login.php" class="nav-link login-button">S'identifier</a>
                     </li>

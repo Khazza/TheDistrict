@@ -7,6 +7,8 @@
   background-repeat: no-repeat;
   height: 350px;
   margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de décollage */
+
 }
 .search-input {
   width: 50%; /* Définir la largeur de la barre de recherche */
@@ -21,51 +23,52 @@
 
 /* Navbar */
 .navbar {
-    background-color: rgba(151, 7, 71, 0.9) !important; /* Couleur de fond de la navbar avec transparence */
-    height: 80px; /* Hauteur fixe pour la navbar */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet de décollage */
-}
-
-.navbar-brand {
-    flex-grow: 1; /* Permet au logo de prendre tout l'espace disponible à gauche */
+  background-color: rgba(
+    151,
+    7,
+    71,
+    0.9
+  ) !important; /* Couleur de fond de la navbar avec transparence */
+  height: 80px; /* Hauteur fixe pour la navbar */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de décollage */
 }
 
 .navbar-brand img {
-    object-fit: contain; /* Ajuster l'image sans déformation */
+  object-fit: contain; /* Ajuster l'image sans déformation */
 }
 
 .navbar-nav.mr-auto {
-    display: flex; /* Utilisation de Flexbox pour centrer les éléments */
-    justify-content: center; /* Centrer les éléments horizontalement */
-    flex-grow: 2; /* Permet aux éléments du milieu de prendre plus d'espace */
+  flex-grow: 2; /* Permet aux éléments du milieu de prendre plus d'espace */
 }
 
 .nav-link {
-    color: #ffffff !important; /* Couleur de texte blanche pour une meilleure lisibilité */
-    font-size: 18px; /* Taille de police plus grande */
-    margin-right: 30px; /* Espace entre les liens */
+  color: #ffffff !important; /* Couleur de texte blanche pour une meilleure lisibilité */
+  font-size: 18px; /* Taille de police plus grande */
+  margin-right: 30px; /* Espace entre les liens */
 }
 
 .nav-link:hover {
-    color: #f8f9fa !important; /* Changement de couleur au survol */
+  color: #3a3f44 !important; /* Changement de couleur au survol */
+  background-color: #ffffff !important; /* Changement de couleur de fond au survol */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Ombre portée pour un effet de décollage */
 }
 
 .nav-link.active {
-    border-bottom: 2px solid #ffffff; /* Souligne le lien actif avec une bordure */
+  border-bottom: 2px solid #ffffff; /* Souligne le lien actif avec une bordure */
 }
 
 .login-button {
-    color: #ffffff !important; /* Couleur du texte du bouton */
-    background-color: #3a3f44 !important; /* Couleur de fond du bouton */
-    border: none; /* Pas de bordure */
-    padding: 10px 20px; /* Padding intérieur */
-    border-radius: 5px; /* Coins arrondis */
+  color: #ffffff !important; /* Couleur du texte du bouton */
+  background-color: #3a3f44 !important; /* Couleur de fond du bouton */
+  border: none; /* Pas de bordure */
+  padding: 10px 20px; /* Padding intérieur */
+  border-radius: 10px; /* Coins arrondis */
 }
 
 .login-button:hover {
-    background-color: #30353a !important; /* Changement de couleur de fond au survol */
+  color: #30353a!important; /* Changement de couleur au survol */
+  background-color: #ffffff !important; /* Changement de couleur de fond au survol */
 }
-
 
 /* Footer */
 .footer {
@@ -85,24 +88,26 @@
 }
 
 /* Title Cards */
-.section-title, .section-title2 {
-    text-align: center; /* Centrer le texte */
-    padding: 20px; /* Espacement autour du texte */
-    margin: 0 auto 30px; /* Centrer horizontalement et ajouter une marge en dessous */
-    max-width: 80%; /* Limiter la largeur du titre */
-    font-weight: bold; /* Gras */
-    color: #333; /* Couleur du texte */
-    letter-spacing: 1px; /* Espacement des lettres */
-    border-bottom: 3px solid #f8c301; /* Ligne sous le titre */
+.section-title,
+.section-title2 {
+  text-align: center; /* Centrer le texte */
+  padding: 20px; /* Espacement autour du texte */
+  margin: 0 auto 30px; /* Centrer horizontalement et ajouter une marge en dessous */
+  max-width: 80%; /* Limiter la largeur du titre */
+  font-weight: bold; /* Gras */
+  color: #333; /* Couleur du texte */
+  letter-spacing: 1px; /* Espacement des lettres */
+  border-bottom: 3px solid #f8c301; /* Ligne sous le titre */
 }
 
-.section-title::before, .section-title2::before {
-    content: ''; /* contenu vide pour le pseudo-élément */
-    display: block;
-    margin: 0 auto 10px; /* Centrer horizontalement et ajouter une marge en dessous */
-    width: 50px; /* Largeur de la ligne */
-    height: 3px; /* Hauteur de la ligne */
-    background-color: #f8c301; /* Couleur de la ligne */
+.section-title::before,
+.section-title2::before {
+  content: ""; /* contenu vide pour le pseudo-élément */
+  display: block;
+  margin: 0 auto 10px; /* Centrer horizontalement et ajouter une marge en dessous */
+  width: 50px; /* Largeur de la ligne */
+  height: 3px; /* Hauteur de la ligne */
+  background-color: #f8c301; /* Couleur de la ligne */
 }
 
 /* Profile Cards */
@@ -229,7 +234,6 @@
   ); /* Couleur de fond lors du survol */
 }
 
-
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
@@ -238,44 +242,44 @@
 .dish-row .col-md-4:nth-child(4),
 .dish-row .col-md-4:nth-child(5),
 .dish-row .col-md-4:nth-child(6) {
-    display: none;
+  display: none;
 }
 
 /* Styles en mode responsive */
 @media screen and (max-width: 768px) {
-    .search-input {
-        display: none;
-    }
+  .search-input {
+    display: none;
+  }
 
-    /* Cacher les catégories et le titre des catégories en mode responsive */
-    .category-row,
-    .section-title {
-        display: none;
-    }
+  /* Cacher les catégories et le titre des catégories en mode responsive */
+  .category-row,
+  .section-title {
+    display: none;
+  }
 
-    /* Afficher les plats 4, 5 et 6 en affichage responsive */
-    .dish-row .col-md-4:nth-child(4),
-    .dish-row .col-md-4:nth-child(5),
-    .dish-row .col-md-4:nth-child(6) {
-        display: block;
-    }
-    
-    /* Styles pour le titre des plats en mode responsive */
-    .section-title2 {
-        font-size: 1.4em;
-        margin-top: 30px;
-    }
+  /* Afficher les plats 4, 5 et 6 en affichage responsive */
+  .dish-row .col-md-4:nth-child(4),
+  .dish-row .col-md-4:nth-child(5),
+  .dish-row .col-md-4:nth-child(6) {
+    display: block;
+  }
+
+  /* Styles pour le titre des plats en mode responsive */
+  .section-title2 {
+    font-size: 1.4em;
+    margin-top: 30px;
+  }
 }
 @media screen and (max-width: 768px) {
-    .section-title2 {
-        font-size: 1.4em;
-        margin-top: 30px;
-    }
+  .section-title2 {
+    font-size: 1.4em;
+    margin-top: 30px;
+  }
 }
 
 /* Nav Responsive */
 @media screen and (max-width: 768px) {
-    .nav-link {
-        margin-right: 15px; /* Réduire l'espacement entre les liens sur les petits écrans */
-    }
+  .nav-link {
+    margin-right: 15px; /* Réduire l'espacement entre les liens sur les petits écrans */
+  }
 }
