@@ -93,25 +93,35 @@ body{
   padding: 20px; /* Ajouter du padding autour du contenu du footer */
   bottom: 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de décollage */
-
 }
+
 
 /* Icones de médias sociaux */
-.footer a {
-  margin: 0 15px; /* Augmenter l'espace entre les icônes */
-  color: inherit; /* Utiliser la couleur héritée (peut être modifiée si nécessaire) */
-}
+
 .fa-facebook, .fa-twitter, .fa-instagram{
   color: #ffffff;
 }
-.footer-link {
-    color: #ffffff; /* Couleur du texte des liens */
-    margin: 0 15px; /* Espace autour des liens */
-    text-decoration: none; /* Enlever le soulignement */
+
+.footer-link{
+  color: #ffffff !important; /* Couleur de texte blanche pour une meilleure lisibilité */
+  font-size: 18px; /* Taille de police plus grande */
+  border-radius: 10px; /* Coins arrondis */  
+  text-decoration: none; /* Enlever le soulignement */
+  padding: 8px;
+  margin: 2px;
 }
 
-.footer-link:hover {
-    text-decoration: underline; /* Soulignement au survol */
+.footer-link.active{  
+  border-bottom: 2px solid #ffffff; /* Souligne le lien actif avec une bordure */
+  color: #ffffff; /* Couleur du texte des liens */
+  margin: 0 15px; /* Espace autour des liens */
+  text-decoration: none; /* Enlever le soulignement */
+}
+.footer-link:hover{
+color: #3a3f44 !important; /* Changement de couleur au survol */
+background-color: #ffffff !important; /* Changement de couleur de fond au survol */
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Ombre portée pour un effet de décollage */
+border-radius: 5px; /* Coins arrondis */
 }
 
 /* Title Cards */
