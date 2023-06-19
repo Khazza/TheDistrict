@@ -271,6 +271,88 @@ border-radius: 5px; /* Coins arrondis */
   ); /* Couleur de fond lors du survol */
 }
 
+/* Privacy css */
+    .privacy-policy {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: justify;
+        line-height: 1.6;
+        font-family: Arial, sans-serif;
+    }
+
+    .privacy-policy h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2em;
+        color: #333;
+    }
+
+    .privacy-policy h2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 1.6em;
+        color: #444;
+    }
+
+    .privacy-policy p, .privacy-policy ul {
+        margin-bottom: 20px;
+    }
+
+    .privacy-policy ul {
+        margin-left: 40px;
+    }
+
+    .privacy-policy a {
+        color: #337ab7;
+        text-decoration: none;
+    }
+
+    .privacy-policy a:hover {
+        text-decoration: underline;
+    }
+
+    /* Legale css */
+    .legal-notice {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: justify;
+      line-height: 1.6;
+      font-family: Arial, sans-serif;
+  }
+
+  .legal-notice h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2em;
+      color: #333;
+  }
+
+  .legal-notice h2 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 1.6em;
+      color: #444;
+  }
+
+  .legal-notice p, .legal-notice address {
+      margin-bottom: 20px;
+  }
+
+  .legal-notice address {
+      margin-left: 40px;
+  }
+
+  .legal-notice a {
+      color: #337ab7;
+      text-decoration: none;
+  }
+
+  .legal-notice a:hover {
+      text-decoration: underline;
+  }
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
