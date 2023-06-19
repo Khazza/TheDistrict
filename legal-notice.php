@@ -12,19 +12,19 @@ include './template/functions.php';
     
     <h2>Société éditrice du site</h2>
     <p><strong>The District</strong></p>
-    <p>SAS au capital de 00.000 euros</p>
-    <p>N° TVA : FR XX XXXXXXXXX</p>
+    <p>SAS au capital de 250.000 euros</p>
+    <p>N° TVA : FR 01 123456789</p>
     <p>Code NAF : 4791A</p>
     <p>Siège social :</p>
     <address>
-        XXX avenue d'XXXXXX, <br>
-        XXXXX XXXXXXXXX
+        123 rue de la Gastronomie, <br>
+        75001 Paris
     </address>
-    <p>Tél : -- -- -- -- --</p>
+    <p>Tél : 01 23 45 67 89</p>
     <p>Mail : <a href="mailto:reply@thedistrict.com">reply@thedistrict.com</a></p>
-
+    
     <h2>Directeur de publication</h2>
-    <p>Prenom NOM</p>
+    <p>Justin Case</p>
     <p>Mail : <a href="mailto:reply@thedistrict.com">reply@thedistrict.com</a></p>
 
     <h2>Hébergeur du site</h2>
