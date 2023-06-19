@@ -7,7 +7,7 @@ include './template/functions.php';
 <!-- Appel de la fonction pour afficher le header -->
 <?php render_header(); ?>
 
-<div class="legal-notice">
+<div class="legal-and-privacy">
     <h1>Mentions légales</h1>
     
     <h2>Société éditrice du site</h2>

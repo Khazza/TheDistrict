@@ -7,7 +7,7 @@ include './template/functions.php';
 <!-- Appel de la fonction pour afficher le header -->
 <?php render_header(); ?>
 
-<div class="privacy-policy">
+<div class="legal-and-privacy">
 
     <h1>Politique de confidentialité</h1>
 
