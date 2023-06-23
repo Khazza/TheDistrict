@@ -355,23 +355,6 @@ border-radius: 5px; /* Coins arrondis */
   background-color: #f8c301;
 }
 
-/* CSS cards plats */
-.plat-card-image-container {
-  height: 200px;
-  overflow: hidden;
-}
-
-.plat-card-image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.plat-card-content {
-  height: 200px;
-  overflow-y: auto;
-}
-
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
