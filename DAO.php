@@ -99,6 +99,34 @@ function get_total_categories() {
     return $row['total'];
 }
 
+function get_plats_by_category($category_id = null) {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    if ($category_id) {
+        $query = "SELECT plat.*, categorie.libelle AS category_name
+                  FROM plat
+                  JOIN categorie ON plat.id_categorie = categorie.id
+                  WHERE plat.id_categorie = :category_id
+                  ORDER BY categorie.libelle";
+    } else {
+        $query = "SELECT plat.*, categorie.libelle AS category_name
+                  FROM plat
+                  JOIN categorie ON plat.id_categorie = categorie.id
+                  ORDER BY categorie.libelle";
+    }
+
+    $stmt = $db->prepare($query);
+
+    if ($category_id) {
+        $stmt->bindParam(':category_id', $category_id, PDO::PARAM_INT);
+    }
+
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
 // Cette fonction génère les liens de pagination en fonction de la page actuelle et du nombre total de catégories.
 function generate_pagination_links($current_page, $total_categories, $items_per_page) {
     $total_pages = ceil($total_categories / $items_per_page);
