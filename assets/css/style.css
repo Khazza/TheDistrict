@@ -374,3 +374,9 @@ border-radius: 5px; /* Coins arrondis */
     margin-right: 15px; /* Réduire l'espacement entre les liens sur les petits écrans */
   }
 }
+
+@media screen and (max-width: 768px) { /* Vous pouvez ajuster la valeur max-width selon vos besoins */
+  .footer {
+    display: none;
+  }
+}
