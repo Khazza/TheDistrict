@@ -375,7 +375,7 @@ border-radius: 5px; /* Coins arrondis */
   }
 }
 
-@media screen and (max-width: 768px) { /* Vous pouvez ajuster la valeur max-width selon vos besoins */
+@media screen and (max-width: 1225px) {
   .footer {
     display: none;
   }
