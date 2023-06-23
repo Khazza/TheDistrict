@@ -65,16 +65,16 @@ body{
 }
 
 .login-button {
-  color: #ffffff !important; /* Couleur du texte du bouton */
-  background-color: #3a3f44 !important; /* Couleur de fond du bouton */
+  color: #ffffff; /* Couleur du texte du bouton */
+  background-color: #3a3f44; /* Couleur de fond du bouton */
   border: none; /* Pas de bordure */
   padding: 10px 20px; /* Padding intérieur */
   border-radius: 10px; /* Coins arrondis */
 }
 
 .login-button:hover {
-  color: #30353a!important; /* Changement de couleur au survol */
-  background-color: #ffffff !important; /* Changement de couleur de fond au survol */
+  color: #30353a; /* Changement de couleur au survol */
+  background-color: #ffffff ; /* Changement de couleur de fond au survol */
 }
 
 /* Footer */
@@ -352,7 +352,7 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 .pagination-btn:hover {
-  background-color: #006400;
+  background-color: #f8c301;
 }
 
 
