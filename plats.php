@@ -36,7 +36,7 @@ include './template/functions.php';
         echo "<div class='card mb-3'>
                 <div class='row g-0'>
                     <div class='col-md-4'>
-                        <img src='chemin_vers_images/{$plat['image']}' alt='{$plat['libelle']}' class='img-fluid'>
+                        <img src='src/img/food/{$plat['image']}' alt='{$plat['libelle']}' class='img-fluid'>
                     </div>
                     <div class='col-md-8'>
                         <div class='card-body'>
