@@ -342,12 +342,12 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 .pagination-prev {
-  background-color: #ff7f50; /* Couleur d'arrière-plan pour le bouton Précédent */
+  background-color: #970747; /* Couleur d'arrière-plan pour le bouton Précédent */
   color: white; /* Couleur du texte pour le bouton Précédent */
 }
 
 .pagination-next {
-  background-color: #32cd32; /* Couleur d'arrière-plan pour le bouton Suivant */
+  background-color: #970747; /* Couleur d'arrière-plan pour le bouton Suivant */
   color: white; /* Couleur du texte pour le bouton Suivant */
 }
 
