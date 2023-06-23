@@ -61,7 +61,7 @@ function get_most_sold_dishes()
 ?>
 
 <?php 
-    function get_categories_paginated($limit, $offset) {
+function get_categories_paginated($limit, $offset) {
     $database = new Database();
     $db = $database->getConnection();
 
@@ -69,12 +69,16 @@ function get_most_sold_dishes()
     $query = "SELECT * FROM categorie LIMIT :limit OFFSET :offset";
     $stmt = $db->prepare($query);
     
-    // Convertissez les limites et les décalages en entiers
+    // Convertir les limites et les décalages en entiers
     $limit = (int) $limit;
     $offset = (int) $offset;
 
-    // Exécutez la requête avec les valeurs des paramètres dans un tableau
-    $stmt->execute([':limit' => $limit, ':offset' => $offset]);
+    // Lier les valeurs en tant qu'entiers
+    $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+
+    // Exécutez la requête
+    $stmt->execute();
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
