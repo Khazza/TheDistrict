@@ -60,34 +60,38 @@ function get_most_sold_dishes()
 }
 ?>
 
-<?php
-function get_categories_paginated($items_per_page, $offset) {
+<?php 
+    function get_categories_paginated($limit, $offset) {
     $database = new Database();
     $db = $database->getConnection();
 
-    // Écrire la requête pour récupérer les catégories avec pagination
-    $query = "SELECT * FROM categorie LIMIT ? OFFSET ?";
-    
-    // Préparer la requête
+    // Utilisez des placeholders nommés dans la requête SQL
+    $query = "SELECT * FROM categorie LIMIT :limit OFFSET :offset";
     $stmt = $db->prepare($query);
     
-    // Exécuter la requête avec les paramètres de pagination
-    $stmt->execute([$items_per_page, $offset]);
+    // Convertissez les limites et les décalages en entiers
+    $limit = (int) $limit;
+    $offset = (int) $offset;
 
-    // Récupérer les résultats
-    $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Exécutez la requête avec les valeurs des paramètres dans un tableau
+    $stmt->execute([':limit' => $limit, ':offset' => $offset]);
 
-    return $categories;
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 
 <?php
 // Cette fonction renvoie le nombre total de catégories dans la base de données.
 function get_total_categories() {
-    global $db;
+    $database = new Database();
+    $db = $database->getConnection();
+    
     $query = "SELECT COUNT(*) as total FROM categorie";
-    $result = $db->query($query);
-    $row = $result->fetch();
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+
+    $row = $stmt->fetch();
+
     return $row['total'];
 }
 
