@@ -124,6 +124,13 @@ box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Ombre portée pour un effet de d
 border-radius: 5px; /* Coins arrondis */
 }
 
+/* Ajouter un effet de survol sur les icônes des réseaux sociaux */
+.footer a:hover i {
+  color: #3a3f44;
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
 /* Title Cards */
 .section-title,
 .section-title2 {
