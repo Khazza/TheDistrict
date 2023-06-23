@@ -33,23 +33,24 @@ include './template/functions.php';
         $availability = ($plat['active'] == 'Yes') ? 'Disponible' : 'Non disponible';
         
         // Début de la carte
-        echo "<div class='card mb-3'>
+        echo "<div class='plat-card mb-3'>
                 <div class='row g-0'>
-                    <div class='col-md-4'>
-                        <img src='chemin_vers_images/{$plat['image']}' alt='{$plat['libelle']}' class='img-fluid'>
+                    <div class='col-md-4 plat-card-image-container'>
+                        <img src='chemin_vers_images/{$plat['image']}' alt='{$plat['libelle']}' class='plat-card-image'>
                     </div>
                     <div class='col-md-8'>
-                        <div class='card-body'>
-                            <h5 class='card-title'>{$plat['libelle']}</h5>
-                            <p class='card-text'>{$plat['description']}</p>
-                            <p class='card-text'><small class='text-muted'>Prix: {$plat['prix']} €</small></p>
-                            <p class='card-text'><small class='text-muted'>Catégorie: {$plat['category_name']}</small></p>
-                            <p class='card-text'><small class='text-muted'>Disponibilité: {$availability}</small></p>
+                        <div class='plat-card-body plat-card-content'>
+                            <h5 class='plat-card-title'>{$plat['libelle']}</h5>
+                            <p class='plat-card-text'>{$plat['description']}</p>
+                            <p class='plat-card-text'><small class='text-muted'>Prix: {$plat['prix']} €</small></p>
+                            <p class='plat-card-text'><small class='text-muted'>Catégorie: {$plat['category_name']}</small></p>
+                            <p class='plat-card-text'><small class='text-muted'>Disponibilité: {$availability}</small></p>
                         </div>
                     </div>
                 </div>
             </div>"; // Fin de la carte
-    }    
+    }
+    
 
     ?>
 </div>
