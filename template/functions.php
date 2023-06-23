@@ -78,5 +78,5 @@ function render_footer()
     </html>
 <?php
 }
-
 ?>
+
