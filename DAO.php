@@ -111,3 +111,11 @@ function generate_pagination_links($current_page, $total_categories, $items_per_
     return $links;
 }
 ?>
+
+( ! ) Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''6' OFFSET '0'' at line 1 in /home/mahe/Bureau/TheDistrict/DAO.php on line 77
+( ! ) PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''6' OFFSET '0'' at line 1 in /home/mahe/Bureau/TheDistrict/DAO.php on line 77
+Call Stack
+#	Time	Memory	Function	Location
+1	0.0000	356424	{main}( )	.../categories.php:0
+2	0.0000	356480	get_categories_paginated( $limit = 6, $offset = 0 )	.../categories.php:28
+3	0.0004	399848	execute( $params = [':limit' => 6, ':offset' => 0] )	.../DAO.php:77
