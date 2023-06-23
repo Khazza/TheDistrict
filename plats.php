@@ -12,8 +12,12 @@ include './template/functions.php';
     </div>
 </div>
 
-<!-- Contenu de la page -->
-<div class="container">
+<!-- main content -->
+<div class="container main-content-container">
+    <!-- Plats -->
+    <!-- Titre pour les plats -->
+        <h2 class="section-title">Nos Plats</h2>
+
     <?php
     // Récupérez l'ID de la catégorie de la requête GET
     $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : null;
@@ -46,7 +50,7 @@ include './template/functions.php';
                 <p class='card-text'><small class='text-muted'>Disponibilité: {$availability}</small></p>
 
                 <!-- Bouton pour commander -->
-                <button class='btn btn-primary' onclick=\"location.href='order.php?id={$plat['id']}'\">Commander</button>
+                <button class='btn btn-primary' onclick=\"location.href='commande.php?id={$plat['id']}'\">Commander</button>
             </div>
         </div>
     </div>
