@@ -59,3 +59,51 @@ function get_most_sold_dishes()
     return $dishes;
 }
 ?>
+
+<?php
+function get_categories_paginated($items_per_page, $offset) {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    // Écrire la requête pour récupérer les catégories avec pagination
+    $query = "SELECT * FROM categories LIMIT ? OFFSET ?";
+    
+    // Préparer la requête
+    $stmt = $db->prepare($query);
+    
+    // Exécuter la requête avec les paramètres de pagination
+    $stmt->execute([$items_per_page, $offset]);
+
+    // Récupérer les résultats
+    $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $categories;
+}
+?>
+
+<?php
+// Cette fonction renvoie le nombre total de catégories dans la base de données.
+function get_total_categories() {
+    global $db;
+    $query = "SELECT COUNT(*) as total FROM categories";
+    $result = $db->query($query);
+    $row = $result->fetch();
+    return $row['total'];
+}
+
+// Cette fonction génère les liens de pagination en fonction de la page actuelle et du nombre total de catégories.
+function generate_pagination_links($current_page, $total_categories, $items_per_page) {
+    $total_pages = ceil($total_categories / $items_per_page);
+    
+    $links = '';
+    if ($current_page > 1) {
+        $links .= '<a href="?page=' . ($current_page - 1) . '" class="btn btn-primary me-2">Précédent</a>';
+    }
+    
+    if ($current_page < $total_pages) {
+        $links .= '<a href="?page=' . ($current_page + 1) . '" class="btn btn-primary">Suivant</a>';
+    }
+    
+    return $links;
+}
+?>
