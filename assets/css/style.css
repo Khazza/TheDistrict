@@ -332,6 +332,30 @@ border-radius: 5px; /* Coins arrondis */
   margin-left: 20px;
 }
 
+.pagination-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-prev {
+  background-color: #ff7f50; /* Couleur d'arrière-plan pour le bouton Précédent */
+  color: white; /* Couleur du texte pour le bouton Précédent */
+}
+
+.pagination-next {
+  background-color: #32cd32; /* Couleur d'arrière-plan pour le bouton Suivant */
+  color: white; /* Couleur du texte pour le bouton Suivant */
+}
+
+.pagination-btn:hover {
+  background-color: #006400;
+}
+
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */

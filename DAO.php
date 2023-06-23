@@ -99,19 +99,4 @@ function get_total_categories() {
     return $row['total'];
 }
 
-// Cette fonction génère les liens de pagination en fonction de la page actuelle et du nombre total de catégories.
-function generate_pagination_links($current_page, $total_categories, $items_per_page) {
-    $total_pages = ceil($total_categories / $items_per_page);
-    
-    $links = '';
-    if ($current_page > 1) {
-        $links .= '<a href="?page=' . ($current_page - 1) . '" class="btn btn-primary me-2">Précédent</a>';
-    }
-    
-    if ($current_page < $total_pages) {
-        $links .= '<a href="?page=' . ($current_page + 1) . '" class="btn btn-primary">Suivant</a>';
-    }
-    
-    return $links;
-}
-?>
+
