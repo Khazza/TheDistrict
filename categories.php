@@ -9,7 +9,6 @@ include './template/functions.php';
 <!-- Search Bar Background Image -->
 <div class="search-bar">
     <div class="container text-center">
-        <input type="text" class="search-input" placeholder="Recherche...">
     </div>
 </div>
 
