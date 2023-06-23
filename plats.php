@@ -35,3 +35,7 @@ include './template/functions.php';
 
 <!-- Appel de la fonction pour afficher le footer -->
 <?php render_footer(); ?>
+( ! ) Warning: Undefined array key "nom" in /home/mahe/Bureau/TheDistrict/plats.php on line 31
+Call Stack
+#	Time	Memory	Function	Location
+1	0.0000	357760	{main}( )	.../plats.php:0
