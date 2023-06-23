@@ -25,11 +25,31 @@ include './template/functions.php';
     $current_category = null;
     foreach ($plats as $plat) {
         if ($current_category != $plat['category_name']) {
-            echo "<h2>{$plat['category_name']}</h2>";
+            echo "<h2 class='mt-4'>{$plat['category_name']}</h2>";
             $current_category = $plat['category_name'];
         }
-        echo "<div>{$plat['libelle']} - {$plat['description']}</div>"; // Utiliser 'libelle' au lieu de 'nom'
-    }
+        
+        // Déterminer le statut de disponibilité
+        $availability = ($plat['active'] == 'Yes') ? 'Disponible' : 'Non disponible';
+        
+        // Début de la carte
+        echo "<div class='card mb-3'>
+                <div class='row g-0'>
+                    <div class='col-md-4'>
+                        <img src='chemin_vers_images/{$plat['image']}' alt='{$plat['libelle']}' class='img-fluid'>
+                    </div>
+                    <div class='col-md-8'>
+                        <div class='card-body'>
+                            <h5 class='card-title'>{$plat['libelle']}</h5>
+                            <p class='card-text'>{$plat['description']}</p>
+                            <p class='card-text'><small class='text-muted'>Prix: {$plat['prix']} €</small></p>
+                            <p class='card-text'><small class='text-muted'>Catégorie: {$plat['category_name']}</small></p>
+                            <p class='card-text'><small class='text-muted'>Disponibilité: {$availability}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>"; // Fin de la carte
+    }    
 
     ?>
 </div>
