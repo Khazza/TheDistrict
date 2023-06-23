@@ -126,7 +126,7 @@ border-radius: 5px; /* Coins arrondis */
 
 /* Ajouter un effet de survol sur les icônes des réseaux sociaux */
 .footer a:hover i {
-  color: #3a3f44;
+  color: #f8c301;
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
 }
