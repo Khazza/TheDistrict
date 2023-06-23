@@ -107,3 +107,6 @@ function generate_pagination_links($current_page, $total_categories, $items_per_
     return $links;
 }
 ?>
+
+( ! ) Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''0' , '6'' at line 1 in /home/mahe/Bureau/TheDistrict/DAO.php on line 75
+( ! ) PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''0' , '6'' at line 1 in /home/mahe/Bureau/TheDistrict/DAO.php on line 75
