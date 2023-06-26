@@ -440,7 +440,7 @@ border-radius: 5px; /* Coins arrondis */
   text-overflow: ellipsis; /* Afficher des points de suspension lorsque le texte est tronqué */
   display: -webkit-box; /* Nécessaire pour utiliser -webkit-line-clamp */
   -webkit-box-orient: vertical; /* Nécessaire pour utiliser -webkit-line-clamp */
-  -webkit-line-clamp: 3; /* Limiter à 3 lignes de texte, ajuster selon vos besoins */
+  -webkit-line-clamp: 2; 
 }
 
 /* Styliser les petits textes des cartes (prix, disponibilité) */
