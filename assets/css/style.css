@@ -356,17 +356,62 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 /* CSS Plats cards */
-.plat-card .img-container {
-  width: 200px; 
-  height: 120px;
-  overflow: hidden;
+/* Styliser le conteneur principal des plats */
+.main-content-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.plat-card .img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Styliser le titre de la section des plats */
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
 }
+
+/* Styliser les cartes des plats */
+.plat-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styliser les images des plats */
+.plat-card .img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styliser le corps de la carte */
+.plat-card .card-body {
+  padding: 20px;
+}
+
+/* Styliser le titre du plat dans la carte */
+.plat-card .card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Styliser le texte de la carte */
+.plat-card .card-text {
+  margin-bottom: 10px;
+}
+
+/* Styliser le bouton de commande */
+.plat-card .btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: #ffffff;
+}
+
+.plat-card .btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
