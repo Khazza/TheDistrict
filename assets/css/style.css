@@ -638,7 +638,7 @@ border-radius: 5px; /* Coins arrondis */
   }
   /* CSS pour rendre le bouton "Menu" plus visible */
 .navbar-toggler {
-  background-color: #333; /* Couleur de fond du bouton */
+  background-color: #3a3f44; /* Couleur de fond du bouton */
   color: #fff; /* Couleur de l'icône du bouton */
   font-size: 1.2em; /* Taille de l'icône du bouton */
   border: none; /* Retirer la bordure du bouton */

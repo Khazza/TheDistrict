@@ -23,7 +23,7 @@ function render_header()
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
             <a class="navbar-brand"><img src="../src/img/the_district_brand/logo_transp.png" alt="Logo" height="60"></a>
             
             <!-- Bouton de basculement -->
