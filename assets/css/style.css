@@ -358,24 +358,29 @@ border-radius: 5px; /* Coins arrondis */
 /* CSS Plats cards */
 /* Styliser le conteneur principal des plats */
 .main-content-container {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 /* Styliser le titre de la section des plats */
 .section-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 3em;
+  margin-bottom: 30px;
   text-align: center;
-  color: #333;
+  color: #2d3142;
+  font-weight: 600;
+  border-bottom: 4px solid #ef8354;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 /* Styliser les cartes des plats */
 .plat-card {
-  border: 1px solid #e0e0e0;
+  border: none;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
 }
 
 /* Styliser les images des plats */
@@ -393,23 +398,34 @@ border-radius: 5px; /* Coins arrondis */
 .plat-card .card-title {
   font-size: 1.5em;
   margin-bottom: 10px;
+  color: #2d3142;
+  font-weight: 600;
 }
 
 /* Styliser le texte de la carte */
 .plat-card .card-text {
   margin-bottom: 10px;
+  color: #4f5d75;
+}
+
+/* Styliser les petits textes des cartes (prix, disponibilité) */
+.plat-card .card-text small {
+  display: block;
+  color: #bfc0c0;
 }
 
 /* Styliser le bouton de commande */
 .plat-card .btn-primary {
-  background-color: #3498db;
-  border-color: #3498db;
+  background-color: #ef8354;
+  border-color: #ef8354;
   color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
-.plat-card .btn-primary:hover {
-  background-color: #2980b9;
-  border-color: #2980b9;
+.plat-card .btn-primary:hover, .plat-card .btn-primary:focus {
+  background-color: #d16f4a;
+  border-color: #d16f4a;
 }
 
 
