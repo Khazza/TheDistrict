@@ -19,10 +19,10 @@ render_header();
 <div class="container">
     <!-- Carte du plat -->
     <?php if ($plat) : ?>
-        <div class="plat-card">
-            <img src="src/img/food/<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>"> <!-- image et libelle au lieu de image_url et nom -->
+        <div class="plat-card2">
+            <img src="src/img/food/<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>">
             <div class="card-body">
-                <h2 class="card-title"><?= $plat['libelle'] ?></h2> <!-- libelle au lieu de nom -->
+                <h2 class="card-title"><?= $plat['libelle'] ?></h2>
                 <p class="card-text"><?= $plat['description'] ?></p>
                 <label for="quantite">Quantité:</label>
                 <input type="number" id="quantite" name="quantite" min="1" value="1">
