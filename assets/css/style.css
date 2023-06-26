@@ -533,6 +533,19 @@ border-radius: 5px; /* Coins arrondis */
   margin-top: 20px;
 }
 
+#quantite {
+  width: 60px; /* Vous pouvez ajuster la largeur */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#quantite:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */

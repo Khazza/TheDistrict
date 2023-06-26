@@ -25,7 +25,7 @@ render_header();
                 <h2 class="card-title"><?= $plat['libelle'] ?></h2>
                 <p class="card-text"><?= $plat['description'] ?></p>
                 <label for="quantite">Quantité:</label>
-                <input type="number" id="quantite" name="quantite" min="1" value="1">
+                <input type="number" id="quantite" name="quantite" min="1" max="25" value="1">
             </div>
         </div>
     <?php endif; ?>
