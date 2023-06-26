@@ -422,8 +422,6 @@ border-radius: 5px; /* Coins arrondis */
 /* Styliser le corps de la carte */
 .plat-card .card-body {
   padding: 20px;
-  max-height: 240px; /* Hauteur maximale */
-  overflow-y: auto; /* Permettre le défilement si nécessaire */
 }
 
 /* Styliser le titre du plat dans la carte */
@@ -438,8 +436,11 @@ border-radius: 5px; /* Coins arrondis */
 .plat-card .card-text {
   margin-bottom: 10px;
   color: #4f5d75;
-  max-height: 100px; /* Hauteur maximale pour la description du plat */
-  overflow-y: auto; /* Permettre le défilement si nécessaire */
+  overflow: hidden; /* Cacher tout texte qui déborde */
+  text-overflow: ellipsis; /* Afficher des points de suspension lorsque le texte est tronqué */
+  display: -webkit-box; /* Nécessaire pour utiliser -webkit-line-clamp */
+  -webkit-box-orient: vertical; /* Nécessaire pour utiliser -webkit-line-clamp */
+  -webkit-line-clamp: 3; /* Limiter à 3 lignes de texte, ajuster selon vos besoins */
 }
 
 /* Styliser les petits textes des cartes (prix, disponibilité) */
