@@ -25,7 +25,14 @@ function render_header()
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand"><img src="../src/img/the_district_brand/logo_transp.png" alt="Logo" height="60"></a>
-            <div class="collapse navbar-collapse">
+            
+            <!-- Bouton de basculement -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Liens de la barre de navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link <?php echo $current_page === 'index.php' ? 'active' : ''; ?>" href="index.php">Accueil</a>
@@ -36,7 +43,6 @@ function render_header()
                     <li class="nav-item">
                         <a class="nav-link <?php echo $current_page === 'plats.php' ? 'active' : ''; ?>" href="plats.php">Plats</a>
                     </li>
-
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -50,6 +56,7 @@ function render_header()
         </nav>
     <?php
 }
+
 
 
 function render_footer()
