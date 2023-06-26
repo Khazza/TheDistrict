@@ -542,13 +542,23 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 .content-wrapper {
-  background-image: url('../../src/img/fosyyyy.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-attachment: fixed;
+  position: relative; /* Faites en sorte que content-wrapper soit le conteneur de référence pour les positions absolues */
   padding: 50px 0;
   margin-top: 20px;
+}
+
+.blur-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../src/img/fosyyyy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   filter: blur(8px);
+  z-index: -1; /* Placez-le en arrière-plan */
 }
 
 /* ---------------------------------------------------------------------------- */

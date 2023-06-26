@@ -17,6 +17,7 @@ render_header();
 ?>
 
 <div class="content-wrapper">
+<div class="blur-background"></div>
     <div class="container">
         <!-- Carte du plat -->
         <?php if ($plat) : ?>
