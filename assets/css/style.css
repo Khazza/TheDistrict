@@ -541,11 +541,6 @@ border-radius: 5px; /* Coins arrondis */
   text-align: center;
 }
 
-#quantite:focus {
-  border-color: #4CAF50;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
-}
-
 .content-wrapper {
   background-image: url('../../src/img/fosyyyy.jpg');
   background-repeat: no-repeat;
