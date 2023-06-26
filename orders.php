@@ -53,7 +53,7 @@ render_header();
             <textarea id="adresse" name="adresse"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Envoyer</button>
+        <button type="submit" class="btn btn-primary">Commander</button>
     </form>
 </div>
 

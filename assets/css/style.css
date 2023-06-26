@@ -461,7 +461,7 @@ border-radius: 5px; /* Coins arrondis */
   transition: all 0.3s;
 }
 
-.plat-card .btn-primary:hover, .plat-card .btn-primary:focus {
+.plat-card .plat-card2 .btn-primary:hover, .plat-card .btn-primary:focus {
   background-color: #f8c301;
   border-color: #f8c301;
 }
@@ -514,25 +514,24 @@ border-radius: 5px; /* Coins arrondis */
 
 .order-form button {
   display: inline-block;
-  background-color: #3498db;
+  background-color: #970747;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
+  font-weight: 600;
   cursor: pointer;
+}
+.btn-primary:hover{
+  color: #30353a; /* Changement de couleur au survol */
+  background-color: #f8c301 ; /* Changement de couleur de fond au survol */
 }
 
 /* Espace entre la carte du plat et le formulaire */
 .plat-card2 + .order-form {
   margin-top: 20px;
 }
-
-/* Utilisez une police personnalisée pour les titres */
-h2 {
-  font-family: 'Arial', sans-serif;
-}
-
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
