@@ -9,9 +9,13 @@ include './template/functions.php';
 <!-- Search Bar Background Image -->
 <div class="search-bar">
     <div class="container text-center">
-        <input type="text" class="search-input" placeholder="Recherche...">
+        <form action="search.php" method="get">
+            <input type="text" name="query" class="search-input" placeholder="Recherche..." required>
+            <button type="submit" class="btn btn-primary">Rechercher</button>
+        </form>
     </div>
 </div>
+
 
 <!-- Main Content -->
 <div class="container main-content-container">

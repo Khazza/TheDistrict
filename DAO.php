@@ -142,3 +142,46 @@ function get_plat_by_id($plat_id) {
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+
+function search_categories($query) {
+    $database = new Database();
+    $db = $database->getConnection();
+    
+    // Requête pour rechercher les catégories par libelle
+    $query = "SELECT * FROM categorie WHERE libelle LIKE :searchQuery";
+    $stmt = $db->prepare($query);
+    
+    // Ajouter des pourcentages autour de la requête pour une recherche de sous-chaîne
+    $searchQuery = '%' . $query . '%';
+    
+    // Lier la valeur de recherche à la requête préparée
+    $stmt->bindValue(':searchQuery', $searchQuery, PDO::PARAM_STR);
+    
+    // Exécutez la requête
+    $stmt->execute();
+    
+    // Récupérer tous les résultats
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function search_dishes($query) {
+    $database = new Database();
+    $db = $database->getConnection();
+    
+    // Requête pour rechercher les plats par libelle
+    $query = "SELECT * FROM plat WHERE libelle LIKE :searchQuery";
+    $stmt = $db->prepare($query);
+    
+    // Ajouter des pourcentages autour de la requête pour une recherche de sous-chaîne
+    $searchQuery = '%' . $query . '%';
+    
+    // Lier la valeur de recherche à la requête préparée
+    $stmt->bindValue(':searchQuery', $searchQuery, PDO::PARAM_STR);
+    
+    // Exécutez la requête
+    $stmt->execute();
+    
+    // Récupérer tous les résultats
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
