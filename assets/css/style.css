@@ -562,7 +562,7 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 /* CSS custom Button */
-.custom-button {
+.custom-search-button {
   background-color: #970747;
   border: none;
   color: white;
@@ -579,7 +579,7 @@ border-radius: 5px; /* Coins arrondis */
   border: 2px solid #bfc0c0;
 }
 
-.custom-button:hover {
+.custom-search-button:hover {
   background-color: #f8c301;
   border-color: #f8c301;
   transition: all 0.3s;
@@ -602,7 +602,7 @@ border-radius: 5px; /* Coins arrondis */
 
 /* Styles en mode responsive */
 @media screen and (max-width: 768px) {
-  .search-input {
+  .search-input, .custom-search-button {
     display: none;
   }
 

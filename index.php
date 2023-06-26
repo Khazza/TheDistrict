@@ -11,7 +11,7 @@ include './template/functions.php';
     <div class="container text-center">
         <form action="search.php" method="get">
             <input type="text" name="query" class="search-input" placeholder="Recherche...">
-            <button type="submit" class="custom-button">Rechercher</button>
+            <button type="submit" class="custom-search-button">Rechercher</button>
         </form>
     </div>
 </div>
