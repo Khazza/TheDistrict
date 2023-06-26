@@ -563,9 +563,9 @@ border-radius: 5px; /* Coins arrondis */
 
 /* CSS custom Button */
 .custom-button {
-  background-color: #4CAF50; /* couleur d'arrière-plan verte */
+  background-color: #970747;
   border: none;
-  color: white; /* texte blanc */
+  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -573,7 +573,19 @@ border-radius: 5px; /* Coins arrondis */
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 4px; /* bord arrondi */
+  border-radius: 16px; /* bord arrondi */
+  font-weight: 600;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid #bfc0c0;
+}
+
+.custom-button:hover {
+  background-color: #f8c301;
+  border-color: #f8c301;
+  transition: all 0.3s;
+  color: #2d3142;
+  border: 2px solid #2d3142
+
 }
 
 
