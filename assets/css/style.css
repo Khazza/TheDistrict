@@ -588,23 +588,6 @@ border-radius: 5px; /* Coins arrondis */
 
 }
 
-/* CSS pour rendre le bouton "Menu" plus visible */
-.navbar-toggler {
-  background-color: #333; /* Couleur de fond du bouton */
-  color: #fff; /* Couleur de l'icône du bouton */
-  font-size: 1.2em; /* Taille de l'icône du bouton */
-  border: none; /* Retirer la bordure du bouton */
-}
-
-/* CSS pour ajouter un fond au menu déroulant */
-.navbar-collapse {
-  background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond semi-transparente */
-}
-
-.navbar-nav .nav-link {
-  color: #fff; /* Couleur du texte des liens */
-}
-
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
@@ -653,6 +636,22 @@ border-radius: 5px; /* Coins arrondis */
   .nav-link {
     margin-right: 15px; /* Réduire l'espacement entre les liens sur les petits écrans */
   }
+  /* CSS pour rendre le bouton "Menu" plus visible */
+.navbar-toggler {
+  background-color: #333; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur de l'icône du bouton */
+  font-size: 1.2em; /* Taille de l'icône du bouton */
+  border: none; /* Retirer la bordure du bouton */
+}
+
+/* CSS pour ajouter un fond au menu déroulant */
+.navbar-collapse {
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond semi-transparente */
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Couleur du texte des liens */
+}
 }
 
 @media screen and (max-width: 1225px) {
