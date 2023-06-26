@@ -50,7 +50,7 @@ include './template/functions.php';
                 <p class='card-text'><small class='text-muted'>Disponibilité: {$availability}</small></p>
 
                 <!-- Bouton pour commander -->
-                <button class='btn btn-primary' onclick=\"location.href='commande.php?id={$plat['id']}'\">Commander</button>
+                <button class='btn btn-primary' onclick=\"location.href='orders.php?id={$plat['id']}'\">Commander</button>
             </div>
         </div>
     </div>
