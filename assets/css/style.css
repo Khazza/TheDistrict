@@ -561,6 +561,22 @@ border-radius: 5px; /* Coins arrondis */
   z-index: -1; /* Placez-le en arrière-plan */
 }
 
+/* CSS custom Button */
+.custom-button {
+  background-color: #4CAF50; /* couleur d'arrière-plan verte */
+  border: none;
+  color: white; /* texte blanc */
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px; /* bord arrondi */
+}
+
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
