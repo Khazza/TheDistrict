@@ -374,13 +374,57 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 /* Styliser les cartes des plats */
+/* Plats Cards */
 .plat-card {
-  border: none;
-  border-radius: 8px;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #f5f5f5;
+  border: 1px solid #30353a;
+  width: 100%;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  height: 240px; /* Hauteur fixe pour la carte, ajustez selon vos besoins */
 }
+
+.plat-card img {
+  height: 100%; /* Hauteur à 100% de la carte */
+  width: 100%; /* Largeur à 100% de la carte */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.plat-card .plat-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10px; /* Réduire le padding pour rendre le fond plus fin */
+  color: #fff;
+  text-align: center;
+  background-color: rgba(151, 7, 71, 0.8);
+  font-family: "Arial", sans-serif; /* Changer la police */
+  font-size: 18px; /* Ajuster la taille de la police */
+  font-weight: bold; /* Mettre le texte en gras */
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.plat-card:hover img {
+  transform: scale(1.15);
+}
+
+.plat-card:hover .plat-name {
+  background-color: rgba(
+    161,
+    8,
+    54,
+    0.616
+  ); /* Couleur de fond lors du survol */
+  transform: translateY(
+    -30px
+  ); /* Déplace le texte vers le haut lors du survol */
+}
+
 
 /* Styliser les images des plats */
 .plat-card .img-container img {
@@ -425,19 +469,6 @@ border-radius: 5px; /* Coins arrondis */
 .plat-card .btn-primary:hover, .plat-card .btn-primary:focus {
   background-color: #f8c301;
   border-color: #f8c301;
-}
-
-/* Styliser les images des plats */
-.plat-card .img-container {
-  width: 200px; /* Vous pouvez régler la largeur */
-  height: 150px; /* Et la hauteur selon vos besoins */
-  overflow: hidden; /* Cela garantit que l'image ne déborde pas du conteneur */
-}
-
-.plat-card .img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cela permet de conserver les proportions de l'image tout en remplissant le conteneur */
 }
 
 /* ---------------------------------------------------------------------------- */
