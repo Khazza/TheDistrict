@@ -546,6 +546,14 @@ border-radius: 5px; /* Coins arrondis */
   box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
 }
 
+.content-wrapper {
+  background-image: url('../../src/img/fosyyyy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* ou vous pouvez utiliser 'contain' selon votre préférence */
+  background-attachment: fixed;
+  padding: 50px 0; /* Ajoutez du padding pour donner de l'espace autour de votre contenu */
+}
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
