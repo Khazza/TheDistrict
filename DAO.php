@@ -126,3 +126,19 @@ function get_plats_by_category($category_id = null) {
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function get_plat_by_id($plat_id) {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    $query = "SELECT plat.*, categorie.libelle AS category_name
+              FROM plat
+              JOIN categorie ON plat.id_categorie = categorie.id
+              WHERE plat.id = :plat_id";
+
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(':plat_id', $plat_id, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
