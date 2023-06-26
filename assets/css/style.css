@@ -466,6 +466,24 @@ border-radius: 5px; /* Coins arrondis */
   border-color: #f8c301;
 }
 
+/* card plats-order */
+.plat-card2 {
+  display: flex;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.plat-card2 img {
+  max-width: 250px;
+  margin-right: 20px;
+}
+
+.plat-card2 .card-body {
+  flex-grow: 1;
+}
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
