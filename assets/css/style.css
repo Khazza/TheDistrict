@@ -369,8 +369,7 @@ border-radius: 5px; /* Coins arrondis */
   text-align: center;
   color: #2d3142;
   font-weight: 600;
-  border-bottom: 4px solid #ef8354;
-  display: inline-block;
+  border-bottom: 4px solid #f8c301;
   padding-bottom: 10px;
 }
 
@@ -416,16 +415,16 @@ border-radius: 5px; /* Coins arrondis */
 
 /* Styliser le bouton de commande */
 .plat-card .btn-primary {
-  background-color: #ef8354;
-  border-color: #ef8354;
+  background-color: #970747;
+  border-color: #970747;
   color: #ffffff;
   font-weight: 600;
   transition: all 0.3s;
 }
 
 .plat-card .btn-primary:hover, .plat-card .btn-primary:focus {
-  background-color: #d16f4a;
-  border-color: #d16f4a;
+  background-color: #f8c301;
+  border-color: #f8c301;
 }
 
 
