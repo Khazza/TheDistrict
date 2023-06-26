@@ -380,10 +380,10 @@ border-radius: 5px; /* Coins arrondis */
   overflow: hidden;
   border: 1px solid #30353a;
   width: 100%;
-  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
   border-radius: 6px;
   margin-bottom: 20px;
-  height: 240px; /* Hauteur fixe pour la carte, ajustez selon vos besoins */
+  height: 240px; /* Hauteur fixe pour la carte, ajustez si besoin */
 }
 
 .plat-card img {
@@ -410,21 +410,8 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 .plat-card:hover img {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
-
-.plat-card:hover .plat-name {
-  background-color: rgba(
-    161,
-    8,
-    54,
-    0.616
-  ); /* Couleur de fond lors du survol */
-  transform: translateY(
-    -30px
-  ); /* Déplace le texte vers le haut lors du survol */
-}
-
 
 /* Styliser les images des plats */
 .plat-card .img-container img {
