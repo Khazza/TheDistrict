@@ -427,6 +427,18 @@ border-radius: 5px; /* Coins arrondis */
   border-color: #f8c301;
 }
 
+/* Styliser les images des plats */
+.plat-card .img-container {
+  width: 200px; /* Vous pouvez régler la largeur */
+  height: 150px; /* Et la hauteur selon vos besoins */
+  overflow: hidden; /* Cela garantit que l'image ne déborde pas du conteneur */
+}
+
+.plat-card .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cela permet de conserver les proportions de l'image tout en remplissant le conteneur */
+}
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
