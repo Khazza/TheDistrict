@@ -467,22 +467,72 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 /* card plats-order */
+/* Pour la carte du plat */
 .plat-card2 {
   display: flex;
-  margin: 20px auto;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 20px;
+  flex-direction: row;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .plat-card2 img {
   max-width: 250px;
-  margin-right: 20px;
+  object-fit: cover;
 }
 
 .plat-card2 .card-body {
-  flex-grow: 1;
+  padding: 20px;
+  flex: 1;
 }
+
+/* Pour le formulaire de commande */
+.order-form {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.order-form .form-group {
+  margin-bottom: 20px;
+}
+
+.order-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.order-form input, .order-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.order-form button {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Espace entre la carte du plat et le formulaire */
+.plat-card2 + .order-form {
+  margin-top: 20px;
+}
+
+/* Utilisez une police personnalisée pour les titres */
+h2 {
+  font-family: 'Arial', sans-serif;
+}
+
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
