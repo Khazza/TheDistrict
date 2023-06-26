@@ -39,7 +39,7 @@ include './template/functions.php';
         // Début de la carte
         echo "<div class='plat-card card mb-3'>
     <div class='row g-0'>
-        <div class='col-md-4'>
+        <div class='col-md-4 img-container'>
             <img src='src/img/food/{$plat['image']}' alt='{$plat['libelle']}' class='img-fluid'>
         </div>
         <div class='col-md-8'>
