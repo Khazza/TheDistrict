@@ -534,7 +534,7 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 #quantite {
-  width: 60px; /* Vous pouvez ajuster la largeur */
+  width: 60px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -544,9 +544,11 @@ border-radius: 5px; /* Coins arrondis */
 .content-wrapper {
   background-image: url('../../src/img/fosyyyy.jpg');
   background-repeat: no-repeat;
-  background-size: cover; /* ou vous pouvez utiliser 'contain' selon votre préférence */
+  background-size: cover; 
   background-attachment: fixed;
-  padding: 50px 0; /* Ajoutez du padding pour donner de l'espace autour de votre contenu */
+  padding: 50px 0;
+  margin-top: 20px;
+  filter: blur(8px);
 }
 
 /* ---------------------------------------------------------------------------- */
