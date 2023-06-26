@@ -2,6 +2,9 @@
 body{
   background-color: #e9e9e9;
 }
+.bg-plat{
+  background-color: #f7f7f7;
+}
 
 /* SearchBar */
 .search-bar {
@@ -399,7 +402,7 @@ border-radius: 5px; /* Coins arrondis */
   left: 0;
   width: 100%;
   padding: 10px 10px; /* Réduire le padding pour rendre le fond plus fin */
-  color: #fff;
+  color: #b40000;
   text-align: center;
   background-color: rgba(151, 7, 71, 0.8);
   font-family: "Arial", sans-serif; /* Changer la police */

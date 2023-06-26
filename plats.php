@@ -42,7 +42,7 @@ include './template/functions.php';
         <div class='col-md-4 img-container'>
             <img src='src/img/food/{$plat['image']}' alt='{$plat['libelle']}' class='img-fluid'>
         </div>
-        <div class='col-md-8 bg-light z-2'>
+        <div class='bg-plat col-md-8 z-2'>
             <div class='card-body'>
                 <h5 class='card-title'>{$plat['libelle']}</h5>
                 <p class='card-text '>{$plat['description']}</p>
