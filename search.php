@@ -22,7 +22,12 @@ render_header();
         if (!empty($categories)) {
             foreach ($categories as $category) :
         ?>
-                <!-- Affichez les cartes de catégorie ici, de la même manière que dans index.php -->
+                <div class="col-md-4">
+                    <div class="profile-card-2">
+                        <img src="src/img/category/<?= $category['image'] ?>" alt="Catégorie <?= $category['libelle'] ?>" class="img img-responsive">
+                        <div class="profile-name"><?= $category['libelle'] ?></div>
+                    </div>
+                </div>
         <?php
             endforeach;
         } else {
@@ -38,7 +43,12 @@ render_header();
         if (!empty($dishes)) {
             foreach ($dishes as $dish) :
         ?>
-                <!-- Affichez les cartes de plat ici, de la même manière que dans index.php -->
+                <div class="col-md-4">
+                    <div class="profile-card-3">
+                        <img src="src/img/food/<?= $dish['image'] ?>" alt="Plat <?= $dish['libelle'] ?>" class="img img-responsive">
+                        <div class="profile-name"><?= $dish['libelle'] ?></div>
+                    </div>
+                </div>
         <?php
             endforeach;
         } else {
@@ -47,6 +57,7 @@ render_header();
         ?>
     </div>
 </div>
+
 
 <!-- Appel de la fonction pour afficher le footer -->
 <?php render_footer(); ?>

@@ -144,7 +144,7 @@ function get_plat_by_id($plat_id) {
 }
 
 
-function search_categories($query) {
+function search_categories($queryCategories) {
     $database = new Database();
     $db = $database->getConnection();
     
@@ -153,7 +153,7 @@ function search_categories($query) {
     $stmt = $db->prepare($query);
     
     // Ajouter des pourcentages autour de la requête pour une recherche de sous-chaîne
-    $searchQuery = '%' . $query . '%';
+    $searchQuery = '%' . $queryCategories . '%';
     
     // Lier la valeur de recherche à la requête préparée
     $stmt->bindValue(':searchQuery', $searchQuery, PDO::PARAM_STR);
@@ -165,7 +165,7 @@ function search_categories($query) {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function search_dishes($query) {
+function search_dishes($queryDishes) {
     $database = new Database();
     $db = $database->getConnection();
     
@@ -174,7 +174,7 @@ function search_dishes($query) {
     $stmt = $db->prepare($query);
     
     // Ajouter des pourcentages autour de la requête pour une recherche de sous-chaîne
-    $searchQuery = '%' . $query . '%';
+    $searchQuery = '%' . $queryDishes . '%';
     
     // Lier la valeur de recherche à la requête préparée
     $stmt->bindValue(':searchQuery', $searchQuery, PDO::PARAM_STR);
