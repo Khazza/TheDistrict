@@ -19,7 +19,7 @@ include './template/functions.php';
 
 
 <!-- Main Content -->
-<div class="container main-content-container">
+<div class="container main-content-container homepage">
     <!-- Categories -->
     <!-- Titre pour les catégories -->
     <h2 class="section-title">Nos catégories populaires</h2>

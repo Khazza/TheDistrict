@@ -606,8 +606,8 @@ border-radius: 5px; /* Coins arrondis */
   }
 
   /* Cacher les catégories et le titre des catégories en mode responsive */
-  .category-row,
-  .section-title {
+  .homepage .category-row,
+  .homepage .section-title {
     display: none;
   }
 
@@ -636,6 +636,7 @@ border-radius: 5px; /* Coins arrondis */
   .nav-link {
     margin-right: 15px; /* Réduire l'espacement entre les liens sur les petits écrans */
   }
+
   /* CSS pour rendre le bouton "Menu" plus visible */
 .navbar-toggler {
   background-color: #3a3f44; /* Couleur de fond du bouton */
