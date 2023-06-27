@@ -30,11 +30,14 @@ include './template/functions.php';
             foreach ($categories as $category) :
         ?>
                 <div class="col-md-4">
-                    <div class="profile-card-2">
-                        <img src="src/img/category/<?= $category['image'] ?>" alt="Catégorie <?= $category['libelle'] ?>" class="img img-responsive">
-                        <div class="profile-name"><?= $category['libelle'] ?></div>
-                    </div>
+                    <a href="plats.php?category_id=<?= $category['id'] ?>" class="category-card-link">
+                        <div class="profile-card-2">
+                            <img src="src/img/category/<?= $category['image'] ?>" alt="Catégorie <?= $category['libelle'] ?>" class="img img-responsive">
+                            <div class="profile-name"><?= $category['libelle'] ?></div>
+                        </div>
+                    </a>
                 </div>
+
         <?php
             endforeach;
         }
@@ -51,11 +54,14 @@ include './template/functions.php';
             foreach ($dishes as $dish) :
         ?>
                 <div class="col-md-4">
-                    <div class="profile-card-3">
-                        <img src="src/img/food/<?= $dish['image'] ?>" alt="Plat <?= $dish['libelle'] ?>" class="img img-responsive">
-                        <div class="profile-name"><?= $dish['libelle'] ?></div>
-                    </div>
+                    <a href="plat_detail.php?plat_id=<?= $dish['id'] ?>" class="dish-card-link">
+                        <div class="profile-card-3">
+                            <img src="src/img/food/<?= $dish['image'] ?>" alt="Plat <?= $dish['libelle'] ?>" class="img img-responsive">
+                            <div class="profile-name"><?= $dish['libelle'] ?></div>
+                        </div>
+                    </a>
                 </div>
+
         <?php
             endforeach;
         }
