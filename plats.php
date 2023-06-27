@@ -13,7 +13,7 @@ include './template/functions.php';
 </div>
 
 <!-- main content -->
-<div class="container main-content-container">
+<div class="container main-content-container plats-page">
     <!-- Plats -->
     <!-- Titre pour les plats -->
         <h2 class="section-title">Nos Plats</h2>
