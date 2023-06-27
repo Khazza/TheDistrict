@@ -616,8 +616,7 @@ border-radius: 5px; /* Coins arrondis */
   /* Spécifique à la page plats.php */
   .plats-page .card-body .btn, /* Cible le bouton Commander */
   .plats-page .card-body .card-text /* Cible le texte de description */ {
-    display: block; /* Vous pouvez ajuster cela selon vos besoins */
-    /* Ajoutez d'autres styles ici si nécessaire */
+    display: block; 
   }
 
   /* Afficher les plats 4, 5 et 6 en affichage responsive */
