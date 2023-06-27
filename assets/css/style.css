@@ -608,6 +608,17 @@ border-radius: 5px; /* Coins arrondis */
   background-color: #f8c301;
   border-color: #f8c301;
 }
+
+.required-message {
+  color: #970747;
+  font-size: 12px;
+  display: none; /* Cache les messages par défaut */
+}
+
+input:invalid + .required-message {
+  display: block; /* Affiche les messages lorsque le champ est invalide */
+}
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
