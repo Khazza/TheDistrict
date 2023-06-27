@@ -2,8 +2,12 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-include 'database.php';
+require_once 'database.php';
+require_once 'DAO.php';
 require_once 'vendor/autoload.php';
+
+$database = new Database();
+$db = $database->getConnection();
 
 // Récupération des données du formulaire
 $plat_id = $_POST['id_plat'];
@@ -13,27 +17,17 @@ $email_client = $_POST['email'];
 $telephone_client = $_POST['telephone'];
 $adresse_client = $_POST['adresse'];
 
-// Récupération du prix du plat
-$query = "SELECT prix FROM plat WHERE id = ?";
-$stmt = $conn->prepare($query);
-$stmt->bind_param("i", $plat_id);
-$stmt->execute();
-$result = $stmt->get_result();
-if ($result && $result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $prix = $row['prix'];
-} else {
+// Récupération du prix du plat en utilisant la fonction dans DAO.php
+$prix = get_plat_prix($db, $plat_id);
+if ($prix === null) {
     die("Erreur lors de la récupération du prix du plat.");
 }
 
 // Calcul du total
 $total = $prix * $quantite;
 
-// Insertion dans la base de données
-$query = "INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) VALUES (?, ?, ?, NOW(), 'en attente', ?, ?, ?, ?)";
-$stmt = $conn->prepare($query);
-$stmt->bind_param("iidsssss", $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
-$stmt->execute();
+// Insertion dans la base de données en utilisant la fonction dans DAO.php
+insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
 // Configuration de PHPMailer
 $mail = new PHPMailer(true);

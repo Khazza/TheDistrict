@@ -186,3 +186,28 @@ function search_dishes($queryDishes) {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+
+function get_plat_prix($db, $plat_id) {
+    $query = "SELECT prix FROM plat WHERE id = :plat_id";
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(":plat_id", $plat_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $result ? $result['prix'] : null;
+}
+
+function insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client) {
+    $query = "INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) VALUES (:plat_id, :quantite, :total, NOW(), 'en attente', :nom_client, :telephone_client, :email_client, :adresse_client)";
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(":plat_id", $plat_id, PDO::PARAM_INT);
+    $stmt->bindParam(":quantite", $quantite, PDO::PARAM_INT);
+    $stmt->bindParam(":total", $total);
+    $stmt->bindParam(":nom_client", $nom_client, PDO::PARAM_STR);
+    $stmt->bindParam(":telephone_client", $telephone_client, PDO::PARAM_STR);
+    $stmt->bindParam(":email_client", $email_client, PDO::PARAM_STR);
+    $stmt->bindParam(":adresse_client", $adresse_client, PDO::PARAM_STR);
+    $stmt->execute();
+}
+
+
+
