@@ -398,11 +398,9 @@ border-radius: 5px; /* Coins arrondis */
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
   border-radius: 6px;
   margin-bottom: 20px;
-  height: 240px; /* Hauteur fixe pour la carte, ajustez si besoin */
 }
 
 .plat-card img {
-  height: 100%; /* Hauteur à 100% de la carte */
   width: 100%; /* Largeur à 100% de la carte */
   object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -695,5 +693,15 @@ border-radius: 5px; /* Coins arrondis */
 @media screen and (max-width: 1225px) {
   .footer {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .plat-card img {
+    height: 100%; /* Hauteur à 100% de la carte sur les grands écrans */
+  }
+}
+@media screen and (min-width: 768px) {
+  .plat-card {
+    height: 240px; /* Hauteur fixe pour la carte sur les grands écrans, ajustez si besoin */
   }
 }
