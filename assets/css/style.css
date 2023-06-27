@@ -695,13 +695,28 @@ border-radius: 5px; /* Coins arrondis */
     display: none;
   }
 }
+
+.plat-card img {
+  height: 120px; /* exemple de hauteur fixe pour les mobiles */
+  width: auto; /* ajuster la largeur proportionnellement */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+/* Styles pour les écrans de taille moyenne (tablettes) */
 @media screen and (min-width: 768px) {
   .plat-card img {
-    height: 100%; /* Hauteur à 100% de la carte sur les grands écrans */
+    height: 180px; /* exemple de hauteur fixe pour les tablettes */
+  }
+}
+
+/* Styles pour les écrans de grande taille (desktop) */
+@media screen and (min-width: 1024px) {
+  .plat-card img {
+    height: 240px; /* exemple de hauteur fixe pour les desktops */
   }
 }
 @media screen and (min-width: 768px) {
   .plat-card {
-    height: 240px; /* Hauteur fixe pour la carte sur les grands écrans, ajustez si besoin */
+    height: 240px;
   }
 }
