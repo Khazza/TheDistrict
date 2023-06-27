@@ -28,15 +28,14 @@ $total = $prix * $quantite;
 insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
 // Construire le résumé de la commande
-$order_summary = "Résumé de votre commande: \n\r";
-$order_summary .= "Nom: $nom_client \n\r";
-$order_summary .= "Email: $email_client \n\r";
-$order_summary .= "Téléphone: $telephone_client \n\r";
-$order_summary .= "Adresse: $adresse_client \n\r";
-$order_summary .= "ID du plat: $plat_id \n\r";
-$order_summary .= "Quantité: $quantite \n\r";
-$order_summary .= "Prix unitaire: $prix \n\r";
-$order_summary .= "Total: $total \n\r";
+$order_summary = "Résumé de votre commande: </br>";
+$order_summary .= "Nom: $nom_client \n\r </br>";
+$order_summary .= "Email: $email_client \n\r </br>";
+$order_summary .= "Téléphone: $telephone_client \n\r</br>";
+$order_summary .= "Adresse: $adresse_client \n\r</br>";
+$order_summary .= "Quantité: $quantite \n\r</br>";
+$order_summary .= "Prix unitaire: $prix € \n\r</br>";
+$order_summary .= "Total: $total €\n\r</br>";
 
 // Configuration de PHPMailer
 $mail = new PHPMailer(true);
