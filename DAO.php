@@ -185,3 +185,4 @@ function search_dishes($queryDishes) {
     // Récupérer tous les résultats
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+

@@ -37,6 +37,7 @@ $stmt->execute();
 
 // Configuration de PHPMailer
 $mail = new PHPMailer(true);
+$mail->CharSet="utf-8";
 $mail->isSMTP();
 $mail->Host = 'localhost';
 $mail->SMTPAuth = false;
@@ -56,5 +57,5 @@ try {
     echo "L'envoi de mail a échoué. L'erreur suivante s'est produite : ", $mail->ErrorInfo;
 }
 
-header('Location: orders.php'); // Rediriger vers la page de commande
+// header('Location: orders.php'); // Rediriger vers la page de commande
 ?>
