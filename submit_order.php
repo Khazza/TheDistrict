@@ -28,14 +28,14 @@ $total = $prix * $quantite;
 insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
 // Construire le résumé de la commande
-$order_summary = "Résumé de votre commande: </br>";
-$order_summary .= "Nom: $nom_client \n\r </br>";
-$order_summary .= "Email: $email_client \n\r </br>";
-$order_summary .= "Téléphone: $telephone_client \n\r</br>";
-$order_summary .= "Adresse: $adresse_client \n\r</br>";
-$order_summary .= "Quantité: $quantite \n\r</br>";
-$order_summary .= "Prix unitaire: $prix € \n\r</br>";
-$order_summary .= "Total: $total €\n\r</br>";
+$order_summary = "Résumé de votre commande: <br>";
+$order_summary .= "Nom: $nom_client <br>";
+$order_summary .= "Email: $email_client <br>";
+$order_summary .= "Téléphone: $telephone_client <br>";
+$order_summary .= "Adresse: $adresse_client <br>";
+$order_summary .= "Quantité: $quantite <br>";
+$order_summary .= "Prix unitaire: $prix € <br>";
+$order_summary .= "Total: $total €<br>";
 
 // Configuration de PHPMailer
 $mail = new PHPMailer(true);
@@ -48,18 +48,29 @@ $mail->Port = 1025;
 $mail->setFrom('from@thedistrict.com', 'The District Company');
 $mail->addAddress($email_client, $nom_client);
 
-$mail->isHTML(true); // Si vous voulez utiliser du HTML à la place du texte brut, changez ceci en true
+$mail->isHTML(true);
 $mail->Subject = 'Confirmation de commande';
 $mail->Body    = $order_summary;
 
 try {
     $mail->send();
-    echo 'Email envoyé avec succès';
+    $message = 'Email envoyé avec succès';
 } catch (Exception $e) {
-    echo "L'envoi de mail a échoué. L'erreur suivante s'est produite : ", $mail->ErrorInfo;
+    $message = "L'envoi de mail a échoué. L'erreur suivante s'est produite : " . $mail->ErrorInfo;
 }
 
-// Rediriger vers la page de commande pour le plat spécifique
-header("Location: orders.php?id=$plat_id");
-exit;
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation</title>
+    <script>
+        window.onload = function() {
+            alert("<?php echo $message; ?>");
+            window.location.href = "orders.php?id=<?php echo $plat_id; ?>";
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
