@@ -400,9 +400,10 @@ border-radius: 5px; /* Coins arrondis */
   margin-bottom: 20px;
 }
 
+/* CSS de base pour l'image dans .plat-card */
 .plat-card img {
-  width: 100%; /* Largeur à 100% de la carte */
-  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
+  width: 100%;
+  object-fit: cover;
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -695,13 +696,27 @@ border-radius: 5px; /* Coins arrondis */
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+/* Styles pour les écrans de petite taille (mobiles) */
+@media screen and (max-width: 767px) {
+  .plat-card {
+    height: 200px; /* Hauteur fixe pour les écrans mobiles */
+  }
+  
   .plat-card img {
-    height: 100%; /* Hauteur à 100% de la carte sur les grands écrans */
+    height: 100%; /* Assure que l'image occupe toute la hauteur de la carte */
   }
 }
-@media screen and (min-width: 768px) {
+
+/* Styles pour les écrans de taille moyenne (tablettes) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .plat-card {
-    height: 240px;
+    height: 300px; /* Hauteur fixe pour les écrans tablettes */
+  }
+}
+
+/* Styles pour les écrans de grande taille (bureaux) */
+@media screen and (min-width: 1024px) {
+  .plat-card {
+    height: 400px; /* Hauteur fixe pour les écrans bureaux */
   }
 }
