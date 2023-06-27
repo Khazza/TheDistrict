@@ -619,6 +619,31 @@ border-radius: 5px; /* Coins arrondis */
     display: block; /* Vous pouvez ajuster cela selon vos besoins */
     /* Ajoutez d'autres styles ici si nécessaire */
   }
+  /* Ajuster la mise en page de la carte sur les petits écrans */
+  .plats-page .plat-card .row {
+    flex-direction: column;
+  }
+
+  /* Ajuster la taille de l'image sur les petits écrans */
+  .plats-page .plat-card .img-container {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Ajuster la taille du texte et la disposition du bouton sur les petits écrans */
+  .plats-page .plat-card .card-body {
+    padding: 15px;
+  }
+
+  .plats-page .plat-card .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .plats-page .plat-card .btn {
+    font-size: 1em;
+  }
+
 
   /* Afficher les plats 4, 5 et 6 en affichage responsive */
   .homepage .dish-row .col-md-4:nth-child(4),
