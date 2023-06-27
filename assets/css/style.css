@@ -593,14 +593,16 @@ border-radius: 5px; /* Coins arrondis */
 /* ---------------------------------------------------------------------------- */
 
 /* Cacher les plats 4, 5 et 6 en affichage grand écran */
-.dish-row .col-md-4:nth-child(4),
-.dish-row .col-md-4:nth-child(5),
-.dish-row .col-md-4:nth-child(6) {
+.homepage .dish-row .col-md-4:nth-child(4),
+.homepage .dish-row .col-md-4:nth-child(5),
+.homepage .dish-row .col-md-4:nth-child(6) {
   display: none;
 }
 
 /* Styles en mode responsive */
 @media screen and (max-width: 768px) {
+  
+  /* Cacher la barre de recherche */
   .search-input, .custom-search-button {
     display: none;
   }
@@ -611,58 +613,47 @@ border-radius: 5px; /* Coins arrondis */
     display: none;
   }
 
-   /* Spécifique à la page plats.php */
-   .plats-page .card-body .btn, /* Cible le bouton Commander */
-   .plats-page .card-body .card-text /* Cible le texte de description */
-   {
-     display: block; /* Vous pouvez ajuster cela selon vos besoins */
-     /* Ajoutez d'autres styles ici si nécessaire */
-   }
+  /* Spécifique à la page plats.php */
+  .plats-page .card-body .btn, /* Cible le bouton Commander */
+  .plats-page .card-body .card-text /* Cible le texte de description */ {
+    display: block; /* Vous pouvez ajuster cela selon vos besoins */
+    /* Ajoutez d'autres styles ici si nécessaire */
+  }
 
-   
   /* Afficher les plats 4, 5 et 6 en affichage responsive */
-  .dish-row .col-md-4:nth-child(4),
-  .dish-row .col-md-4:nth-child(5),
-  .dish-row .col-md-4:nth-child(6) {
+  .homepage .dish-row .col-md-4:nth-child(4),
+  .homepage .dish-row .col-md-4:nth-child(5),
+  .homepage .dish-row .col-md-4:nth-child(6) {
     display: block;
   }
 
   /* Styles pour le titre des plats en mode responsive */
-  .section-title2 {
+  .homepage .section-title2 {
     font-size: 1.4em;
     margin-top: 30px;
   }
 
-}
-@media screen and (max-width: 768px) {
-  .section-title2 {
-    font-size: 1.4em;
-    margin-top: 30px;
-  }
-}
-
-/* Nav Responsive */
-@media screen and (max-width: 768px) {
+  /* Nav Responsive */
   .nav-link {
     margin-right: 15px; /* Réduire l'espacement entre les liens sur les petits écrans */
   }
 
   /* CSS pour rendre le bouton "Menu" plus visible */
-.navbar-toggler {
-  background-color: #3a3f44; /* Couleur de fond du bouton */
-  color: #fff; /* Couleur de l'icône du bouton */
-  font-size: 1.2em; /* Taille de l'icône du bouton */
-  border: none; /* Retirer la bordure du bouton */
-}
+  .navbar-toggler {
+    background-color: #3a3f44; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur de l'icône du bouton */
+    font-size: 1.2em; /* Taille de l'icône du bouton */
+    border: none; /* Retirer la bordure du bouton */
+  }
 
-/* CSS pour ajouter un fond au menu déroulant */
-.navbar-collapse {
-  background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond semi-transparente */
-}
+  /* CSS pour ajouter un fond au menu déroulant */
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond semi-transparente */
+  }
 
-.navbar-nav .nav-link {
-  color: #fff; /* Couleur du texte des liens */
-}
+  .navbar-nav .nav-link {
+    color: #fff; /* Couleur du texte des liens */
+  }
 }
 
 @media screen and (max-width: 1225px) {
