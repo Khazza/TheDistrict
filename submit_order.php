@@ -28,15 +28,15 @@ $total = $prix * $quantite;
 insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
 // Construire le résumé de la commande
-$order_summary = "Résumé de votre commande: \n";
-$order_summary .= "Nom: $nom_client \n";
-$order_summary .= "Email: $email_client \n";
-$order_summary .= "Téléphone: $telephone_client \n";
-$order_summary .= "Adresse: $adresse_client \n";
-$order_summary .= "ID du plat: $plat_id \n";
-$order_summary .= "Quantité: $quantite \n";
-$order_summary .= "Prix unitaire: $prix \n";
-$order_summary .= "Total: $total \n";
+$order_summary = "Résumé de votre commande: \n\r";
+$order_summary .= "Nom: $nom_client \n\r";
+$order_summary .= "Email: $email_client \n\r";
+$order_summary .= "Téléphone: $telephone_client \n\r";
+$order_summary .= "Adresse: $adresse_client \n\r";
+$order_summary .= "ID du plat: $plat_id \n\r";
+$order_summary .= "Quantité: $quantite \n\r";
+$order_summary .= "Prix unitaire: $prix \n\r";
+$order_summary .= "Total: $total \n\r";
 
 // Configuration de PHPMailer
 $mail = new PHPMailer(true);
@@ -61,6 +61,6 @@ try {
 }
 
 // Rediriger vers la page de commande pour le plat spécifique
-header("Location: order_page.php?plat_id=$plat_id");
+header("Location: orders.php?id=$plat_id");
 exit;
 ?>
