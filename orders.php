@@ -17,7 +17,7 @@ render_header();
 ?>
 
 <div class="content-wrapper">
-<div class="blur-background"></div>
+    <div class="blur-background"></div>
     <div class="container">
         <!-- Carte du plat -->
         <?php if ($plat) : ?>
@@ -26,8 +26,10 @@ render_header();
                 <div class="card-body">
                     <h2 class="card-title"><?= $plat['libelle'] ?></h2>
                     <p class="card-text"><?= $plat['description'] ?></p>
-                    <label for="quantite">Quantité:</label>
-                    <input type="number" id="quantite" name="quantite" min="1" max="25" value="1">
+                    <div class="quant text-end">
+                        <label for="quantite">Quantité:</label>
+                        <input type="number" id="quantite" name="quantite" min="1" max="25" value="1">
+                    </div>
                 </div>
             </div>
         <?php endif; ?>
@@ -38,24 +40,32 @@ render_header();
             <div class="form-group">
                 <label for="nom_prenom">Nom et prénom *</label>
                 <input type="text" id="nom_prenom" name="nom_prenom" required>
+                <span class="required-message">Ce champ est obligatoire</span>
             </div>
 
             <div class="form-group">
                 <label for="email">Email *</label>
                 <input type="email" id="email" name="email" required>
+                <span class="required-message">Ce champ est obligatoire</span>
             </div>
 
             <div class="form-group">
                 <label for="telephone">Téléphone *</label>
                 <input type="tel" id="telephone" name="telephone" required>
+                <span class="required-message">Ce champ est obligatoire</span>
             </div>
 
             <div class="form-group">
                 <label for="adresse">Adresse</label>
                 <textarea id="adresse" name="adresse"></textarea>
+                <span class="required-message">Ce champ est obligatoire</span>
             </div>
 
-            <button type="submit" class="btn btn-primary">Commander</button>
+            <div class="row">
+                <div class="col-md-12 text-end">
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+            </div>
         </form>
     </div>
 </div>
