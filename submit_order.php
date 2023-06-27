@@ -13,8 +13,20 @@ $email_client = $_POST['email'];
 $telephone_client = $_POST['telephone'];
 $adresse_client = $_POST['adresse'];
 
+// Récupération du prix du plat
+$query = "SELECT prix FROM plat WHERE id = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("i", $plat_id);
+$stmt->execute();
+$result = $stmt->get_result();
+if ($result && $result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $prix = $row['prix'];
+} else {
+    die("Erreur lors de la récupération du prix du plat.");
+}
+
 // Calcul du total
-$prix = ...;
 $total = $prix * $quantite;
 
 // Insertion dans la base de données
