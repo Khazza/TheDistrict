@@ -19,24 +19,25 @@ render_header();
 <div class="content-wrapper">
     <div class="blur-background"></div>
     <div class="container">
-        <!-- Carte du plat -->
-        <?php if ($plat) : ?>
-            <div class="plat-card2">
-                <img src="src/img/food/<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>">
-                <div class="card-body">
-                    <h2 class="card-title"><?= $plat['libelle'] ?></h2>
-                    <p class="card-text"><?= $plat['description'] ?></p>
-                    <div class="quant text-end">
-                        <label for="quantite">Quantité:</label>
-                        <input type="number" id="quantite" name="quantite" min="1" max="25" value="1">
-                    </div>
-                </div>
-            </div>
-        <?php endif; ?>
-
 
         <!-- Formulaire de commande -->
         <form action="submit_order.php" method="post" class="order-form">
+
+            <!-- Carte du plat -->
+            <?php if ($plat) : ?>
+                <div class="plat-card2">
+                    <img src="src/img/food/<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>">
+                    <div class="card-body">
+                        <h2 class="card-title"><?= $plat['libelle'] ?></h2>
+                        <p class="card-text"><?= $plat['description'] ?></p>
+                        <div class="quant text-end">
+                            <label for="quantite">Quantité:</label>
+                            <input type="number" id="quantite" name="quantite" min="1" max="25" value="1">
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+
             <div class="form-group">
                 <label for="nom_prenom">Nom et prénom *</label>
                 <input type="text" id="nom_prenom" name="nom_prenom" required>
