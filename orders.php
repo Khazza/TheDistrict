@@ -30,12 +30,15 @@ render_header();
                     <div class="card-body">
                         <h2 class="card-title"><?= $plat['libelle'] ?></h2>
                         <p class="card-text"><?= $plat['description'] ?></p>
+                        <p class="card-text">Prix: <?= $plat['prix'] ?> €</p>
+                        <!-- Ajouter d'autres informations du plat ici si nécessaire -->
                         <div class="quant text-end">
                             <label for="quantite">Quantité:</label>
                             <input type="number" id="quantite" name="quantite" min="1" max="25" value="1">
                         </div>
                     </div>
                 </div>
+                <input type="hidden" name="id_plat" value="<?= $plat_id ?>"> <!-- Champ caché pour l'id du plat -->
             <?php endif; ?>
 
             <div class="form-group">
