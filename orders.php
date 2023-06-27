@@ -56,8 +56,8 @@ render_header();
             </div>
 
             <div class="form-group">
-                <label for="adresse">Adresse</label>
-                <textarea id="adresse" name="adresse"></textarea>
+                <label for="adresse">Adresse *</label>
+                <textarea id="adresse" name="adresse" required></textarea>
                 <span class="required-message">Ce champ est obligatoire</span>
             </div>
 
