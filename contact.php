@@ -22,9 +22,11 @@ include './template/functions.php';
                 <!-- Ligne 1: Nom et Prénom -->
                 <div class="row mb-3">
                     <div class="col-md-6">
+                    <label for="nom_prenom">Nom *</label>
                         <input type="text" class="form-control contact-input" name="nom" placeholder="Nom" required>
                     </div>
                     <div class="col-md-6">
+                    <label for="nom_prenom">Prénom</label>
                         <input type="text" class="form-control contact-input" name="prenom" placeholder="Prénom">
                     </div>
                 </div>
@@ -32,9 +34,11 @@ include './template/functions.php';
                 <!-- Ligne 2: Email et Téléphone -->
                 <div class="row mb-3">
                     <div class="col-md-6">
+                    <label for="nom_prenom">Email</label>
                         <input type="email" class="form-control contact-input" name="email" placeholder="Email">
                     </div>
                     <div class="col-md-6">
+                    <label for="nom_prenom">Téléphone *</label>
                         <input type="text" class="form-control contact-input" name="telephone" placeholder="Téléphone" required>
                     </div>
                 </div>
@@ -42,6 +46,7 @@ include './template/functions.php';
                 <!-- Ligne 3: Votre demande -->
                 <div class="row mb-3">
                     <div class="col-md-12">
+                    <label for="nom_prenom">Votre demande :</label>
                         <textarea class="form-control contact-input" name="demande" rows="4" placeholder="Votre demande"></textarea>
                     </div>
                 </div>
