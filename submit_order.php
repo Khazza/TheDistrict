@@ -51,5 +51,5 @@ try {
     echo "L'envoi de mail a échoué. L'erreur suivante s'est produite : ", $mail->ErrorInfo;
 }
 
-// header('Location: orders.php'); // Rediriger vers la page de commande
+header('Location: orders.php'); // Rediriger vers la page de commande
 ?>
