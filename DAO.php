@@ -230,7 +230,6 @@ function loginUser($identifier, $password) {
     $database = new Database();
     $db = $database->getConnection();
     
-    // Requête SQL pour obtenir l'utilisateur par email ou nom d'utilisateur
     $query = "SELECT * FROM utilisateur WHERE email = :identifier OR nom_prenom = :identifier";
     $stmt = $db->prepare($query);
     $stmt->bindParam(':identifier', $identifier);
@@ -238,15 +237,11 @@ function loginUser($identifier, $password) {
     
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    // Vérifier si un utilisateur a été trouvé et si le mot de passe correspond
     if ($user && password_verify($password, $user['password'])) {
-        // Connecter l'utilisateur et retourner vrai
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['user_role'] = $user['role'];
-        return true;
+        return $user; // Renvoyez les informations de l'utilisateur en cas de réussite
     }
     
-    // Retourner faux si les informations d'identification sont invalides
-    return false;
+    return null; // Renvoyez null en cas d'échec
 }
+
 
