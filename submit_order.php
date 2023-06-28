@@ -54,23 +54,11 @@ $mail->Body    = $order_summary;
 
 try {
     $mail->send();
-    $message = 'Email envoyé avec succès';
 } catch (Exception $e) {
-    $message = "L'envoi de mail a échoué. L'erreur suivante s'est produite : " . $mail->ErrorInfo;
+    error_log("L'envoi de mail a échoué. L'erreur suivante s'est produite : " . $mail->ErrorInfo);
 }
 
+// Rediriger vers la page de commande pour le plat spécifique
+header("Location: orders.php?id=$plat_id");
+exit;
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Confirmation</title>
-    <script>
-        window.onload = function() {
-            alert("<?php echo $message; ?>");
-            window.location.href = "orders.php?id=<?php echo $plat_id; ?>";
-        }
-    </script>
-</head>
-<body>
-</body>
-</html>

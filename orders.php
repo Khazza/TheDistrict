@@ -21,8 +21,7 @@ render_header();
     <div class="container">
 
         <!-- Formulaire de commande -->
-        <form action="submit_order.php" method="post" class="order-form">
-
+        <form action="submit_order.php" method="post" class="order-form" id="order-form">
             <!-- Carte du plat -->
             <?php if ($plat) : ?>
                 <div class="plat-card2">
