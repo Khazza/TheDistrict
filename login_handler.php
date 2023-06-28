@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (loginUser($identifier, $password)) {
         
         // Rediriger l'utilisateur vers la page d'accueil si la connexion est réussie
-        header("Location: /path_to_your_homepage");
+        header("Location: index.php");
         exit();
         
     } else {
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['error_message'] = "Invalid identifier or password";
         
         // Rediriger l'utilisateur vers la page de connexion avec un message d'erreur
-        header("Location: /path_to_your_login_page");
+        header("Location: login.php");
         exit();
         
     }
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     
     // Rediriger vers la page de connexion si la méthode de requête n'est pas POST
-    header("Location: /path_to_your_login_page");
+    header("Location: login.php");
     exit();
     
 }
