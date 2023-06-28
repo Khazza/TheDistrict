@@ -12,7 +12,6 @@ document.querySelector('.order-form').addEventListener('submit', function(e) {
         cancelButtonText: 'Non, annulez!'
     }).then((result) => {
         if (result.isConfirmed) {
-            // Ici, vous pouvez envoyer le formulaire programmatically si l'utilisateur confirme
             document.querySelector('.order-form').submit();
         }
     });
