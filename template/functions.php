@@ -53,7 +53,7 @@ function render_header()
                             <span class="nav-link">Bonjour, <?php echo htmlspecialchars($_SESSION['user']['nom_prenom']); ?></span>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-danger" href="logout.php">Se déconnecter</a>
+                            <a class="btn custom-logoff-btn" href="logout.php">Se déconnecter</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item">

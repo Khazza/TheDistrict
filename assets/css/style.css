@@ -644,7 +644,7 @@ input:invalid + .required-message {
 }
 
 /* CSS bouton login/signup */
-.custom-login-btn {
+.custom-login-btn, .custom-logoff-btn, .custom-signup-btn{
   background-color: #970747;
   color: #ffffff;
   padding: 10px 20px;
@@ -658,25 +658,12 @@ input:invalid + .required-message {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre */
 }
 
-.custom-signup-btn {
-  background-color: #970747;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: 2px solid #ffffff; /* Ajouter une bordure blanche */
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Ajouter une transition pour box-shadow */
-  margin-left: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre */
-}
-
 .navbar-nav.ms-auto {
   margin-right: 20px;
 }
 
 /* Changer la couleur d'arrière-plan lorsqu'on survole les boutons */
-.custom-login-btn:hover, .custom-signup-btn:hover {
+.custom-login-btn:hover, .custom-signup-btn:hover, .custom-logoff-btn:hover {
   background-color: #ffffff;
   color: #000000;
   border: 2px solid #000000; /* Ajouter une bordure blanche */
@@ -690,7 +677,7 @@ input:invalid + .required-message {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Ajouter une ombre interne lorsqu'on clique */
 }
 
-.custom-signup-btn:focus, .custom-login-btn:focus{
+.custom-signup-btn:focus, .custom-login-btn:focus, .custom-logoff-btn:focus{
   background-color: white !important;
   color: #000000;
   border: 2px solid #000000; /* Ajouter une bordure blanche */
