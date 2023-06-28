@@ -43,11 +43,11 @@ function render_header()
                     <li class="nav-item">
                         <a class="nav-link <?php echo $current_page === 'plats.php' ? 'active' : ''; ?>" href="plats.php">Plats</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link <?php echo $current_page === 'contact.php' ? 'active' : ''; ?>" href="contact.php">Contact</a>
                     </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
                     <?php if (isset($_SESSION['user'])) : ?>
                         <li class="nav-item">
                             <span class="nav-link">Bonjour, <?php echo htmlspecialchars($_SESSION['user']['nom_prenom']); ?></span>

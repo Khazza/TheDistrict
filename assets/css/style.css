@@ -632,7 +632,7 @@ input:invalid + .required-message {
 
 /* CSS bouton login/signup */
 .custom-login-btn {
-  background-color: #2c3e50; /* Bleu foncé */
+  background-color: #970747; /* Bleu foncé */
   color: #ffffff; /* Texte blanc */
   padding: 10px 20px; /* Espacement interne */
   border: none; /* Aucune bordure */
@@ -643,7 +643,7 @@ input:invalid + .required-message {
 }
 
 .custom-signup-btn {
-  background-color: #e74c3c; /* Rouge */
+  background-color: #970747; /* Rouge */
   color: #ffffff; /* Texte blanc */
   padding: 10px 20px; /* Espacement interne */
   border: none; /* Aucune bordure */
@@ -655,12 +655,16 @@ input:invalid + .required-message {
 
 /* Changer la couleur d'arrière-plan lorsqu'on survole les boutons */
 .custom-login-btn:hover, .custom-signup-btn:hover {
-  background-color: #34495e; /* Une couleur légèrement différente lors du survol */
+  background-color: #f8c301a2; /* Une couleur légèrement différente lors du survol */
+  color: #ffffff; /* Texte blanc */
+
 }
 
 /* Changer la couleur d'arrière-plan lorsqu'on clique sur les boutons */
 .custom-login-btn:active, .custom-signup-btn:active {
-  background-color: #2c3e50; /* Une couleur légèrement différente lorsqu'on clique */
+  background-color: #f8c301a2; /* Une couleur légèrement différente lorsqu'on clique */
+  color: #ffffff; /* Texte blanc */
+
 }
 
 /* ---------------------------------------------------------------------------- */
