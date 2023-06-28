@@ -48,6 +48,12 @@ body{
   flex-grow: 2; /* Permet aux éléments du milieu de prendre plus d'espace */
 }
 
+.nav-message {
+  color: #ffffff; 
+  font-size: 18px; 
+  margin-right: 10px; /* Espace entre les liens */
+}
+
 .nav-link {
   color: #ffffff !important; /* Couleur de texte blanche pour une meilleure lisibilité */
   font-size: 18px; /* Taille de police plus grande */

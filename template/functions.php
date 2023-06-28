@@ -50,7 +50,7 @@ function render_header()
                 <ul class="navbar-nav ms-auto">
                     <?php if (isset($_SESSION['user'])) : ?>
                         <li class="nav-item">
-                            <span class="nav-link">Bonjour, <?php echo htmlspecialchars($_SESSION['user']['nom_prenom']); ?></span>
+                            <span class="nav-message">Bonjour, <?php echo htmlspecialchars($_SESSION['user']['nom_prenom']); ?></span>
                         </li>
                         <li class="nav-item">
                             <a class="btn custom-logoff-btn" href="logout.php">Se déconnecter</a>
