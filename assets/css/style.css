@@ -640,6 +640,8 @@ input:invalid + .required-message {
   font-size: 16px; /* Taille de la police */
   text-decoration: none; /* Supprime le soulignement */
   transition: background-color 0.3s ease; /* Transition en douceur lors du survol */
+  margin-right: 10px; /* Ajouter une marge à droite */
+  margin-left: 10px; /* Ajouter une marge à gauche */
 }
 
 .custom-signup-btn {
@@ -651,21 +653,25 @@ input:invalid + .required-message {
   font-size: 16px; /* Taille de la police */
   text-decoration: none; /* Supprime le soulignement */
   transition: background-color 0.3s ease; /* Transition en douceur lors du survol */
+  margin-left: 10px; /* Ajouter une marge à gauche */
+}
+
+.navbar-nav.ms-auto {
+  margin-right: 20px; /* Ajouter une marge à droite pour éloigner les boutons du bord de la fenêtre */
 }
 
 /* Changer la couleur d'arrière-plan lorsqu'on survole les boutons */
 .custom-login-btn:hover, .custom-signup-btn:hover {
   background-color: #f8c301a2; /* Une couleur légèrement différente lors du survol */
   color: #ffffff; /* Texte blanc */
-
 }
 
 /* Changer la couleur d'arrière-plan lorsqu'on clique sur les boutons */
 .custom-login-btn:active, .custom-signup-btn:active {
   background-color: #f8c301a2; /* Une couleur légèrement différente lorsqu'on clique */
   color: #ffffff; /* Texte blanc */
-
 }
+
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
