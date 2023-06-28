@@ -49,10 +49,10 @@ function render_header()
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <?php if (isset($_SESSION['user'])) : ?>
-                        <li class="nav-item">
+                        <li class="nav-item d-flex align-items-center">
                             <span class="nav-message">Bonjour, <?php echo htmlspecialchars($_SESSION['user']['nom_prenom']); ?></span>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-flex align-items-center">
                             <a class="btn custom-logoff-btn" href="logout.php">Se déconnecter</a>
                         </li>
                     <?php else : ?>
