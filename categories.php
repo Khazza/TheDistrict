@@ -47,7 +47,9 @@ include './template/functions.php';
 
     <!-- Pagination -->
     <div class="d-flex justify-content-center">
+        
         <?php
+        var_dump($page, $total_categories, $items_per_page);
         $total_categories = get_total_categories();
         echo generate_pagination_links($page, $total_categories, $items_per_page);
         ?>
