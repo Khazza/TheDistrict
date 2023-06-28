@@ -570,7 +570,7 @@ border-radius: 5px; /* Coins arrondis */
   background-size: cover;
   background-attachment: fixed;
   filter: blur(8px);
-  z-index: -1; /* Placez-le en arrière-plan */
+  z-index: -1;
 }
 
 /* CSS custom Button */
@@ -706,6 +706,10 @@ input:invalid + .required-message {
 /* Styles en mode responsive */
 @media screen and (max-width: 768px) {
   
+  .navbar {
+    z-index: 1000; /* ou toute valeur suffisamment élevée */
+}
+
   /* Cacher la barre de recherche */
   .search-input, .custom-search-button {
     display: none;
