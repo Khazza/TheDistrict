@@ -77,7 +77,7 @@ function get_total_categories() {
     $database = new Database();
     $db = $database->getConnection();
     
-    $query = "SELECT COUNT(*) as total FROM categorie";
+    $query = "SELECT COUNT(*) as total FROM categorie WHERE active = 'Yes'";
     $stmt = $db->prepare($query);
     $stmt->execute();
 
@@ -85,6 +85,7 @@ function get_total_categories() {
 
     return $row['total'];
 }
+
 
 function get_plats_by_category($category_id = null) {
     $database = new Database();

@@ -114,6 +114,7 @@ function generate_pagination_links($current_page, $total_categories, $items_per_
         $links .= '<a href="?page=' . ($current_page - 1) . '" class="pagination-btn pagination-prev">Précédent</a>';
     }
 
+    // Vérifiez si c'est la dernière page
     if ($current_page < $total_pages) {
         $links .= '<a href="?page=' . ($current_page + 1) . '" class="pagination-btn pagination-next">Suivant</a>';
     }
