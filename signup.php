@@ -64,5 +64,14 @@ $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
     </div>
 </div>
 
-<!-- Appel de la fonction pour afficher le footer -->
-<?php render_footer(); ?>
+
+<!-- Bootstrap JS, jQuery -->
+<script src="./js/script.js"></script>
+<!-- Inclusion de SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

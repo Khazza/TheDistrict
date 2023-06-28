@@ -621,9 +621,8 @@ input:invalid + .required-message {
 
 /* CSS Login/signup */
 .form-container {
-  margin-top: 50px;
-  max-width: 500px; /* Vous pouvez ajuster cette valeur en fonction de la largeur souhaitée */
-  margin: auto;
+  margin-top: 150px;
+  max-width: 500px; 
 }
 
 .card {
