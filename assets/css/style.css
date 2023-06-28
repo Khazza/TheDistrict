@@ -459,7 +459,7 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 .plat-card .plat-card2 .btn-primary:hover, .plat-card .btn-primary:focus {
-  background-color: #f8c301;
+  background-color: #f8c301 ;
   border-color: #f8c301;
 }
 
@@ -592,8 +592,8 @@ border-radius: 5px; /* Coins arrondis */
   transition: all 0.3s;
 }
 .btn-primary:focus {
-  background-color: #f8c301;
-  border-color: #f8c301;
+  background-color: #f8c301 !important;
+  border-color: #f8c301 !important;
 }
 
 .required-message {
