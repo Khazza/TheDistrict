@@ -619,6 +619,43 @@ input:invalid + .required-message {
   display: block; /* Affiche les messages lorsque le champ est invalide */
 }
 
+
+/* CSS Login/signup */
+.form-container {
+  margin-top: 50px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-header {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #4CAF50;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+.text-login {
+  color: #4CAF50;
+}
+
+.back-index {
+  color: #4CAF50;
+}
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */

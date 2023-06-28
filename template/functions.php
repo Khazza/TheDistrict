@@ -48,17 +48,24 @@ function render_header()
                     <li class="nav-item">
                         <a class="nav-link <?php echo $current_page === 'contact.php' ? 'active' : ''; ?>" href="contact.php">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="login.php" class="nav-link login-button">S'identifier</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="signup.php" class="nav-link login-button">S'enregistrer</a>
-                    </li>
+                    <?php if (isset($_SESSION['user'])): ?>
+                        <li class="nav-item">
+                            <span class="nav-link">Bonjour, <?php echo htmlspecialchars($_SESSION['user']['nom_prenom']); ?></span>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a href="login.php" class="nav-link login-button">S'identifier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="signup.php" class="nav-link login-button">S'enregistrer</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </nav>
     <?php
 }
+
 
 
 
