@@ -632,45 +632,50 @@ input:invalid + .required-message {
 
 /* CSS bouton login/signup */
 .custom-login-btn {
-  background-color: #970747; /* Bleu foncé */
-  color: #ffffff; /* Texte blanc */
-  padding: 10px 20px; /* Espacement interne */
-  border: none; /* Aucune bordure */
-  border-radius: 5px; /* Coins arrondis */
-  font-size: 16px; /* Taille de la police */
-  text-decoration: none; /* Supprime le soulignement */
-  transition: background-color 0.3s ease; /* Transition en douceur lors du survol */
-  margin-right: 10px; /* Ajouter une marge à droite */
-  margin-left: 10px; /* Ajouter une marge à gauche */
+  background-color: #970747;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 2px solid #ffffff; /* Ajouter une bordure blanche */
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Ajouter une transition pour box-shadow */
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre */
 }
 
 .custom-signup-btn {
-  background-color: #970747; /* Rouge */
-  color: #ffffff; /* Texte blanc */
-  padding: 10px 20px; /* Espacement interne */
-  border: none; /* Aucune bordure */
-  border-radius: 5px; /* Coins arrondis */
-  font-size: 16px; /* Taille de la police */
-  text-decoration: none; /* Supprime le soulignement */
-  transition: background-color 0.3s ease; /* Transition en douceur lors du survol */
-  margin-left: 10px; /* Ajouter une marge à gauche */
+  background-color: #970747;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 2px solid #ffffff; /* Ajouter une bordure blanche */
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Ajouter une transition pour box-shadow */
+  margin-left: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre */
 }
 
 .navbar-nav.ms-auto {
-  margin-right: 20px; /* Ajouter une marge à droite pour éloigner les boutons du bord de la fenêtre */
+  margin-right: 20px;
 }
 
 /* Changer la couleur d'arrière-plan lorsqu'on survole les boutons */
 .custom-login-btn:hover, .custom-signup-btn:hover {
-  background-color: #f8c301a2; /* Une couleur légèrement différente lors du survol */
-  color: #ffffff; /* Texte blanc */
+  background-color: #f8c301a2;
+  color: #ffffff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre lors du survol */
 }
 
 /* Changer la couleur d'arrière-plan lorsqu'on clique sur les boutons */
 .custom-login-btn:active, .custom-signup-btn:active {
-  background-color: #f8c301a2; /* Une couleur légèrement différente lorsqu'on clique */
-  color: #ffffff; /* Texte blanc */
+  background-color: #f8c301a2;
+  color: #ffffff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Ajouter une ombre interne lorsqu'on clique */
 }
+
 
 
 /* ---------------------------------------------------------------------------- */
