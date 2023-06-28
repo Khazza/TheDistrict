@@ -1,21 +1,7 @@
 <?php
 require_once 'database.php';
 
-
-// function get_categories()
-// {
-//     $database = new Database();
-//     $db = $database->getConnection();
-
-//     $query = "SELECT * FROM categorie WHERE active = 'Yes' LIMIT 6";
-//     $stmt = $db->prepare($query);
-//     $stmt->execute();
-
-//     $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-//     return $categories;
-// }
-
+// ------------------------------------------------Index
 function get_popular_categories($limit = 6) {
     $database = new Database();
     $db = $database->getConnection();
@@ -60,6 +46,8 @@ function get_most_sold_dishes()
 }
 ?>
 
+
+<!-- --------------------------------Categories---------------------------- -->
 <?php
 function get_categories_paginated($limit, $offset) {
     $database = new Database();
@@ -80,6 +68,28 @@ function get_categories_paginated($limit, $offset) {
     $stmt->execute();
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
+<?php
+function generate_pagination_links($current_page, $total_items, $items_per_page) {
+    $output = '';
+    
+    // Calculer le nombre total de pages
+    $total_pages = ceil($total_items / $items_per_page);
+
+    // Lien vers la page précédente
+    if ($current_page > 1) {
+        $prev_page = $current_page - 1;
+        $output .= "<a href='?page=$prev_page'>Page précédente</a> ";
+    }
+
+    // Lien vers la page suivante
+    if ($current_page < $total_pages) {
+        $next_page = $current_page + 1;
+        $output .= "<a href='?page=$next_page'>Page suivante</a> ";
+    }
+
+    return $output;
 }
 ?>
 
