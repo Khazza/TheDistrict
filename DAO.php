@@ -60,13 +60,12 @@ function get_most_sold_dishes()
 }
 ?>
 
-<?php 
+<?php
 function get_categories_paginated($limit, $offset) {
     $database = new Database();
     $db = $database->getConnection();
 
-    // Utilisez des placeholders nommés dans la requête SQL
-    $query = "SELECT * FROM categorie LIMIT :limit OFFSET :offset";
+    $query = "SELECT * FROM categorie WHERE active = 'Yes' LIMIT :limit OFFSET :offset";
     $stmt = $db->prepare($query);
     
     // Convertir les limites et les décalages en entiers
