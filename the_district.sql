@@ -85,3 +85,8 @@ INSERT INTO `commande` (`id`, `id_plat`, `quantite`, `total`, `date_commande`, `
 (8, 14, 1, 6.00, "2021-07-20 06:40:57", "En préparation", "Vernon Vargas", "7414744440", "venno@gmail.com", "1234 Hazelwood Avenue"),
 (9, 9, 4, 20.00, "2021-07-20 07:06:06", "Annulée", "Carlos Grayson", "7401456980", "carlos@gmail.com", "2969 Hartland Avenue"),
 (10, 16, 4, 12.00, "2021-07-20 07:11:06", "Livrée", "Jonathan Caudill", "7410256996", "jonathan@gmail.com", "1959 Limer Street");
+
+
+INSERT INTO utilisateur (id, nom_prenom, email, password, role) VALUES
+-- MDP admin: Admin123
+	(1, 'Admin',from@thedistrict.com, '$2y$10$hifuCMqIYHhH84S0hNQpzuysd2uURrQFtTszCL7sMxHh/.CEWcRlO', 'admin');
