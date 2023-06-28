@@ -622,6 +622,8 @@ input:invalid + .required-message {
 /* CSS Login/signup */
 .form-container {
   margin-top: 50px;
+  max-width: 500px; /* Vous pouvez ajuster cette valeur en fonction de la largeur souhaitée */
+  margin: auto;
 }
 
 .card {
@@ -638,13 +640,10 @@ input:invalid + .required-message {
   color: white;
 }
 
-.text-login {
+.text-login, .back-index {
   color: #970747;
 }
 
-.back-index {
-  color: #970747;
-}
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
