@@ -3,7 +3,7 @@ function render_header()
 {
     $current_page = basename($_SERVER['SCRIPT_NAME']);
 
-?>
+    ?>
     <!DOCTYPE html>
     <html lang="fr">
 
@@ -52,12 +52,15 @@ function render_header()
                         <li class="nav-item">
                             <span class="nav-link">Bonjour, <?php echo htmlspecialchars($_SESSION['user']['nom_prenom']); ?></span>
                         </li>
+                        <li class="nav-item">
+                            <a class="btn btn-danger" href="logout.php">Se déconnecter</a>
+                        </li>
                     <?php else: ?>
                         <li class="nav-item">
-                        <a class="nav-link <?php echo $current_page === 'login.php' ? 'active' : ''; ?>" href="login.php">S'identifier</a>
+                            <a class="btn btn-primary" href="login.php">S'identifier</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link <?php echo $current_page === 'signup.php' ? 'active' : ''; ?>" href="signup.php">S'enregistrer</a>
+                            <a class="btn btn-secondary" href="signup.php">S'enregistrer</a>
                         </li>
                     <?php endif; ?>
                 </ul>
