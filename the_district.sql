@@ -3,6 +3,8 @@ CREATE DATABASE IF NOT EXISTS the_district;
 USE the_district;
 
 -- Création des tables
+
+DROP TABLE IF EXISTS `categorie`;
 CREATE TABLE `categorie` (
   `id` int AUTO_INCREMENT PRIMARY KEY,
   `libelle` varchar(100) NOT NULL,
@@ -10,6 +12,8 @@ CREATE TABLE `categorie` (
   `active` varchar(10) NOT NULL
 );
 
+
+DROP TABLE IF EXISTS `plat`;
 CREATE TABLE `plat` (
   `id` int AUTO_INCREMENT PRIMARY KEY,
   `libelle` varchar(100) NOT NULL,
@@ -21,6 +25,8 @@ CREATE TABLE `plat` (
   FOREIGN KEY (id_categorie) REFERENCES categorie(id)
 );
 
+
+DROP TABLE IF EXISTS `commande`;
 CREATE TABLE `commande` (
   `id` int AUTO_INCREMENT PRIMARY KEY,
   `id_plat` int NOT NULL,
@@ -35,11 +41,14 @@ CREATE TABLE `commande` (
   FOREIGN KEY (id_plat) REFERENCES plat(id)
 );
 
+
+DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE `utilisateur` (
   `id` int AUTO_INCREMENT PRIMARY KEY,
   `nom_prenom` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `role` ENUM('admin', 'user') NOT NULL DEFAULT 'user'
 );
 
 -- Insertion des données dans la table `categorie`

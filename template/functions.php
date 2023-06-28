@@ -51,6 +51,9 @@ function render_header()
                     <li class="nav-item">
                         <a href="login.php" class="nav-link login-button">S'identifier</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="signup.php" class="nav-link login-button">S'enregistrer</a>
+                    </li>
                 </ul>
             </div>
         </nav>
