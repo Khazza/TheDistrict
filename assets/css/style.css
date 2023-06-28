@@ -67,19 +67,6 @@ body{
   border-bottom: 2px solid #ffffff; /* Souligne le lien actif avec une bordure */
 }
 
-.login-button {
-  color: #ffffff; /* Couleur du texte du bouton */
-  background-color: #3a3f44; /* Couleur de fond du bouton */
-  border: none; /* Pas de bordure */
-  padding: 10px 20px; /* Padding intérieur */
-  border-radius: 10px; /* Coins arrondis */
-}
-
-.login-button:hover {
-  color: #30353a; /* Changement de couleur au survol */
-  background-color: #ffffff ; /* Changement de couleur de fond au survol */
-}
-
 /* Footer */
 .footer {
   background-color: rgba(

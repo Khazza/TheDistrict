@@ -54,10 +54,10 @@ function render_header()
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a href="login.php" class="nav-link login-button">S'identifier</a>
+                        <a class="nav-link <?php echo $current_page === 'login.php' ? 'active' : ''; ?>" href="login.php">S'identifier</a>
                         </li>
                         <li class="nav-item">
-                            <a href="signup.php" class="nav-link login-button">S'enregistrer</a>
+                        <a class="nav-link <?php echo $current_page === 'signup.php' ? 'active' : ''; ?>" href="signup.php">S'enregistrer</a>
                         </li>
                     <?php endif; ?>
                 </ul>

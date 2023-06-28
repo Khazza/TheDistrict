@@ -19,7 +19,7 @@ render_header();
 <div class="container form-container">
     <div class="card">
         <div class="card-header">
-            <h2 class="text-login text-center">Connexion</h2>
+            <h2 class="title-login text-center">Connexion</h2>
         </div>
         <div class="card-body">
             <?php
