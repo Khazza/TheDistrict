@@ -25,7 +25,7 @@ function render_header()
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-light">
             <a class="navbar-brand"><img src="../src/img/the_district_brand/logo_transp.png" alt="Logo" height="60"></a>
-            
+
             <!-- Bouton de basculement -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -77,7 +77,11 @@ function render_footer()
         </footer>
 
         <!-- Bootstrap JS, jQuery -->
-        <script> src="./js/script.js"</script>
+        <script>
+            src = "./js/script.js"
+        </script>
+        <!-- Inclusion de SweetAlert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -90,19 +94,19 @@ function render_footer()
 
 <?php
 // Cette fonction génère les liens de pagination en fonction de la page actuelle et du nombre total de catégories.
-function generate_pagination_links($current_page, $total_categories, $items_per_page) {
+function generate_pagination_links($current_page, $total_categories, $items_per_page)
+{
     $total_pages = ceil($total_categories / $items_per_page);
-    
+
     $links = '';
     if ($current_page > 1) {
         $links .= '<a href="?page=' . ($current_page - 1) . '" class="pagination-btn pagination-prev">Précédent</a>';
     }
-    
+
     if ($current_page < $total_pages) {
         $links .= '<a href="?page=' . ($current_page + 1) . '" class="pagination-btn pagination-next">Suivant</a>';
     }
-    
+
     return $links;
 }
 ?>
-
