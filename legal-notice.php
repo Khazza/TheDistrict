@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include 'database.php';
 include 'DAO.php';
 include './template/functions.php';

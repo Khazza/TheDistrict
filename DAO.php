@@ -211,13 +211,18 @@ function insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_
 
 // --------------------------------LOGIN/SIGNUP
 function userExists($pdo, $email) {
-    $stmt = $pdo->prepare("SELECT * FROM utilisateur WHERE email = ?");
+    $database = new Database();
+    $db = $database->getConnection();
+
+    $stmt = $db->prepare("SELECT * FROM utilisateur WHERE email = ?");
     $stmt->execute([$email]);
     return $stmt->fetch();
 }
 
 function registerUser($pdo, $nom_prenom, $email, $password) {
-    $stmt = $pdo->prepare("INSERT INTO utilisateur (nom_prenom, email, password) VALUES (?, ?, ?)");
+    $database = new Database();
+    $db = $database->getConnection();
+    $stmt = $db->prepare("INSERT INTO utilisateur (nom_prenom, email, password) VALUES (?, ?, ?)");
     return $stmt->execute([$nom_prenom, $email, password_hash($password, PASSWORD_DEFAULT)]);
 }
 

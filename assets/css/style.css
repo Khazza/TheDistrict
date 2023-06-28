@@ -619,7 +619,6 @@ input:invalid + .required-message {
   display: block; /* Affiche les messages lorsque le champ est invalide */
 }
 
-
 /* CSS Login/signup */
 .form-container {
   margin-top: 50px;
@@ -635,25 +634,16 @@ input:invalid + .required-message {
 }
 
 .card-header {
-  background-color: #4CAF50;
+  background-color: #970747;
   color: white;
 }
 
-.btn-primary {
-  background-color: #4CAF50;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #45a049;
-}
-
 .text-login {
-  color: #4CAF50;
+  color: #970747;
 }
 
 .back-index {
-  color: #4CAF50;
+  color: #970747;
 }
 
 /* ---------------------------------------------------------------------------- */
