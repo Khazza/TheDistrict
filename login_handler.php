@@ -1,5 +1,4 @@
 <?php
-
 // Demarrez la session
 session_start();
 include 'database.php';
