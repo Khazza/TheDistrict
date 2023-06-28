@@ -77,9 +77,7 @@ function render_footer()
         </footer>
 
         <!-- Bootstrap JS, jQuery -->
-        <script>
-            src = "./js/script.js"
-        </script>
+        <script src="./js/script.js"></script>
         <!-- Inclusion de SweetAlert2 -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
