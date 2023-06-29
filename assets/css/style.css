@@ -706,8 +706,14 @@ input:invalid + .required-message {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #970747;
+  background-color: rgba(
+    151,
+    7,
+    71,
+    0.9
+  ) !important; /* Couleur de fond de la navbar avec transparence */
   color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de décollage */
 }
 
 /* ---------------------------------------------------------------------------- */
