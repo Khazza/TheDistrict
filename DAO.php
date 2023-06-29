@@ -299,4 +299,27 @@ function deletePlat($db, $id) {
 
     return $stmt->execute();
 }
+
+function addCategory($db, $libelle, $active) {
+    $query = "INSERT INTO categorie (libelle, active) VALUES (:libelle, :active)";
+    $stmt = $db->prepare($query);
+
+    $stmt->bindParam(':libelle', $libelle);
+    $stmt->bindParam(':active', $active);
+
+    $stmt->execute();
+}
+
+function addPlat($db, $libelle, $description, $prix, $active, $id_categorie) {
+    $query = "INSERT INTO plat (libelle, description, prix, active, id_categorie) VALUES (:libelle, :description, :prix, :active, :id_categorie)";
+    $stmt = $db->prepare($query);
+
+    $stmt->bindParam(':libelle', $libelle);
+    $stmt->bindParam(':description', $description);
+    $stmt->bindParam(':prix', $prix);
+    $stmt->bindParam(':active', $active);
+    $stmt->bindParam(':id_categorie', $id_categorie);
+
+    $stmt->execute();
+}
 ?>
