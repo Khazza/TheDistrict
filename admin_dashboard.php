@@ -51,40 +51,58 @@ $plats = get_all_plats();
         <?php endforeach; ?>
     </table>
 
-    <!-- Section de gestion des plats -->
-    <h2>Gestion des plats</h2>
-    <table class="dashboard-table">
-        <tr>
-            <th>ID</th>
-            <th>Libelle</th>
-            <th>Description</th>
-            <th>Prix</th>
-            <th>Active</th>
-            <th>Actions</th>
-        </tr>
-        <?php foreach ($plats as $plat) : ?>
+<!-- Section de gestion des plats -->
+<h2>Gestion des plats</h2>
+
+<?php
+// Regrouper les plats par catégorie
+$plats_by_category = [];
+foreach ($plats as $plat) {
+    $plats_by_category[$plat['id_categorie']][] = $plat;
+}
+
+// Itérer sur les catégories
+foreach ($categories as $categorie) {
+    if (isset($plats_by_category[$categorie['id']])) {
+        echo "<h3 class='category-title'>{$categorie['libelle']}</h3>";
+
+        echo "<table class='dashboard-table'>
             <tr>
-                <form action="update_plat.php" method="post">
-                    <td><?php echo $plat['id']; ?></td>
-                    <td><input type="text" name="libelle" value="<?php echo $plat['libelle']; ?>"></td>
-                    <td><input type="text" name="description" value="<?php echo $plat['description']; ?>"></td>
-                    <td><input type="text" name="prix" value="<?php echo $plat['prix']; ?>"></td>
+                <th>ID</th>
+                <th>Libelle</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Active</th>
+                <th>Actions</th>
+            </tr>";
+
+        // Itérer sur les plats de cette catégorie
+        foreach ($plats_by_category[$categorie['id']] as $plat) {
+            echo "<tr>
+                <form action='update_plat.php' method='post'>
+                    <td>{$plat['id']}</td>
+                    <td><input type='text' name='libelle' value='{$plat['libelle']}'></td>
+                    <td><input type='text' name='description' value='{$plat['description']}'></td>
+                    <td><input type='text' name='prix' value='{$plat['prix']}'></td>
                     <td>
-                        <select name="active">
-                            <option value="Yes" <?php if ($plat['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
-                            <option value="No" <?php if ($plat['active'] === 'No') echo 'selected'; ?>>No</option>
+                        <select name='active'>
+                            <option value='Yes'".($plat['active'] === 'Yes' ? ' selected' : '').">Yes</option>
+                            <option value='No'".($plat['active'] === 'No' ? ' selected' : '').">No</option>
                         </select>
                     </td>
                     <td>
-                        <input type="hidden" name="id" value="<?php echo $plat['id']; ?>">
-                        <input type="hidden" name="id_categorie" value="<?php echo $plat['id_categorie']; ?>">
-                        <input type="submit" value="Modifier">
-                        <a href="delete_plat.php?id=<?php echo $plat['id']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce plat?');">Supprimer</a>
+                        <input type='hidden' name='id' value='{$plat['id']}'>
+                        <input type='hidden' name='id_categorie' value='{$plat['id_categorie']}'>
+                        <input type='submit' value='Modifier'>
+                        <a href='delete_plat.php?id={$plat['id']}' onclick=\"return confirm('Êtes-vous sûr de vouloir supprimer ce plat?');\">Supprimer</a>
                     </td>
                 </form>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-</div>
+            </tr>";
+        }
+
+        echo "</table>";
+    }
+}
+?>
 
 <?php render_footer(); ?>
