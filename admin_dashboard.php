@@ -5,12 +5,12 @@ include 'database.php';
 include 'DAO.php';
 include './template/functions.php';
 
-// Vérifier si l'utilisateur est connecté et est un admin
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+if (!isset($_SESSION['user']['user_id']) || $_SESSION['user']['role'] !== 'admin') {
     // Rediriger vers la page de connexion ou une page d'erreur
     header('Location: login.php');
     exit();
 }
+
 
 // Appel de la fonction pour afficher le header
 render_header();
@@ -31,7 +31,7 @@ $plats = get_all_plats();
             <th>Active</th>
             <th>Actions</th>
         </tr>
-        <?php foreach ($categories as $categorie): ?>
+        <?php foreach ($categories as $categorie) : ?>
             <tr>
                 <form action="update_category.php" method="post">
                     <td><?php echo $categorie['id']; ?></td>
@@ -62,7 +62,7 @@ $plats = get_all_plats();
             <th>Active</th>
             <th>Actions</th>
         </tr>
-        <?php foreach ($plats as $plat): ?>
+        <?php foreach ($plats as $plat) : ?>
             <tr>
                 <form action="update_plat.php" method="post">
                     <td><?php echo $plat['id']; ?></td>
