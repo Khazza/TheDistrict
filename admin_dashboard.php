@@ -24,11 +24,15 @@ $plats = get_all_plats();
 
     <!-- Section de gestion des catégories -->
     <h2>Gestion des catégories</h2>
-    
+
     <h3>Ajouter une nouvelle catégorie</h3>
-    <form action="add_category.php" method="post">
+    <!-- Ajout de la section pour ajouter une nouvelle catégorie -->
+    <h3>Ajouter une nouvelle catégorie</h3>
+    <form action="add_category.php" method="post" enctype="multipart/form-data">
         <label for="libelle">Libelle:</label>
         <input type="text" name="libelle" required>
+        <label for="image">Image:</label>
+        <input type="file" name="image" required>
         <label for="active">Active:</label>
         <select name="active">
             <option value="Yes">Yes</option>
@@ -68,13 +72,17 @@ $plats = get_all_plats();
     <h2>Gestion des plats</h2>
 
     <h3>Ajouter un nouveau plat</h3>
-    <form action="add_plat.php" method="post">
+    <!-- Ajout de la section pour ajouter un nouveau plat -->
+    <h3>Ajouter un nouveau plat</h3>
+    <form action="add_plat.php" method="post" enctype="multipart/form-data">
         <label for="libelle">Libelle:</label>
         <input type="text" name="libelle" required>
         <label for="description">Description:</label>
         <input type="text" name="description" required>
         <label for="prix">Prix:</label>
         <input type="number" step="0.01" name="prix" required>
+        <label for="image">Image:</label>
+        <input type="file" name="image" required>
         <label for="active">Active:</label>
         <select name="active">
             <option value="Yes">Yes</option>
@@ -121,8 +129,8 @@ $plats = get_all_plats();
                         <td><input type='text' name='prix' value='{$plat['prix']}'></td>
                         <td>
                             <select name='active'>
-                                <option value='Yes'".($plat['active'] === 'Yes' ? ' selected' : '').">Yes</option>
-                                <option value='No'".($plat['active'] === 'No' ? ' selected' : '').">No</option>
+                                <option value='Yes'" . ($plat['active'] === 'Yes' ? ' selected' : '') . ">Yes</option>
+                                <option value='No'" . ($plat['active'] === 'No' ? ' selected' : '') . ">No</option>
                             </select>
                         </td>
                         <td>
