@@ -25,7 +25,6 @@ $plats = get_all_plats();
     <!-- Section de gestion des catégories -->
     <h2>Gestion des catégories</h2>
 
-    <h3>Ajouter une nouvelle catégorie</h3>
     <!-- Ajout de la section pour ajouter une nouvelle catégorie -->
     <h3>Ajouter une nouvelle catégorie</h3>
     <form action="add_category.php" method="post" enctype="multipart/form-data">
@@ -71,7 +70,6 @@ $plats = get_all_plats();
     <!-- Section de gestion des plats -->
     <h2>Gestion des plats</h2>
 
-    <h3>Ajouter un nouveau plat</h3>
     <!-- Ajout de la section pour ajouter un nouveau plat -->
     <h3>Ajouter un nouveau plat</h3>
     <form action="add_plat.php" method="post" enctype="multipart/form-data">
