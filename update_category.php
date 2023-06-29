@@ -11,4 +11,7 @@ $libelle = $_POST['libelle'];
 $active = $_POST['active'];
 
 updateCategory($db, $id, $libelle, $active);
+// Redirection vers la page admin_dashboard.php
+header('Location: admin_dashboard.php');
+exit();
 ?>
