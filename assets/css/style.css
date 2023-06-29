@@ -692,6 +692,9 @@ input:invalid + .required-message {
 }
 
 /* CSS Dashboard */
+.dashboard{
+  margin-top: 20px;
+}
 .dashboard .dashboard-table {
   width: 100%;
   border-collapse: collapse;
