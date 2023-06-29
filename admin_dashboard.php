@@ -45,11 +45,12 @@ $plats = get_all_plats();
             <th>ID</th>
             <th>Libelle</th>
             <th>Active</th>
+            <th>Image</th>
             <th>Actions</th>
         </tr>
         <?php foreach ($categories as $categorie) : ?>
             <tr>
-                <form action="update_category.php" method="post">
+                <form action="update_category.php" method="post" enctype="multipart/form-data">
                     <td><?php echo $categorie['id']; ?></td>
                     <td><input type="text" name="libelle" value="<?php echo $categorie['libelle']; ?>"></td>
                     <td>
@@ -57,6 +58,10 @@ $plats = get_all_plats();
                             <option value="Yes" <?php if ($categorie['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
                             <option value="No" <?php if ($categorie['active'] === 'No') echo 'selected'; ?>>No</option>
                         </select>
+                    </td>
+                    <td>
+                        <label for="image">Image:</label>
+                        <input type="file" name="image">
                     </td>
                     <td>
                         <input type="hidden" name="id" value="<?php echo $categorie['id']; ?>">
@@ -114,13 +119,14 @@ $plats = get_all_plats();
                     <th>Description</th>
                     <th>Prix</th>
                     <th>Active</th>
+                    <th>Image</th>
                     <th>Actions</th>
                 </tr>";
 
             // Itérer sur les plats de cette catégorie
             foreach ($plats_by_category[$categorie['id']] as $plat) {
                 echo "<tr>
-                    <form action='update_plat.php' method='post'>
+                    <form action='update_plat.php' method='post' enctype='multipart/form-data'>
                         <td>{$plat['id']}</td>
                         <td><input type='text' name='libelle' value='{$plat['libelle']}'></td>
                         <td><input type='text' name='description' value='{$plat['description']}'></td>
@@ -130,6 +136,10 @@ $plats = get_all_plats();
                                 <option value='Yes'" . ($plat['active'] === 'Yes' ? ' selected' : '') . ">Yes</option>
                                 <option value='No'" . ($plat['active'] === 'No' ? ' selected' : '') . ">No</option>
                             </select>
+                        </td>
+                        <td>
+                            <label for='image'>Image:</label>
+                            <input type='file' name='image'>
                         </td>
                         <td>
                             <input type='hidden' name='id' value='{$plat['id']}'>
