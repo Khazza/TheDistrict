@@ -77,6 +77,7 @@ $plats = get_all_plats();
                     </td>
                     <td>
                         <input type="hidden" name="id" value="<?php echo $plat['id']; ?>">
+                        <input type="hidden" name="id_categorie" value="<?php echo $plat['id_categorie']; ?>">
                         <input type="submit" value="Modifier">
                         <a href="delete_plat.php?id=<?php echo $plat['id']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce plat?');">Supprimer</a>
                     </td>

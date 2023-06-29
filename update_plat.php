@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include 'database.php';
 include 'DAO.php';
 
@@ -14,4 +15,7 @@ $id_categorie = $_POST['id_categorie'];
 $active = $_POST['active'];
 
 updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active);
+// Redirection vers la page admin_dashboard.php
+header('Location: admin_dashboard.php');
+exit();
 ?>
