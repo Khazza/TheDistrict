@@ -66,7 +66,7 @@ $plats = get_all_plats();
             <tr>
                 <form action="update_plat.php" method="post">
                     <td><?php echo $plat['id']; ?></td>
-                    <td><?php echo $plat['libelle']; ?></td>
+                    <td><input type="text" name="libelle" value="<?php echo $plat['libelle']; ?>"></td>
                     <td><input type="text" name="description" value="<?php echo $plat['description']; ?>"></td>
                     <td><input type="text" name="prix" value="<?php echo $plat['prix']; ?>"></td>
                     <td>
