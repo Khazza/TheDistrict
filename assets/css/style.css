@@ -705,6 +705,7 @@ input:invalid + .required-message {
 .dashboard .dashboard-table th {
   padding-top: 12px;
   padding-bottom: 12px;
+  margin-top: 20px;
   text-align: left;
   background-color: rgba(
     151,
@@ -714,6 +715,17 @@ input:invalid + .required-message {
   ) !important; /* Couleur de fond de la navbar avec transparence */
   color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de décollage */
+}
+.modifier-btn {
+  background-color: #FF0000; /* Rouge */
+  color: white; /* Couleur du texte */
+}
+.active-yes {
+  background-color: #00FF00; /* Vert */
+}
+
+.active-no {
+  background-color: #FF0000; /* Rouge */
 }
 
 /* ---------------------------------------------------------------------------- */
