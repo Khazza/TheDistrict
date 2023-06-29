@@ -706,7 +706,7 @@ input:invalid + .required-message {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #970747;
   color: white;
 }
 
@@ -725,7 +725,7 @@ input:invalid + .required-message {
 @media screen and (max-width: 768px) {
   
   .navbar {
-    z-index: 1000; /* ou toute valeur suffisamment élevée */
+    z-index: 1000;
 }
 
   /* Cacher la barre de recherche */

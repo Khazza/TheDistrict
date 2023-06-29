@@ -5,7 +5,7 @@ include 'database.php';
 include 'DAO.php';
 include './template/functions.php';
 
-if (!isset($_SESSION['user']['user_id']) || $_SESSION['user']['role'] !== 'admin') {
+if (!isset($_SESSION['user']['nom_prenom']) || $_SESSION['user']['role'] !== 'admin') {
     // Rediriger vers la page de connexion ou une page d'erreur
     header('Location: login.php');
     exit();

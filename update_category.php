@@ -8,8 +8,7 @@ $db = $database->getConnection();
 
 $id = $_POST['id'];
 $libelle = $_POST['libelle'];
-$image = $_POST['image'];
 $active = $_POST['active'];
 
-updateCategory($db, $id, $libelle, $image, $active);
+updateCategory($db, $id, $libelle, $active);
 ?>

@@ -257,13 +257,12 @@ function get_all_plats() {
 }
 
 
-function updateCategory($db, $id, $libelle, $image, $active) {
-    $query = "UPDATE categorie SET libelle = :libelle, image = :image, active = :active WHERE id = :id";
+function updateCategory($db, $id, $libelle, $active) {
+    $query = "UPDATE categorie SET libelle = :libelle, active = :active WHERE id = :id";
     $stmt = $db->prepare($query);
 
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->bindParam(':libelle', $libelle, PDO::PARAM_STR);
-    $stmt->bindParam(':image', $image, PDO::PARAM_STR);
     $stmt->bindParam(':active', $active, PDO::PARAM_STR);
 
     return $stmt->execute();
@@ -278,15 +277,14 @@ function deleteCategory($db, $id) {
     return $stmt->execute();
 }
 
-function updatePlat($db, $id, $libelle, $description, $prix, $image, $id_categorie, $active) {
-    $query = "UPDATE plat SET libelle = :libelle, description = :description, prix = :prix, image = :image, id_categorie = :id_categorie, active = :active WHERE id = :id";
+function updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active) {
+    $query = "UPDATE plat SET libelle = :libelle, description = :description, prix = :prix, id_categorie = :id_categorie, active = :active WHERE id = :id";
     $stmt = $db->prepare($query);
 
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->bindParam(':libelle', $libelle, PDO::PARAM_STR);
     $stmt->bindParam(':description', $description, PDO::PARAM_STR);
     $stmt->bindParam(':prix', $prix);
-    $stmt->bindParam(':image', $image, PDO::PARAM_STR);
     $stmt->bindParam(':id_categorie', $id_categorie, PDO::PARAM_INT);
     $stmt->bindParam(':active', $active, PDO::PARAM_STR);
 
