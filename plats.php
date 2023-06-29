@@ -30,34 +30,38 @@ include './template/functions.php';
     // Affichez les plats
     $current_category = null;
     foreach ($plats as $plat) {
-        if ($current_category != $plat['category_name']) {
-            echo "<h2 class='mt-4'>{$plat['category_name']}</h2>";
-            $current_category = $plat['category_name'];
+        // Ne montrer le plat que si le statut 'active' est égal à 'Yes'
+        if ($plat['active'] === 'Yes') {
+    
+            if ($current_category != $plat['category_name']) {
+                echo "<h2 class='mt-4'>{$plat['category_name']}</h2>";
+                $current_category = $plat['category_name'];
+            }
+    
+            // Déterminer le statut de disponibilité
+            $availability = ($plat['active'] == 'Yes') ? 'Disponible' : 'Non disponible';
+    
+            // Début de la carte
+            echo "<div class='plat-card card mb-3'>
+                <div class='row g-0'>
+                    <div class='col-md-4 img-container'>
+                        <img src='src/img/food/{$plat['image']}' alt='{$plat['libelle']}' class='img-fluid'>
+                    </div>
+                    <div class='bg-plat col-md-8 z-2'>
+                        <div class='card-body'>
+                            <h5 class='card-title'>{$plat['libelle']}</h5>
+                            <p class='card-text'>{$plat['description']}</p>
+                            <p class='card-text'><small class='text-muted'>Prix: {$plat['prix']} €</small></p>
+                            <p class='card-text'><small class='text-muted'>Disponibilité: {$availability}</small></p>
+    
+                            <!-- Bouton pour commander -->
+                            <button class='btn btn-primary' onclick=\"location.href='orders.php?id={$plat['id']}'\">Commander</button>
+                        </div>
+                    </div>
+                </div>
+            </div>"; // Fin de la carte
         }
-
-        // Déterminer le statut de disponibilité
-        $availability = ($plat['active'] == 'Yes') ? 'Disponible' : 'Non disponible';
-
-        // Début de la carte
-        echo "<div class='plat-card card mb-3'>
-    <div class='row g-0'>
-        <div class='col-md-4 img-container'>
-            <img src='src/img/food/{$plat['image']}' alt='{$plat['libelle']}' class='img-fluid'>
-        </div>
-        <div class='bg-plat col-md-8 z-2'>
-            <div class='card-body'>
-                <h5 class='card-title'>{$plat['libelle']}</h5>
-                <p class='card-text '>{$plat['description']}</p>
-                <p class='card-text'><small class='text-muted'>Prix: {$plat['prix']} €</small></p>
-                <p class='card-text'><small class='text-muted'>Disponibilité: {$availability}</small></p>
-
-                <!-- Bouton pour commander -->
-                <button class='btn btn-primary' onclick=\"location.href='orders.php?id={$plat['id']}'\">Commander</button>
-            </div>
-        </div>
-    </div>
-</div>"; // Fin de la carte
-    }
+    }    
 
     ?>
 </div>
