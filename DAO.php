@@ -233,3 +233,72 @@ function loginUser($identifier, $password) {
 }
 
 
+// ---------------------------------------Dashboard
+function get_all_categories() {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    $query = "SELECT * FROM categorie";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function get_all_plats() {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    $query = "SELECT * FROM plat";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+function updateCategory($db, $id, $libelle, $image, $active) {
+    $query = "UPDATE categorie SET libelle = :libelle, image = :image, active = :active WHERE id = :id";
+    $stmt = $db->prepare($query);
+
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->bindParam(':libelle', $libelle, PDO::PARAM_STR);
+    $stmt->bindParam(':image', $image, PDO::PARAM_STR);
+    $stmt->bindParam(':active', $active, PDO::PARAM_STR);
+
+    return $stmt->execute();
+}
+
+function deleteCategory($db, $id) {
+    $query = "DELETE FROM categorie WHERE id = :id";
+    $stmt = $db->prepare($query);
+
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+    return $stmt->execute();
+}
+
+function updatePlat($db, $id, $libelle, $description, $prix, $image, $id_categorie, $active) {
+    $query = "UPDATE plat SET libelle = :libelle, description = :description, prix = :prix, image = :image, id_categorie = :id_categorie, active = :active WHERE id = :id";
+    $stmt = $db->prepare($query);
+
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->bindParam(':libelle', $libelle, PDO::PARAM_STR);
+    $stmt->bindParam(':description', $description, PDO::PARAM_STR);
+    $stmt->bindParam(':prix', $prix);
+    $stmt->bindParam(':image', $image, PDO::PARAM_STR);
+    $stmt->bindParam(':id_categorie', $id_categorie, PDO::PARAM_INT);
+    $stmt->bindParam(':active', $active, PDO::PARAM_STR);
+
+    return $stmt->execute();
+}
+
+function deletePlat($db, $id) {
+    $query = "DELETE FROM plat WHERE id = :id";
+    $stmt = $db->prepare($query);
+
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+    return $stmt->execute();
+}
+?>

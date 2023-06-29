@@ -52,6 +52,14 @@ function render_header()
                         <li class="nav-item d-flex align-items-center">
                             <span class="nav-message">Bonjour, <?php echo htmlspecialchars($_SESSION['user']['nom_prenom']); ?></span>
                         </li>
+
+                        <!-- Ajouter ce bloc pour afficher le bouton de tableau de bord pour les admin -->
+                        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') : ?>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="btn custom-dashboard-btn" href="admin_dashboard.php">Tableau de bord</a>
+                            </li>
+                        <?php endif; ?>
+
                         <li class="nav-item d-flex align-items-center">
                             <a class="btn custom-logoff-btn" href="logout.php">Se déconnecter</a>
                         </li>
