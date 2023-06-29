@@ -16,10 +16,3 @@ document.querySelector('.order-form').addEventListener('submit', function(e) {
         }
     });
 });
-
-function confirmDelete(id) {
-    if (confirm('Êtes-vous sûr de vouloir supprimer ce plat?')) {
-        // Redirection vers la page de suppression avec l'ID du plat
-        window.location.href = 'delete_plat.php?id=' + id;
-    }
-};
