@@ -6,8 +6,8 @@ document.querySelector('.order-form').addEventListener('submit', function(e) {
         text: "Voulez-vous vraiment envoyer votre commande?",
         icon: 'question',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#970747',
+        cancelButtonColor: '#000000',
         confirmButtonText: 'Oui !',
         cancelButtonText: 'Non, annulez!'
     }).then((result) => {
