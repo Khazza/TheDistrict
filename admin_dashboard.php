@@ -31,15 +31,15 @@ $plats = get_all_plats();
             <!-- Ajout de la section pour ajouter une nouvelle catégorie -->
             <h3 class="mb-3">Ajouter une nouvelle catégorie</h3>
             <form action="add_category.php" method="post" enctype="multipart/form-data" class="mb-4">
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="libelle">Libelle:</label>
                     <input type="text" name="libelle" class="form-control" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="image">Image:</label>
                     <input type="file" name="image" class="form-control-file" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="active">Active:</label>
                     <select name="active" class="form-control">
                         <option value="Yes">Yes</option>
@@ -73,7 +73,7 @@ $plats = get_all_plats();
                                     </select>
                                 </td>
                                 <td>
-                                    <label for="image">Image:</label>
+                                    <label for="image">Image: </label>
                                     <input type="file" name="image" class="form-control-file">
                                 </td>
                                 <td>
@@ -97,30 +97,30 @@ $plats = get_all_plats();
             <!-- Ajout de la section pour ajouter un nouveau plat -->
             <h3 class="mb-3">Ajouter un nouveau plat</h3>
             <form action="add_plat.php" method="post" enctype="multipart/form-data" class="mb-4">
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="libelle">Libelle:</label>
                     <input type="text" name="libelle" class="form-control" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="description">Description:</label>
                     <textarea name="description" class="form-control" required></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="prix">Prix:</label>
                     <input type="number" step="0.01" name="prix" class="form-control" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="image">Image:</label>
                     <input type="file" name="image" class="form-control-file" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="active">Active:</label>
                     <select name="active" class="form-control">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-2">
                     <label for="id_categorie">Catégorie:</label>
                     <select name="id_categorie" class="form-control">
                         <?php foreach ($categories as $categorie) : ?>
@@ -178,7 +178,7 @@ $plats = get_all_plats();
                                 <td>
                                     <input type='hidden' name='id' value='{$plat['id']}'>
                                     <input type='hidden' name='id_categorie' value='{$plat['id_categorie']}'>
-                                    <input type='submit' value='Modifier' class='btn btn-secondary'>
+                                    <input type='submit' value='Modifier' class='btn btn-secondary mb-1'>
                                     <a href='delete_plat.php?id={$plat['id']}' class='btn btn-danger' onclick=\"return confirm('Êtes-vous sûr de vouloir supprimer ce plat?');\">Supprimer</a>
                                 </td>
                             </form>
