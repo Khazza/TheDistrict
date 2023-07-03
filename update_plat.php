@@ -16,8 +16,15 @@ $active = $_POST['active'];
 $image = null;
 
 if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-    // Il y a un fichier image à télécharger
-    $image = file_get_contents($_FILES['image']['tmp_name']);
+    $uploadDirectory = 'src/img/food/';
+    $uploadFile = $uploadDirectory . basename($_FILES['image']['name']);
+
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {
+        $image = $uploadFile; // Cela contiendra le chemin de l'image
+    } else {
+        // Gérer l'erreur de téléchargement
+        echo "Erreur lors du téléchargement de l'image.";
+    }
 }
 
 updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active, $image);
