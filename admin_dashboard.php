@@ -39,6 +39,15 @@ $plats = get_all_plats();
             ?>
         </div>
     <?php endif; ?>
+    <!-- Affichage du message de suppression s'il existe -->
+    <?php if (isset($_SESSION['deletion_message'])) : ?>
+        <div class="alert alert-danger">
+            <?php
+            echo $_SESSION['deletion_message'];
+            unset($_SESSION['deletion_message']);
+            ?>
+        </div>
+    <?php endif; ?>
 
     <!-- Section de gestion des catégories -->
     <div class="card mb-5">

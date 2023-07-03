@@ -21,6 +21,8 @@ if (isset($_GET['id'])) {
     $stmt->bindParam(':id', $id);
     $stmt->execute();
 
+    $_SESSION['deletion_message'] = "L'élément a été supprimé avec succès!";
+
     header('Location: admin_dashboard.php');
     exit();
 }
