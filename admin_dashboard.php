@@ -21,6 +21,16 @@ $plats = get_all_plats();
 
 <div class="container dashboard my-5">
 
+    <!-- Affichage du message s'il existe -->
+    <?php if (isset($_SESSION['message'])) : ?>
+        <div class="alert alert-success">
+            <?php
+            echo $_SESSION['message'];
+            unset($_SESSION['message']);
+            ?>
+        </div>
+    <?php endif; ?>
+
     <!-- Section de gestion des catégories -->
     <div class="card mb-5">
         <div class="card-header custom-header-categories">

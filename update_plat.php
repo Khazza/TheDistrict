@@ -29,6 +29,8 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 
 updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active, $image);
 
+$_SESSION['message'] = "La modification a été effectuée avec succès!";
+
 // Redirection vers la page admin_dashboard.php
 header('Location: admin_dashboard.php');
 exit();

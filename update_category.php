@@ -25,6 +25,8 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 
 updateCategory($db, $id, $libelle, $active, $image);
 
+$_SESSION['message'] = "La modification a été effectuée avec succès!";
+
 // Redirection vers la page admin_dashboard.php
 header('Location: admin_dashboard.php');
 exit();
