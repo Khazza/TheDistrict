@@ -1,0 +1,2 @@
+( ! ) Fatal error: Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xFF\xD8\xFF\xE0\x00\x10...' for column `the_district`.`categorie`.`image` at row 1 in /home/mahe/Bureau/TheDistrict/DAO.php on line 279
+( ! ) PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect string value: '\xFF\xD8\xFF\xE0\x00\x10...' for column `the_district`.`categorie`.`image` at row 1 in /home/mahe/Bureau/TheDistrict/DAO.php on line 279
