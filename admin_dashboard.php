@@ -36,7 +36,7 @@ $plats = get_all_plats();
                     <input type="text" name="libelle" class="form-control" required>
                 </div>
                 <div class="form-group mb-2">
-                    <label for="image">Image:</label>
+                    <label for="image">Image: </label>
                     <input type="file" name="image" class="form-control-file" required>
                 </div>
                 <div class="form-group mb-2">
@@ -110,7 +110,7 @@ $plats = get_all_plats();
                     <input type="number" step="0.01" name="prix" class="form-control" required>
                 </div>
                 <div class="form-group mb-2">
-                    <label for="image">Image:</label>
+                    <label for="image">Image: </label>
                     <input type="file" name="image" class="form-control-file" required>
                 </div>
                 <div class="form-group mb-2">
