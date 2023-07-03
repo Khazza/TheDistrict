@@ -323,18 +323,19 @@ function deletePlat($db, $id) {
     return $stmt->execute();
 }
 
-function addCategory($db, $libelle, $active) {
-    $query = "INSERT INTO categorie (libelle, active) VALUES (:libelle, :active)";
+function addCategory($db, $libelle, $active, $imagePath) {
+    $query = "INSERT INTO categorie (libelle, active, image) VALUES (:libelle, :active, :imagePath)";
     $stmt = $db->prepare($query);
 
     $stmt->bindParam(':libelle', $libelle);
     $stmt->bindParam(':active', $active);
+    $stmt->bindParam(':imagePath', $imagePath);
 
     $stmt->execute();
 }
 
-function addPlat($db, $libelle, $description, $prix, $active, $id_categorie) {
-    $query = "INSERT INTO plat (libelle, description, prix, active, id_categorie) VALUES (:libelle, :description, :prix, :active, :id_categorie)";
+function addPlat($db, $libelle, $description, $prix, $active, $id_categorie, $imagePath) {
+    $query = "INSERT INTO plat (libelle, description, prix, active, id_categorie, image) VALUES (:libelle, :description, :prix, :active, :id_categorie, :imagePath)";
     $stmt = $db->prepare($query);
 
     $stmt->bindParam(':libelle', $libelle);
@@ -342,7 +343,9 @@ function addPlat($db, $libelle, $description, $prix, $active, $id_categorie) {
     $stmt->bindParam(':prix', $prix);
     $stmt->bindParam(':active', $active);
     $stmt->bindParam(':id_categorie', $id_categorie);
+    $stmt->bindParam(':imagePath', $imagePath);
 
     $stmt->execute();
 }
+
 ?>

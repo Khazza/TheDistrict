@@ -6,11 +6,18 @@ include 'DAO.php';
 $libelle = $_POST['libelle'];
 $active = $_POST['active'];
 
-$database = new Database();
-$db = $database->getConnection();
+$targetDir = "src/img/category/";
+$targetFile = $targetDir . basename($_FILES["image"]["name"]);
 
-addCategory($db, $libelle, $active);
+if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
+    $database = new Database();
+    $db = $database->getConnection();
 
-header('Location: admin_dashboard.php');
-exit();
+    addCategory($db, $libelle, $active, $targetFile);
+
+    header('Location: admin_dashboard.php');
+    exit();
+} else {
+    echo "Désolé, il y a eu une erreur lors du téléchargement de votre fichier.";
+}
 ?>
