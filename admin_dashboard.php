@@ -27,7 +27,7 @@ $plats = get_all_plats();
             <h2>Gestion des catégories</h2>
         </div>
         <div class="card-body">
-            
+
             <!-- Ajout de la section pour ajouter une nouvelle catégorie -->
             <h3 class="mb-3">Ajouter une nouvelle catégorie</h3>
             <form action="add_category.php" method="post" enctype="multipart/form-data" class="mb-4">
@@ -97,7 +97,38 @@ $plats = get_all_plats();
             <!-- Ajout de la section pour ajouter un nouveau plat -->
             <h3 class="mb-3">Ajouter un nouveau plat</h3>
             <form action="add_plat.php" method="post" enctype="multipart/form-data" class="mb-4">
-                <!-- ... Reste de votre formulaire pour ajouter un plat ... -->
+                <div class="form-group">
+                    <label for="libelle">Libelle:</label>
+                    <input type="text" name="libelle" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="prix">Prix:</label>
+                    <input type="number" step="0.01" name="prix" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" name="image" class="form-control-file" required>
+                </div>
+                <div class="form-group">
+                    <label for="active">Active:</label>
+                    <select name="active" class="form-control">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="id_categorie">Catégorie:</label>
+                    <select name="id_categorie" class="form-control">
+                        <?php foreach ($categories as $categorie) : ?>
+                            <option value="<?php echo $categorie['id']; ?>"><?php echo $categorie['libelle']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <input type="submit" value="Ajouter" class="btn btn-primary">
             </form>
 
             <?php
