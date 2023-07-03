@@ -10,13 +10,14 @@ $active = $_POST['active'];
 $id_categorie = $_POST['id_categorie'];
 
 $targetDir = "src/img/food/";
-$targetFile = $targetDir . basename($_FILES["image"]["name"]);
+$fileName = basename($_FILES["image"]["name"]);
+$targetFile = $targetDir . $fileName;
 
 if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
     $database = new Database();
     $db = $database->getConnection();
 
-    addPlat($db, $libelle, $description, $prix, $active, $id_categorie, $targetFile);
+    addPlat($db, $libelle, $description, $prix, $active, $id_categorie, $fileName);
 
     header('Location: admin_dashboard.php');
     exit();

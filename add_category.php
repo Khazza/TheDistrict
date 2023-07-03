@@ -7,13 +7,14 @@ $libelle = $_POST['libelle'];
 $active = $_POST['active'];
 
 $targetDir = "src/img/category/";
-$targetFile = $targetDir . basename($_FILES["image"]["name"]);
+$fileName = basename($_FILES["image"]["name"]);
+$targetFile = $targetDir . $fileName;
 
 if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
     $database = new Database();
     $db = $database->getConnection();
 
-    addCategory($db, $libelle, $active, $targetFile);
+    addCategory($db, $libelle, $active, $fileName);
 
     header('Location: admin_dashboard.php');
     exit();
