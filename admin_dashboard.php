@@ -163,7 +163,7 @@ $plats = get_all_plats();
                             <form action='update_plat.php' method='post' enctype='multipart/form-data'>
                                 <td>{$plat['id']}</td>
                                 <td><input type='text' name='libelle' class='form-control' value='{$plat['libelle']}'></td>
-                                <td><input type='text' name='description' class='form-control' value='{$plat['description']}'></td>
+                                <td><textarea name='description' class='form-control' >{$plat['description']}</textarea></td>
                                 <td><input type='text' name='prix' class='form-control' value='{$plat['prix']}'></td>
                                 <td>
                                     <select name='active' class='form-control'>
