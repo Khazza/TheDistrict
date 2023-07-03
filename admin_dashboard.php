@@ -30,6 +30,15 @@ $plats = get_all_plats();
             ?>
         </div>
     <?php endif; ?>
+    <!-- Affichage du message de création s'il existe -->
+    <?php if (isset($_SESSION['creation_message'])) : ?>
+        <div class="alert alert-info">
+            <?php
+            echo $_SESSION['creation_message'];
+            unset($_SESSION['creation_message']);
+            ?>
+        </div>
+    <?php endif; ?>
 
     <!-- Section de gestion des catégories -->
     <div class="card mb-5">

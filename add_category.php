@@ -16,6 +16,8 @@ if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
 
     addCategory($db, $libelle, $active, $fileName);
 
+    $_SESSION['creation_message'] = "L'élément a été créé avec succès!";
+
     header('Location: admin_dashboard.php');
     exit();
 } else {
