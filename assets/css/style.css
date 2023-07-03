@@ -721,6 +721,13 @@ input:invalid + .required-message {
 label {
   font-weight: bold;
 }
+.custom-header-plats {
+  background-color: #4CAF50; /* Changer à la couleur désirée */
+}
+
+.custom-header-categories {
+  background-color: #2196F3; /* Changer à la couleur désirée */
+}
 
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
