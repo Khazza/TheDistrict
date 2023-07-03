@@ -20,7 +20,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
     $uploadFile = $uploadDirectory . basename($_FILES['image']['name']);
 
     if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {
-        $image = $uploadFile; // Cela contiendra le chemin de l'image
+        $image = basename($_FILES['image']['name']);
     } else {
         // Gérer l'erreur de téléchargement
         echo "Erreur lors du téléchargement de l'image.";
