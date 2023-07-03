@@ -257,16 +257,28 @@ function get_all_plats() {
 }
 
 
-function updateCategory($db, $id, $libelle, $active) {
-    $query = "UPDATE categorie SET libelle = :libelle, active = :active WHERE id = :id";
+function updateCategory($db, $id, $libelle, $active, $image) {
+    $query = "UPDATE categorie SET libelle = :libelle, active = :active";
+    
+    if ($image !== null) {
+        $query .= ", image = :image";
+    }
+
+    $query .= " WHERE id = :id";
+
     $stmt = $db->prepare($query);
 
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->bindParam(':libelle', $libelle, PDO::PARAM_STR);
     $stmt->bindParam(':active', $active, PDO::PARAM_STR);
 
+    if ($image !== null) {
+        $stmt->bindParam(':image', $image, PDO::PARAM_LOB);
+    }
+
     return $stmt->execute();
 }
+
 
 function deleteCategory($db, $id) {
     $query = "DELETE FROM categorie WHERE id = :id";
@@ -277,8 +289,15 @@ function deleteCategory($db, $id) {
     return $stmt->execute();
 }
 
-function updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active) {
-    $query = "UPDATE plat SET libelle = :libelle, description = :description, prix = :prix, id_categorie = :id_categorie, active = :active WHERE id = :id";
+function updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active, $image) {
+    $query = "UPDATE plat SET libelle = :libelle, description = :description, prix = :prix, id_categorie = :id_categorie, active = :active";
+    
+    if ($image !== null) {
+        $query .= ", image = :image";
+    }
+
+    $query .= " WHERE id = :id";
+
     $stmt = $db->prepare($query);
 
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -288,8 +307,13 @@ function updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $act
     $stmt->bindParam(':id_categorie', $id_categorie, PDO::PARAM_INT);
     $stmt->bindParam(':active', $active, PDO::PARAM_STR);
 
+    if ($image !== null) {
+        $stmt->bindParam(':image', $image, PDO::PARAM_LOB);
+    }
+
     return $stmt->execute();
 }
+
 
 function deletePlat($db, $id) {
     $query = "DELETE FROM plat WHERE id = :id";
