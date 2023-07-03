@@ -23,7 +23,7 @@ $plats = get_all_plats();
 
     <!-- Section de gestion des catégories -->
     <div class="card mb-5">
-        <div class="card-header custom-header-categories">
+        <div class="card-header">
             <h2>Gestion des catégories</h2>
         </div>
         <div class="card-body">
@@ -90,7 +90,7 @@ $plats = get_all_plats();
 
     <!-- Section de gestion des plats -->
     <div class="card">
-        <div class="card-header custom-header-plats">
+        <div class="card-header">
             <h2>Gestion des plats</h2>
         </div>
         <div class="card-body">
