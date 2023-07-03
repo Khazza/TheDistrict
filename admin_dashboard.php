@@ -78,7 +78,8 @@ $plats = get_all_plats();
                                 </td>
                                 <td>
                                     <input type="hidden" name="id" value="<?php echo $categorie['id']; ?>">
-                                    <input type="submit" value="Modifier" class="btn btn-secondary">
+                                    <input type="submit" value="Modifier" class="btn btn-secondary mb-1">
+                                    <a href="delete_category.php?id=<?php echo $categorie['id']; ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette catégorie?');">Supprimer</a>
                                 </td>
                             </form>
                         </tr>
