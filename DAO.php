@@ -257,10 +257,10 @@ function get_all_plats() {
 }
 
 
-function updateCategory($db, $id, $libelle, $active, $image) {
+function updateCategory($db, $id, $libelle, $active, $imagePath) {
     $query = "UPDATE categorie SET libelle = :libelle, active = :active";
     
-    if ($image !== null) {
+    if ($imagePath !== null) {
         $query .= ", image = :image";
     }
 
@@ -272,13 +272,12 @@ function updateCategory($db, $id, $libelle, $active, $image) {
     $stmt->bindParam(':libelle', $libelle, PDO::PARAM_STR);
     $stmt->bindParam(':active', $active, PDO::PARAM_STR);
 
-    if ($image !== null) {
-        $stmt->bindParam(':image', $image, PDO::PARAM_LOB);
+    if ($imagePath !== null) {
+        $stmt->bindParam(':image', $imagePath, PDO::PARAM_STR);
     }
 
     return $stmt->execute();
 }
-
 
 function deleteCategory($db, $id) {
     $query = "DELETE FROM categorie WHERE id = :id";
@@ -289,10 +288,10 @@ function deleteCategory($db, $id) {
     return $stmt->execute();
 }
 
-function updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active, $image) {
+function updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active, $imagePath) {
     $query = "UPDATE plat SET libelle = :libelle, description = :description, prix = :prix, id_categorie = :id_categorie, active = :active";
     
-    if ($image !== null) {
+    if ($imagePath !== null) {
         $query .= ", image = :image";
     }
 
@@ -307,8 +306,8 @@ function updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $act
     $stmt->bindParam(':id_categorie', $id_categorie, PDO::PARAM_INT);
     $stmt->bindParam(':active', $active, PDO::PARAM_STR);
 
-    if ($image !== null) {
-        $stmt->bindParam(':image', $image, PDO::PARAM_LOB);
+    if ($imagePath !== null) {
+        $stmt->bindParam(':image', $imagePath, PDO::PARAM_STR);
     }
 
     return $stmt->execute();
