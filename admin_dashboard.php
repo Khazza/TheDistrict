@@ -266,9 +266,9 @@ $plats = get_all_plats();
                                     <td><?php echo $order['date_commande']; ?></td>
                                     <td>
                                         <select name="etat" class="form-control">
-                                            <option value="En cours" <?php if ($order['etat'] === 'En cours') echo 'selected'; ?>>En cours</option>
-                                            <option value="Terminée" <?php if ($order['etat'] === 'Terminée') echo 'selected'; ?>>Terminée</option>
-                                            <!-- Vous pouvez ajouter d'autres états ici -->
+                                            <option value="Livree" <?php if ($order['etat'] === 'Livree') echo 'selected'; ?>>Livré</option>
+                                            <option value="En cours de livraison" <?php if ($order['etat'] === 'En cours de livraison') echo 'selected'; ?>>En cours de livraison</option>
+                                            <option value="Annulee" <?php if ($order['etat'] === 'Annulee') echo 'selected'; ?>>Annulé</option>
                                         </select>
                                     </td>
                                     <td><?php echo $order['nom_client']; ?></td>
