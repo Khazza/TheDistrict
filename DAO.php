@@ -60,11 +60,9 @@ function get_categories_paginated($limit, $offset) {
     $limit = (int) $limit;
     $offset = (int) $offset;
 
-    // Lier les valeurs en tant qu'entiers
     $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
     $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
 
-    // Exécutez la requête
     $stmt->execute();
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -140,16 +138,13 @@ function search_categories($queryCategories) {
     $query = "SELECT * FROM categorie WHERE libelle LIKE :searchQuery";
     $stmt = $db->prepare($query);
     
-    // Ajouter des pourcentages autour de la requête pour une recherche de sous-chaîne
     $searchQuery = '%' . $queryCategories . '%';
     
     // Lier la valeur de recherche à la requête préparée
     $stmt->bindValue(':searchQuery', $searchQuery, PDO::PARAM_STR);
     
-    // Exécutez la requête
     $stmt->execute();
     
-    // Récupérer tous les résultats
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -161,16 +156,13 @@ function search_dishes($queryDishes) {
     $query = "SELECT * FROM plat WHERE libelle LIKE :searchQuery";
     $stmt = $db->prepare($query);
     
-    // Ajouter des pourcentages autour de la requête pour une recherche de sous-chaîne
     $searchQuery = '%' . $queryDishes . '%';
     
     // Lier la valeur de recherche à la requête préparée
     $stmt->bindValue(':searchQuery', $searchQuery, PDO::PARAM_STR);
     
-    // Exécutez la requête
     $stmt->execute();
     
-    // Récupérer tous les résultats
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 

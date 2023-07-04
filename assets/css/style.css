@@ -135,7 +135,7 @@ border-radius: 5px; /* Coins arrondis */
   padding: 20px; /* Espacement autour du texte */
   margin: 0 auto 30px; /* Centrer horizontalement et ajouter une marge en dessous */
   max-width: 80%; /* Limiter la largeur du titre */
-  font-weight: bold; /* Gras */
+  font-weight: bold;
   color: #333; /* Couleur du texte */
   letter-spacing: 1px; /* Espacement des lettres */
   border-bottom: 3px solid #f8c301; /* Ligne sous le titre */
@@ -227,8 +227,8 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 .profile-card-3 img {
-  height: 100%; /* Hauteur à 100% de la carte */
-  width: 100%; /* Largeur à 100% de la carte */
+  height: 100%;
+  width: 100%; 
   object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -242,7 +242,7 @@ border-radius: 5px; /* Coins arrondis */
   color: #fff;
   text-align: center;
   background-color: rgba(151, 7, 71, 0.8);
-  font-family: "Arial", sans-serif; /* Changer la police */
+  font-family: "Arial", sans-serif; 
   font-size: 18px; /* Ajuster la taille de la police */
   font-weight: bold; /* Mettre le texte en gras */
   transform: translateY(0);
@@ -273,7 +273,7 @@ border-radius: 5px; /* Coins arrondis */
 
 /* Card Content */
 .card-body h5 {
-  font-size: 20px; /* Taille de la police pour le nom de la catégorie ou du plat */
+  font-size: 20px;
   font-weight: bold; /* Forme de la police */
 }
 
@@ -409,9 +409,9 @@ border-radius: 5px; /* Coins arrondis */
   color: #b40000;
   text-align: center;
   background-color: rgba(151, 7, 71, 0.8);
-  font-family: "Arial", sans-serif; /* Changer la police */
-  font-size: 18px; /* Ajuster la taille de la police */
-  font-weight: bold; /* Mettre le texte en gras */
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold; 
   transform: translateY(0);
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
