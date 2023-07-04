@@ -261,8 +261,12 @@ $plats = get_all_plats();
                                 <form action="update_order.php" method="post">
                                     <td><?php echo $order['id']; ?></td>
                                     <td><?php echo $order['id_plat']; ?></td>
-                                    <td><?php echo $order['quantite']; ?></td>
-                                    <td><?php echo $order['total']; ?></td>
+                                    <td>
+                                        <input type="number" name="quantite" value="<?php echo $order['quantite']; ?>" class="form-control" />
+                                    </td>
+                                    <td>
+                                        <input type="text" name="total" value="<?php echo $order['total']; ?>" class="form-control" />
+                                    </td>
                                     <td><?php echo $order['date_commande']; ?></td>
                                     <td>
                                         <select name="etat" class="form-control">
