@@ -177,7 +177,8 @@ function get_plat_prix($db, $plat_id) {
 }
 
 function insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client) {
-    $query = "INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) VALUES (:plat_id, :quantite, :total, NOW(), 'En préparation', :nom_client, :telephone_client, :email_client, :adresse_client)";
+    $query = "INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) 
+    VALUES (:plat_id, :quantite, :total, NOW(), 'En préparation', :nom_client, :telephone_client, :email_client, :adresse_client)";
     $stmt = $db->prepare($query);
     $stmt->bindParam(":plat_id", $plat_id, PDO::PARAM_INT);
     $stmt->bindParam(":quantite", $quantite, PDO::PARAM_INT);

@@ -31,7 +31,6 @@ updatePlat($db, $id, $libelle, $description, $prix, $id_categorie, $active, $ima
 
 $_SESSION['message'] = "La modification a été effectuée avec succès!";
 
-// Redirection vers la page admin_dashboard.php
 header('Location: admin_dashboard.php');
 exit();
 ?>
