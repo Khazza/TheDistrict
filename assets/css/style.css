@@ -623,7 +623,7 @@ border-radius: 5px; /* Coins arrondis */
 }
 
 input:invalid + .required-message {
-  display: block; /* Affiche les messages lorsque le champ est invalide */
+  display: block;
 }
 
 /* CSS Login/signup */
@@ -655,7 +655,7 @@ input:invalid + .required-message {
   background-color: #970747;
   color: #ffffff;
   padding: 10px 20px;
-  border: 2px solid #ffffff; /* Ajouter une bordure blanche */
+  border: 2px solid #ffffff;
   border-radius: 5px;
   font-size: 16px;
   text-decoration: none;
