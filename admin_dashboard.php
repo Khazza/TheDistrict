@@ -78,42 +78,45 @@ $plats = get_all_plats();
             </form>
 
             <!-- Tableau des catégories existantes -->
-            <table class="table dashboard-table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Libelle</th>
-                        <th>Active</th>
-                        <th>Image</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($categories as $categorie) : ?>
+            <div class="table-responsive">
+                <table class="table dashboard-table">
+                    <thead>
                         <tr>
-                            <form action="update_category.php" method="post" enctype="multipart/form-data">
-                                <td><?php echo $categorie['id']; ?></td>
-                                <td><input type="text" name="libelle" class="form-control" value="<?php echo $categorie['libelle']; ?>"></td>
-                                <td>
-                                    <select name="active" class="form-control">
-                                        <option value="Yes" <?php if ($categorie['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
-                                        <option value="No" <?php if ($categorie['active'] === 'No') echo 'selected'; ?>>No</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <label for="image">Image: </label>
-                                    <input type="file" name="image" class="form-control-file">
-                                </td>
-                                <td>
-                                    <input type="hidden" name="id" value="<?php echo $categorie['id']; ?>">
-                                    <input type="submit" value="Modifier" class="btn btn-secondary mb-1">
-                                    <a href="delete_category.php?id=<?php echo $categorie['id']; ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette catégorie?');">Supprimer</a>
-                                </td>
-                            </form>
+                            <th>ID</th>
+                            <th>Libelle</th>
+                            <th>Active</th>
+                            <th>Image</th>
+                            <th>Actions</th>
                         </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($categories as $categorie) : ?>
+                            <tr>
+                                <form action="update_category.php" method="post" enctype="multipart/form-data">
+                                    <td><?php echo $categorie['id']; ?></td>
+                                    <td><input type="text" name="libelle" class="form-control" value="<?php echo $categorie['libelle']; ?>"></td>
+                                    <td>
+                                        <select name="active" class="form-control">
+                                            <option value="Yes" <?php if ($categorie['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
+                                            <option value="No" <?php if ($categorie['active'] === 'No') echo 'selected'; ?>>No</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label for="image">Image: </label>
+                                        <input type="file" name="image" class="form-control-file">
+                                    </td>
+                                    <td>
+                                        <input type="hidden" name="id" value="<?php echo $categorie['id']; ?>">
+                                        <input type="submit" value="Modifier" class="btn btn-secondary mb-1">
+                                        <a href="delete_category.php?id=<?php echo $categorie['id']; ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette catégorie?');">Supprimer</a>
+                                    </td>
+                                </form>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 
@@ -160,19 +163,20 @@ $plats = get_all_plats();
                 <input type="submit" value="Ajouter" class="btn btn-primary">
             </form>
 
-            <?php
-            // Regrouper les plats par catégorie
-            $plats_by_category = [];
-            foreach ($plats as $plat) {
-                $plats_by_category[$plat['id_categorie']][] = $plat;
-            }
+            <div class="table-responsive">
+                <?php
+                // Regrouper les plats par catégorie
+                $plats_by_category = [];
+                foreach ($plats as $plat) {
+                    $plats_by_category[$plat['id_categorie']][] = $plat;
+                }
 
-            // Itérer sur les catégories
-            foreach ($categories as $categorie) {
-                if (isset($plats_by_category[$categorie['id']])) {
-                    echo "<h3 class='category-title'>{$categorie['libelle']}</h3>";
+                // Itérer sur les catégories
+                foreach ($categories as $categorie) {
+                    if (isset($plats_by_category[$categorie['id']])) {
+                        echo "<h3 class='category-title'>{$categorie['libelle']}</h3>";
 
-                    echo "<table class='table dashboard-table'>
+                        echo "<table class='table dashboard-table'>
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -186,9 +190,9 @@ $plats = get_all_plats();
                         </thead>
                         <tbody>";
 
-                    // Itérer sur les plats de cette catégorie
-                    foreach ($plats_by_category[$categorie['id']] as $plat) {
-                        echo "<tr>
+                        // Itérer sur les plats de cette catégorie
+                        foreach ($plats_by_category[$categorie['id']] as $plat) {
+                            echo "<tr>
                             <form action='update_plat.php' method='post' enctype='multipart/form-data'>
                                 <td>{$plat['id']}</td>
                                 <td><input type='text' name='libelle' class='form-control' value='{$plat['libelle']}'></td>
@@ -212,12 +216,13 @@ $plats = get_all_plats();
                                 </td>
                             </form>
                         </tr>";
-                    }
+                        }
 
-                    echo "</tbody></table>";
+                        echo "</tbody></table>";
+                    }
                 }
-            }
-            ?>
+                ?>
+            </div>
         </div>
     </div>
 </div>
