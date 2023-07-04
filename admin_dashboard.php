@@ -103,7 +103,7 @@ $plats = get_all_plats();
                                             <td><?php echo $categorie['id']; ?></td>
                                             <td><input type="text" name="libelle" class="form-control" value="<?php echo $categorie['libelle']; ?>"></td>
                                             <td>
-                                                <select name="active" class="form-control">
+                                                <select name="active" class="form-control <?php echo ($categorie['active'] === 'Yes') ? 'active-yes' : 'active-no'; ?>">
                                                     <option value="Yes" <?php if ($categorie['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
                                                     <option value="No" <?php if ($categorie['active'] === 'No') echo 'selected'; ?>>No</option>
                                                 </select>
@@ -127,7 +127,7 @@ $plats = get_all_plats();
             </div>
 
             <!-- Section de gestion des plats -->
-            <div class="card">
+            <div class="card mt-5">
                 <div class="card-header custom-header-plats">
                     <h2>Gestion des plats</h2>
                 </div>
@@ -153,9 +153,9 @@ $plats = get_all_plats();
                         </div>
                         <div class="form-group mb-2">
                             <label for="active">Active:</label>
-                            <select name="active" class="form-control">
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
+                            <select name="active" class="form-control <?php echo ($plat['active'] === 'Yes') ? 'active-yes' : 'active-no'; ?>">
+                                <option value="Yes" <?php if ($plat['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
+                                <option value="No" <?php if ($plat['active'] === 'No') echo 'selected'; ?>>No</option>
                             </select>
                         </div>
                         <div class="form-group mb-2">
