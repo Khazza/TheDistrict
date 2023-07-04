@@ -266,7 +266,7 @@ $plats = get_all_plats();
                                     <td><?php echo $order['date_commande']; ?></td>
                                     <td>
                                         <select name="etat" class="form-control">
-                                        <option value="En préparation" <?php if ($order['etat'] === 'En préparation') echo 'selected'; ?>>En préparation</option>
+                                            <option value="En préparation" <?php if ($order['etat'] === 'En préparation') echo 'selected'; ?>>En préparation</option>
                                             <option value="Livree" <?php if ($order['etat'] === 'Livree') echo 'selected'; ?>>Livrée</option>
                                             <option value="En cours de livraison" <?php if ($order['etat'] === 'En cours de livraison') echo 'selected'; ?>>En cours de livraison</option>
                                             <option value="Annulee" <?php if ($order['etat'] === 'Annulee') echo 'selected'; ?>>Annulée</option>
