@@ -225,6 +225,71 @@ $plats = get_all_plats();
             </div>
         </div>
     </div>
+
+    <!-- Section de gestion des commandes -->
+    <div class="card mt-5">
+        <div class="card-header custom-header-orders">
+            <h2>Gestion des commandes</h2>
+        </div>
+        <div class="card-body">
+
+            <!-- Tableau des commandes existantes -->
+            <div class="table-responsive">
+                <table class="table dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>ID Plat</th>
+                            <th>Quantité</th>
+                            <th>Total</th>
+                            <th>Date Commande</th>
+                            <th>État</th>
+                            <th>Nom Client</th>
+                            <th>Téléphone Client</th>
+                            <th>Email Client</th>
+                            <th>Adresse Client</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        // Récupération des commandes de la base de données
+                        $orders = get_all_orders();
+
+                        foreach ($orders as $order) : ?>
+                            <tr>
+                                <form action="update_order.php" method="post">
+                                    <td><?php echo $order['id']; ?></td>
+                                    <td><?php echo $order['id_plat']; ?></td>
+                                    <td><?php echo $order['quantite']; ?></td>
+                                    <td><?php echo $order['total']; ?></td>
+                                    <td><?php echo $order['date_commande']; ?></td>
+                                    <td>
+                                        <select name="etat" class="form-control">
+                                            <option value="En cours" <?php if ($order['etat'] === 'En cours') echo 'selected'; ?>>En cours</option>
+                                            <option value="Terminée" <?php if ($order['etat'] === 'Terminée') echo 'selected'; ?>>Terminée</option>
+                                            <!-- Vous pouvez ajouter d'autres états ici -->
+                                        </select>
+                                    </td>
+                                    <td><?php echo $order['nom_client']; ?></td>
+                                    <td><?php echo $order['telephone_client']; ?></td>
+                                    <td><?php echo $order['email_client']; ?></td>
+                                    <td><?php echo $order['adresse_client']; ?></td>
+                                    <td>
+                                        <input type="hidden" name="id" value="<?php echo $order['id']; ?>">
+                                        <input type="submit" value="Modifier" class="btn btn-secondary mb-1">
+                                        <a href="delete_order.php?id=<?php echo $order['id']; ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette commande?');">Supprimer</a>
+                                    </td>
+                                </form>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
 <?php render_footer(); ?>

@@ -1,3 +1,2 @@
-
 ( ! ) Fatal error: Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`the_district`.`commande`, CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id_plat`) REFERENCES `plat` (`id`)) in /home/mahe/Bureau/TheDistrict/DAO.php on line 315
 ( ! ) PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`the_district`.`commande`, CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id_plat`) REFERENCES `plat` (`id`)) in /home/mahe/Bureau/TheDistrict/DAO.php on line 315

@@ -340,4 +340,42 @@ function addPlat($db, $libelle, $description, $prix, $active, $id_categorie, $im
     $stmt->execute();
 }
 
+function get_all_orders() {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    $query = 'SELECT * FROM commande'; 
+    $statement = $db->prepare($query);
+    $statement->execute();
+    
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function update_order($id, $quantite, $total, $etat) {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    $query = "UPDATE commande SET quantite = :quantite, total = :total, etat = :etat WHERE id = :id";
+    $stmt = $db->prepare($query);
+
+    $stmt->bindParam(':quantite', $quantite);
+    $stmt->bindParam(':total', $total);
+    $stmt->bindParam(':etat', $etat);
+    $stmt->bindParam(':id', $id);
+
+    $stmt->execute();
+}
+
+function delete_order($id) {
+    $database = new Database();
+    $db = $database->getConnection();
+
+    $query = "DELETE FROM commande WHERE id = :id";
+    $stmt = $db->prepare($query);
+
+    $stmt->bindParam(':id', $id);
+
+    $stmt->execute();
+}
+
 ?>
