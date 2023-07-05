@@ -177,8 +177,7 @@ function get_plat_prix($db, $plat_id) {
 }
 
 function insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client) {
-    $query = "INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) 
-    VALUES (:plat_id, :quantite, :total, NOW(), 'En préparation', :nom_client, :telephone_client, :email_client, :adresse_client)";
+    $query = "INSERT INTO commande (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) VALUES (:plat_id, :quantite, :total, NOW(), 'En préparation', :nom_client, :telephone_client, :email_client, :adresse_client)";
     $stmt = $db->prepare($query);
     $stmt->bindParam(":plat_id", $plat_id, PDO::PARAM_INT);
     $stmt->bindParam(":quantite", $quantite, PDO::PARAM_INT);
@@ -341,14 +340,12 @@ function addPlat($db, $libelle, $description, $prix, $active, $id_categorie, $im
     $stmt->execute();
 }
 
-function get_all_orders($start, $limit) {
+function get_all_orders() {
     $database = new Database();
     $db = $database->getConnection();
 
-    $query = 'SELECT * FROM commande LIMIT :start, :limit';
+    $query = 'SELECT * FROM commande'; 
     $statement = $db->prepare($query);
-    $statement->bindValue(':start', (int) $start, PDO::PARAM_INT);
-    $statement->bindValue(':limit', (int) $limit, PDO::PARAM_INT);
     $statement->execute();
     
     return $statement->fetchAll(PDO::FETCH_ASSOC);
