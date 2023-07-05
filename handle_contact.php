@@ -15,7 +15,7 @@ $demande = $_POST['demande'];
 $message = "Nouveau message de contact: <br>";
 $message .= "Nom: $nom <br>";
 $message .= "Prénom: $prenom <br>";
-$message .= "Email: $email <br>";
+$message .= "Email de l'expéditeur: $email <br>";
 $message .= "Téléphone: $telephone <br>";
 $message .= "Demande: <br> $demande";
 
@@ -25,9 +25,10 @@ $mail->CharSet = "utf-8";
 $mail->isSMTP();
 $mail->Host = 'localhost';
 $mail->SMTPAuth = false;
-$mail->Port = 1025; // Changez ceci si vous utilisez un port différent pour Mailtrap/Mailhog
+$mail->Port = 1025;
 
-$mail->setFrom($email, "$nom $prenom");
+// Utiliser une adresse e-mail fixe pour l'expéditeur
+$mail->setFrom('noreply@district.com', 'Formulaire de Contact de The District');
 $mail->addAddress('from@district.com');
 
 $mail->isHTML(true);
