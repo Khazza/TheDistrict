@@ -495,10 +495,19 @@ body {
 
 /* Pour le formulaire de commande */
 .order-form {
-  background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 8px;
+  background:rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff; /* Ajouter une bordure blanche */
+  backdrop-filter :blur(15px);
+}
+.order-form .required-message {
+color: white;
+}
+
+.order-form .btn-primary {
+  border: 2px solid #ffffff; /* Ajouter une bordure blanche */
 }
 
 .order-form .form-group {
@@ -507,6 +516,7 @@ body {
 
 .order-form label {
   display: block;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
@@ -566,7 +576,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  filter: blur(8px);
   z-index: -1;
 }
 
