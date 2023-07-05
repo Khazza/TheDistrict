@@ -42,6 +42,42 @@ $(document).ready(function () {
 
 let currentPage = 1;
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Charge la première page de commandes lorsque le document est prêt
+    loadOrders(currentPage);
+});
+
+function loadOrders(page) {
+    fetch(`api.php?action=get_orders&page=${page}`)
+    .then(response => response.json())
+    .then(data => {
+        const tableBody = document.getElementById("ordersTableBody");
+        tableBody.innerHTML = ""; // Vider le tableau existant
+
+        // Remplir le tableau avec des données
+        data.orders.forEach(order => {
+            tableBody.innerHTML += `
+                <tr>
+                    <td>${order.id}</td>
+                    <td>${order.id_plat}</td>
+                    <td>${order.quantite}</td>
+                    <td>${order.total}</td>
+                    <td>${order.date_commande}</td>
+                    <td>${order.etat}</td>
+                    <td>${order.nom_client}</td>
+                    <td>${order.telephone_client}</td>
+                    <td>${order.email_client}</td>
+                    <td>${order.adresse_client}</td>
+                    <td>
+                        <!-- Vous pouvez ajouter ici des boutons d'action -->
+                    </td>
+                </tr>
+            `;
+        });
+    })
+    .catch(error => console.error('Error:', error));
+}
+
 function prevPage() {
     if (currentPage > 1) {
         currentPage--;
@@ -53,3 +89,4 @@ function nextPage() {
     currentPage++;
     loadOrders(currentPage);
 }
+
