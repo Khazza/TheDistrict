@@ -1,8 +1,8 @@
 /* #970747 */
-body{
+body {
   background-color: #e9e9e9;
 }
-.bg-plat{
+.bg-plat {
   background-color: #f7f7f7;
 }
 
@@ -15,7 +15,6 @@ body{
   height: 350px;
   margin-top: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de décollage */
-
 }
 .search-input {
   width: 50%; /* Définir la largeur de la barre de recherche */
@@ -49,10 +48,10 @@ body{
 }
 
 .nav-message {
-  color: #ffffff; 
-  font-size: 18px; 
+  color: #ffffff;
+  font-size: 18px;
   margin-right: 10px; /* Espace entre les liens */
-  padding:15px 0;
+  padding: 15px 0;
 }
 
 .nav-link {
@@ -67,7 +66,6 @@ body{
   background-color: #ffffff !important; /* Changement de couleur de fond au survol */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Ombre portée pour un effet de décollage */
   border-radius: 10px; /* Coins arrondis */
-
 }
 
 .nav-link.active {
@@ -76,12 +74,7 @@ body{
 
 /* Footer */
 .footer {
-  background-color: rgba(
-    151,
-    7,
-    71,
-    0.9
-  ) !important;
+  background-color: rgba(151, 7, 71, 0.9) !important;
   position: relative;
   height: 50px;
   width: 50%; /* Réduire la largeur du background du footer */
@@ -92,33 +85,34 @@ body{
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de décollage */
 }
 
-
 /* Icones de médias sociaux */
 
-.fa-facebook, .fa-twitter, .fa-instagram{
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
   color: #ffffff;
 }
 
-.footer-link{
+.footer-link {
   color: #ffffff !important; /* Couleur de texte blanche pour une meilleure lisibilité */
   font-size: 18px; /* Taille de police plus grande */
-  border-radius: 10px; /* Coins arrondis */  
+  border-radius: 10px; /* Coins arrondis */
   text-decoration: none; /* Enlever le soulignement */
   padding: 8px;
   margin: 2px;
 }
 
-.footer-link.active{  
+.footer-link.active {
   border-bottom: 2px solid #ffffff; /* Souligne le lien actif avec une bordure */
   color: #ffffff; /* Couleur du texte des liens */
   margin: 0 15px; /* Espace autour des liens */
   text-decoration: none; /* Enlever le soulignement */
 }
-.footer-link:hover{
-color: #3a3f44 !important; /* Changement de couleur au survol */
-background-color: #ffffff !important; /* Changement de couleur de fond au survol */
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Ombre portée pour un effet de décollage */
-border-radius: 5px; /* Coins arrondis */
+.footer-link:hover {
+  color: #3a3f44 !important; /* Changement de couleur au survol */
+  background-color: #ffffff !important; /* Changement de couleur de fond au survol */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Ombre portée pour un effet de décollage */
+  border-radius: 5px; /* Coins arrondis */
 }
 
 /* Ajouter un effet de survol sur les icônes des réseaux sociaux */
@@ -151,17 +145,18 @@ border-radius: 5px; /* Coins arrondis */
   background-color: #f8c301; /* Couleur de la ligne */
 }
 
-.category-card-link, .dish-card-link {
+.category-card-link,
+.dish-card-link {
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
-.category-card-link:hover, .dish-card-link:hover {
+.category-card-link:hover,
+.dish-card-link:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-
 
 /* Profile Cards */
 .profile-card-2 {
@@ -228,7 +223,7 @@ border-radius: 5px; /* Coins arrondis */
 
 .profile-card-3 img {
   height: 100%;
-  width: 100%; 
+  width: 100%;
   object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la carte */
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -242,7 +237,7 @@ border-radius: 5px; /* Coins arrondis */
   color: #fff;
   text-align: center;
   background-color: rgba(151, 7, 71, 0.8);
-  font-family: "Arial", sans-serif; 
+  font-family: "Arial", sans-serif;
   font-size: 18px; /* Ajuster la taille de la police */
   font-weight: bold; /* Mettre le texte en gras */
   transform: translateY(0);
@@ -411,7 +406,7 @@ border-radius: 5px; /* Coins arrondis */
   background-color: rgba(151, 7, 71, 0.8);
   font-family: "Arial", sans-serif;
   font-size: 18px;
-  font-weight: bold; 
+  font-weight: bold;
   transform: translateY(0);
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -447,7 +442,7 @@ border-radius: 5px; /* Coins arrondis */
   text-overflow: ellipsis; /* Afficher des points de suspension lorsque le texte est tronqué */
   display: -webkit-box; /* Nécessaire pour utiliser -webkit-line-clamp */
   -webkit-box-orient: vertical; /* Nécessaire pour utiliser -webkit-line-clamp */
-  -webkit-line-clamp: 2; 
+  -webkit-line-clamp: 2;
 }
 
 /* Styliser les petits textes des cartes (prix, disponibilité) */
@@ -466,13 +461,14 @@ border-radius: 5px; /* Coins arrondis */
   transition: all 0.3s;
 }
 
-.plat-card .plat-card2 .btn-primary:hover, .plat-card .btn-primary:focus {
+.plat-card .plat-card2 .btn-primary:hover,
+.plat-card .btn-primary:focus {
   background-color: white !important;
   color: #000000 !important;
   border: 2px solid #000000; /* Ajouter une bordure blanche */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre lors du survol */
   transition: all 0.3s;
-  border: 2px solid #2d3142
+  border: 2px solid #2d3142;
 }
 
 /* card plats-order */
@@ -514,7 +510,8 @@ border-radius: 5px; /* Coins arrondis */
   margin-bottom: 8px;
 }
 
-.order-form input, .order-form textarea {
+.order-form input,
+.order-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -531,13 +528,13 @@ border-radius: 5px; /* Coins arrondis */
   font-weight: 600;
   cursor: pointer;
 }
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: white !important;
   color: #000000 !important;
   border: 2px solid #000000; /* Ajouter une bordure blanche */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre lors du survol */
   transition: all 0.3s;
-  border: 2px solid #2d3142
+  border: 2px solid #2d3142;
 }
 
 /* Espace entre la carte du plat et le formulaire */
@@ -565,7 +562,7 @@ border-radius: 5px; /* Coins arrondis */
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../src/img/fosyyyy.jpg');
+  background-image: url("../../src/img/fosyyyy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -597,7 +594,7 @@ border-radius: 5px; /* Coins arrondis */
   border: 2px solid #000000; /* Ajouter une bordure blanche */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre lors du survol */
   transition: all 0.3s;
-  border: 2px solid #2d3142
+  border: 2px solid #2d3142;
 }
 
 .btn-primary {
@@ -629,16 +626,16 @@ input:invalid + .required-message {
 /* CSS Login/signup */
 .form-container {
   margin-top: 150px;
-  max-width: 500px; 
+  max-width: 500px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
@@ -646,12 +643,16 @@ input:invalid + .required-message {
   color: white;
 }
 
-.text-login, .back-index {
+.text-login,
+.back-index {
   color: #970747;
 }
 
 /* CSS bouton login/signup */
-.custom-login-btn, .custom-logoff-btn, .custom-signup-btn, .custom-dashboard-btn{
+.custom-login-btn,
+.custom-logoff-btn,
+.custom-signup-btn,
+.custom-dashboard-btn {
   background-color: #970747;
   color: #ffffff;
   padding: 10px 20px;
@@ -670,7 +671,10 @@ input:invalid + .required-message {
 }
 
 /* Changer la couleur d'arrière-plan lorsqu'on survole les boutons */
-.custom-login-btn:hover, .custom-signup-btn:hover, .custom-logoff-btn:hover, .custom-dashboard-btn:hover{
+.custom-login-btn:hover,
+.custom-signup-btn:hover,
+.custom-logoff-btn:hover,
+.custom-dashboard-btn:hover {
   background-color: #ffffff;
   color: #000000;
   border: 2px solid #000000; /* Ajouter une bordure blanche */
@@ -678,13 +682,17 @@ input:invalid + .required-message {
 }
 
 /* Changer la couleur d'arrière-plan lorsqu'on clique sur les boutons */
-.custom-login-btn:active, .custom-signup-btn:active {
+.custom-login-btn:active,
+.custom-signup-btn:active {
   background-color: #f8c301a2;
   color: #ffffff;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Ajouter une ombre interne lorsqu'on clique */
 }
 
-.custom-signup-btn:focus, .custom-login-btn:focus, .custom-logoff-btn:focus, .custom-dashboard-btn:focus{
+.custom-signup-btn:focus,
+.custom-login-btn:focus,
+.custom-logoff-btn:focus,
+.custom-dashboard-btn:focus {
   background-color: white !important;
   color: #000000;
   border: 2px solid #000000; /* Ajouter une bordure blanche */
@@ -692,7 +700,7 @@ input:invalid + .required-message {
 }
 
 /* CSS Dashboard */
-.dashboard{
+.dashboard {
   margin-top: 20px;
 }
 .dashboard .dashboard-table {
@@ -700,7 +708,8 @@ input:invalid + .required-message {
   border-collapse: collapse;
 }
 
-.dashboard .dashboard-table th, .dashboard .dashboard-table td {
+.dashboard .dashboard-table th,
+.dashboard .dashboard-table td {
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -741,8 +750,9 @@ label {
 }
 
 .btn-merci-home {
-  background-color: #2ecc71;
-  color: white;
+  background-color: #dddddd;
+  border: 2px solid #000000;
+  color: rgb(0, 0, 0);
   padding: 15px 30px;
   font-size: 18px;
   border-radius: 5px;
@@ -750,7 +760,8 @@ label {
 }
 
 .btn-merci-home:hover {
-  background-color: #27ae60;
+  background-color: #970747;
+  border: 2px solid #000000;
   color: white;
 }
 
@@ -767,13 +778,13 @@ label {
 
 /* Styles en mode responsive */
 @media screen and (max-width: 768px) {
-  
   .navbar {
     z-index: 1000;
-}
+  }
 
   /* Cacher la barre de recherche */
-  .search-input, .custom-search-button {
+  .search-input,
+  .custom-search-button {
     display: none;
   }
 
@@ -786,7 +797,7 @@ label {
   /* Spécifique à la page plats.php */
   .plats-page .card-body .btn, /* Cible le bouton Commander */
   .plats-page .card-body .card-text /* Cible le texte de description */ {
-    display: block; 
+    display: block;
   }
   /* Ajuster la mise en page de la carte sur les petits écrans */
   .plats-page .plat-card .row {
@@ -812,7 +823,6 @@ label {
   .plats-page .plat-card .btn {
     font-size: 1em;
   }
-
 
   /* Afficher les plats 4, 5 et 6 en affichage responsive */
   .homepage .dish-row .col-md-4:nth-child(4),
@@ -843,7 +853,12 @@ label {
 
   /* CSS pour ajouter un fond au menu déroulant */
   .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond semi-transparente */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ); /* Couleur de fond semi-transparente */
   }
 
   .navbar-nav .nav-link {
