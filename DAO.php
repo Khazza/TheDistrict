@@ -341,12 +341,14 @@ function addPlat($db, $libelle, $description, $prix, $active, $id_categorie, $im
     $stmt->execute();
 }
 
-function get_all_orders() {
+function get_all_orders($start, $limit) {
     $database = new Database();
     $db = $database->getConnection();
 
-    $query = 'SELECT * FROM commande'; 
+    $query = 'SELECT * FROM commande LIMIT :start, :limit';
     $statement = $db->prepare($query);
+    $statement->bindValue(':start', (int) $start, PDO::PARAM_INT);
+    $statement->bindValue(':limit', (int) $limit, PDO::PARAM_INT);
     $statement->execute();
     
     return $statement->fetchAll(PDO::FETCH_ASSOC);
