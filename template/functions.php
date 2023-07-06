@@ -10,6 +10,8 @@ function render_header()
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The District, restaurant et commande en ligne de divers spécialités comme burgers, pizzas, pastas, salades">
+        <meta name="keywords" content="Commande, Restaurant, District, Burger, Pizza, Pasta">
         <!-- Favicon -->
         <link rel="icon" href="./src/img/the_district_brand/favicon.png">
         <title>The District - Restaurant et Commande en Ligne</title>
