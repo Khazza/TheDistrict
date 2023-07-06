@@ -256,8 +256,6 @@ function updateCategory($db, $id, $libelle, $active, $imagePath) {
         $query .= ", image = :image";
     }
 
-    $query .= " WHERE id = :id";
-
     $stmt = $db->prepare($query);
 
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
