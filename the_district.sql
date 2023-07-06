@@ -1,6 +1,5 @@
 -- Création de la base de données
-CREATE DATABASE IF NOT EXISTS the_district;
-USE the_district;
+USE mahe;
 
 -- Création des tables
 
