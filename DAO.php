@@ -152,8 +152,8 @@ function search_dishes($queryDishes) {
     $database = new Database();
     $db = $database->getConnection();
     
-    // Requête pour rechercher les plats par libelle
-    $query = "SELECT * FROM plat WHERE libelle LIKE :searchQuery";
+    // Requête pour rechercher les plats par libelle ou description
+    $query = "SELECT * FROM plat WHERE libelle LIKE :searchQuery OR description LIKE :searchQuery";
     $stmt = $db->prepare($query);
     
     $searchQuery = '%' . $queryDishes . '%';
@@ -165,6 +165,7 @@ function search_dishes($queryDishes) {
     
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
 
 
 function get_plat_prix($db, $plat_id) {
