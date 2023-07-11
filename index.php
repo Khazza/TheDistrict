@@ -7,6 +7,15 @@ include './template/functions.php';
 ?>
 <!-- Appel de la fonction pour afficher le header -->
 <?php render_header(); ?>
+
+<?php
+// Afficher le message de succès après la déconnexion
+if (isset($_SESSION['logout_success'])) {
+    echo '<div class="alert alert-success text-center">' . $_SESSION['logout_success'] . '</div>';
+    unset($_SESSION['logout_success']); // Effacer le message de succès pour qu'il ne soit pas réaffiché
+}
+?>
+
 <?php
 // Afficher le message de succès après la connexion
 if (isset($_SESSION['login_success'])) {

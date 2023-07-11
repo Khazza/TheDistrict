@@ -1,13 +1,11 @@
 <?php
 session_start();
 
-// Supprime toutes les variables de session
-session_unset();
+if (isset($_SESSION['user'])) {
+    $_SESSION["logout_success"] = "Déconnexion réussie. À bientôt, " . $_SESSION['user']['nom_prenom'] . "!";
+    unset($_SESSION['user']); // Supprimer seulement les informations de l'utilisateur
+}
 
-// Détruit la session
-session_destroy();
-
-// Redirige vers la page d'accueil avec le paramètre de requête logout=success
-header('Location: index.php');
+header("Location: index.php");
 exit();
 ?>
