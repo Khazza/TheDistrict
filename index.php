@@ -7,17 +7,6 @@ include './template/functions.php';
 ?>
 <!-- Appel de la fonction pour afficher le header -->
 <?php render_header(); ?>
-
-<!-- Search Bar Background Image -->
-<div class="search-bar">
-    <div class="container text-center">
-        <form action="search.php" method="get">
-            <input type="text" name="query" class="search-input" placeholder="Recherche...">
-            <button type="submit" class="custom-search-button">Rechercher</button>
-        </form>
-    </div>
-</div>
-
 <?php
 // Afficher le message de succès après la connexion
 if (isset($_SESSION['login_success'])) {
@@ -34,6 +23,15 @@ if (isset($_SESSION['register_success'])) {
 }
 ?>
 
+<!-- Search Bar Background Image -->
+<div class="search-bar">
+    <div class="container text-center">
+        <form action="search.php" method="get">
+            <input type="text" name="query" class="search-input" placeholder="Recherche...">
+            <button type="submit" class="custom-search-button">Rechercher</button>
+        </form>
+    </div>
+</div>
 
 <!-- Main Content -->
 <div class="container main-content-container homepage">
