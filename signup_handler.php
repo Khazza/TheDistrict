@@ -41,7 +41,11 @@ if (!empty($_SESSION['errors'])) {
 
 // Si tout est correct, ajouter l'utilisateur à la base de données
 if (registerUser($pdo, $nom_prenom, $email, $password)) {
-    $_SESSION["register_success"] = "Inscription réussie! Vous pouvez maintenant vous connecter.";
+    // Connexion de l'utilisateur et création de la nouvelle session
+    $user = loginUser($email, $password);
+    $_SESSION['user'] = $user;
+
+    $_SESSION["register_success"] = "Inscription réussie! Vous êtes maintenant connecté.";
     header("Location: index.php");
     exit();
 } else {

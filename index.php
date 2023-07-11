@@ -18,6 +18,21 @@ include './template/functions.php';
     </div>
 </div>
 
+<?php
+// Afficher le message de succès après la connexion
+if (isset($_SESSION['login_success'])) {
+    echo '<div class="alert alert-success text-center">' . $_SESSION['login_success'] . '</div>';
+    unset($_SESSION['login_success']); // Effacer le message de succès pour qu'il ne soit pas réaffiché
+}
+?>
+
+<?php
+// Afficher le message de succès après l'inscription et la connexion
+if (isset($_SESSION['register_success'])) {
+    echo '<div class="alert alert-success text-center">' . $_SESSION['register_success'] . '</div>';
+    unset($_SESSION['register_success']); // Effacer le message de succès pour qu'il ne soit pas réaffiché
+}
+?>
 
 
 <!-- Main Content -->

@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($user) {
         $_SESSION['user'] = $user; // Stockez les informations de l'utilisateur dans la session
+        $_SESSION["login_success"] = "Connexion réussie! Bienvenue " . $user['nom_prenom'] . ".";
         
         header("Location: index.php");
         exit();
