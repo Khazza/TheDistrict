@@ -27,6 +27,9 @@ $total = $prix * $quantite;
 // Insertion dans la base de données
 insert_order($db, $plat_id, $quantite, $total, $nom_client, $telephone_client, $email_client, $adresse_client);
 
+// Ajouter un message de confirmation à la session
+$_SESSION['order_success'] = "Votre commande a été passée avec succès ! Vous recevrez un email de confirmation.";
+
 // Construire le résumé de la commande
 $order_summary = "Résumé de votre commande: <br>";
 $order_summary .= "Nom: $nom_client <br>";
