@@ -904,6 +904,15 @@ label {
 
   .navbar-nav .nav-link {
     color: #fff; /* Couleur du texte des liens */
+  }  
+  .plat-img-container {
+    max-height: 200px; /* Ou toute autre hauteur appropriée à votre conception */
+    overflow: hidden;
+  }
+  
+  .plat-img-fluid {
+    height: 100%;
+    object-fit: cover; 
   }
 }
 
@@ -920,18 +929,5 @@ label {
 @media screen and (min-width: 768px) {
   .plat-card {
     height: 240px;
-  }
-}
-
-
-@media screen and (min-width: 768px){
-  .plat-img-container {
-    max-height: 200px; /* Ou toute autre hauteur appropriée à votre conception */
-    overflow: hidden;
-  }
-  
-  .plat-img-fluid {
-    height: 100%;
-    object-fit: cover; 
   }
 }
