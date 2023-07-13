@@ -66,6 +66,6 @@ try {
 }
 
 // Rediriger vers la page de commande pour le plat spécifique avec le paramètre success
-header("Location: orders.php?id=$plat_id&success=true");
+header("Location: orders.php?id=$plat_id");
 exit;
 ?>

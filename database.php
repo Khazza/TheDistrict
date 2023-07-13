@@ -3,9 +3,9 @@
 class Database
 {
     private $host = "localhost";
-    private $db_name = "mahe";
-    private $username = "mahe";
-    private $password = "mahecv05";
+    private $db_name = "the_district";
+    private $username = "admin";
+    private $password = "cv05";
     public $conn;
 
     public function getConnection()
