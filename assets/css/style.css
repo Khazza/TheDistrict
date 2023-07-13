@@ -833,7 +833,7 @@ label {
     font-size: 1em;
   }
 
-  /* Afficher les plats 4, 5 et 6 en affichage responsive */
+  /* Afficher les plats 4, 5 et 6Email: en affichage responsive */
   .homepage .dish-row .col-md-4:nth-child(4),
   .homepage .dish-row .col-md-4:nth-child(5),
   .homepage .dish-row .col-md-4:nth-child(6) {
@@ -875,11 +875,6 @@ label {
   }
 }
 
-@media screen and (max-width: 1225px) {
-  .footer {
-    display: none;
-  }
-}
 @media screen and (min-width: 768px) {
   .plat-card img {
     height: 100%; /* Hauteur à 100% de la carte sur les grands écrans */
