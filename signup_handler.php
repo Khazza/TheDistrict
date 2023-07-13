@@ -11,8 +11,8 @@ if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_tok
 }
 
 // Vérification des champs
-$nom_prenom = $_POST['nom_prenom'];
-$email = $_POST['email'];
+$nom_prenom = htmlspecialchars($_POST['nom_prenom']); // Échappement des caractères spéciaux
+$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL); // Validation de l'adresse e-mail
 $password = $_POST['password'];
 $confirm_password = $_POST['confirm_password'];
 
@@ -24,6 +24,11 @@ if (!preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password)) {
 }
 if ($password !== $confirm_password) {
     $_SESSION['errors'][] = "Les mots de passe ne correspondent pas.";
+}
+
+// Vérification si l'email est valide
+if (!$email) {
+    $_SESSION['errors'][] = "L'adresse e-mail n'est pas valide.";
 }
 
 // Vérification si l'email est déjà pris
