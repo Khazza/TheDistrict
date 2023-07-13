@@ -207,13 +207,13 @@ function registerUser($pdo, $nom_prenom, $email, $password) {
     return $stmt->execute([$nom_prenom, $email, password_hash($password, PASSWORD_DEFAULT)]);
 }
 
-function loginUser($identifier, $password) {
+function loginUser($email, $password) {
     $database = new Database();
     $db = $database->getConnection();
     
-    $query = "SELECT * FROM utilisateur WHERE email = :identifier OR nom_prenom = :identifier";
+    $query = "SELECT * FROM utilisateur WHERE email = :email";
     $stmt = $db->prepare($query);
-    $stmt->bindParam(':identifier', $identifier);
+    $stmt->bindParam(':email', $email);
     $stmt->execute();
     
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -221,9 +221,9 @@ function loginUser($identifier, $password) {
     if ($user && password_verify($password, $user['password'])) {
         return $user; // Renvoyez les informations de l'utilisateur en cas de réussite
     }
-    
     return null; // Renvoyez null en cas d'échec
 }
+
 
 
 // ---------------------------------------Dashboard

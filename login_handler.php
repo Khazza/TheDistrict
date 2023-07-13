@@ -5,7 +5,7 @@ include 'DAO.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $identifier = $_POST['username'];
+    $identifier = $_POST['email'];
     $password = $_POST['password'];
     
     $user = loginUser($identifier, $password);

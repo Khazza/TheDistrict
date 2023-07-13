@@ -33,8 +33,8 @@ render_header();
             ?>
             <form method="POST" action="login_handler.php">
                 <div class="mb-3">
-                    <label for="username" class="form-label">Nom d'utilisateur ou Email:</label>
-                    <input type="text" class="form-control" name="username" required>
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" name="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Mot de passe:</label>
@@ -62,4 +62,5 @@ render_header();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
