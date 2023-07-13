@@ -791,11 +791,35 @@ label {
     z-index: 1000;
   }
 
-  /* Cacher la barre de recherche */
+  /* Cacher la barre de recherche
   .search-input,
   .custom-search-button {
     display: none;
+  } */
+
+/* Modifie la barre de recherche sur les écrans de 768px ou moins */
+@media (max-width: 768px) {
+  .search-bar {
+    /* Ces styles sont à ajuster selon vos préférences et votre design actuel */
+    width: 100%;
+    font-size: 14px;
+    margin: 0 auto;
   }
+  
+  .search-input {
+    /* Ces styles sont à ajuster selon vos préférences et votre design actuel */
+    width: 80%;
+    padding: 10px;
+  }
+
+  .custom-search-button {
+    /* Ces styles sont à ajuster selon vos préférences et votre design actuel */
+    width: 20%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
 
   /* Cacher les catégories et le titre des catégories en mode responsive */
   .homepage .category-row,
