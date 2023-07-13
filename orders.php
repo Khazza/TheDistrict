@@ -20,8 +20,9 @@ render_header();
 
 <?php
 // Afficher le message de succès après l'envoi de la commande
-if (isset($_GET['success'])) {
-    echo '<div class="alert alert-success text-center">Votre commande a été passée avec succès ! Vous recevrez un email de confirmation.</div>';
+if (isset($_SESSION['order_success'])) {
+    echo '<div class="alert alert-success text-center">' . $_SESSION['order_success'] . '</div>';
+    unset($_SESSION['order_success']); // Effacer le message de succès pour qu'il ne soit pas réaffiché
 }
 
 ?>
