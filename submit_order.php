@@ -61,7 +61,7 @@ try {
     error_log("L'envoi de mail a échoué. L'erreur suivante s'est produite : " . $mail->ErrorInfo);
 }
 
-// Rediriger vers la page de commande pour le plat spécifique
-header("Location: orders.php?id=$plat_id");
+// Rediriger vers la page de commande pour le plat spécifique avec le paramètre success
+header("Location: orders.php?id=$plat_id&success=true");
 exit;
 ?>
