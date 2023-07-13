@@ -35,7 +35,7 @@ function render_header()
 
             <!-- Liens de la barre de navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto mx-2">
                     <li class="nav-item">
                         <a class="nav-link <?php echo $current_page === 'index.php' ? 'active' : ''; ?>" href="index.php">Accueil</a>
                     </li>
@@ -51,10 +51,10 @@ function render_header()
                 </ul>
                 <!-- Search bar hidden on larger screens -->
                 <form action="search.php" method="get" class="d-lg-none my-3">
-                    <div class="input-group">
+                    <div class="input-group w-75 mx-2">
                         <input type="text" name="query" class="form-control" placeholder="Recherche..." aria-label="Recherche...">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
+                            <button class="btn btn-outline-secondary mx-1" type="submit"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </form>
@@ -75,10 +75,10 @@ function render_header()
                         </li>
                     <?php else : ?>
                         <li class="nav-item">
-                            <a class="btn custom-login-btn" href="login.php">S'identifier</a>
+                            <a class="btn custom-login-btn my-1" href="login.php">S'identifier</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn custom-signup-btn" href="signup.php">S'enregistrer</a>
+                            <a class="btn custom-signup-btn my-1" href="signup.php">S'enregistrer</a>
                         </li>
                     <?php endif; ?>
                 </ul>

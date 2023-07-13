@@ -622,6 +622,15 @@ color: white;
   transition: all 0.3s;
 }
 
+.btn-outline-secondary{
+  background-color: #970747;
+  color: #ffffff;
+}
+.btn-outline-secondary:hover{
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .required-message {
   color: #970747;
   font-size: 12px;
