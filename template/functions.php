@@ -85,15 +85,15 @@ function render_footer()
     $current_page = basename($_SERVER['SCRIPT_NAME']);
     ?>
         <footer class="footer text-center py-3 mt-2 mb-3">
-            <div class="container d-flex align-items-center justify-content-between h-100">
-                <div>
-                    <a href="../legal-notice.php" class="mr-auto footer-link <?php echo $current_page === 'legal-notice.php' ? 'active' : ''; ?>">Mentions légales</a> <!-- Lien vers Mentions légales -->
-                    <a href="../privacy-policy.php" class="mr-auto footer-link <?php echo $current_page === 'privacy-policy.php' ? 'active' : ''; ?>">Politique de confidentialité</a> <!-- Lien vers Politique de confidentialité -->
+            <div class="container d-flex align-items-center justify-content-between h-100 flex-md-row flex-column">
+                <div class="text-md-start text-center mb-md-0 mb-3">
+                    <a href="../legal-notice.php" class="mr-auto footer-link text-sm <?php echo $current_page === 'legal-notice.php' ? 'active' : ''; ?>">Mentions légales</a> <!-- Lien vers Mentions légales -->
+                    <a href="../privacy-policy.php" class="mr-auto footer-link text-sm <?php echo $current_page === 'privacy-policy.php' ? 'active' : ''; ?>">Politique de confidentialité</a> <!-- Lien vers Politique de confidentialité -->
                 </div>
-                <div>
-                    <a href="#" class="ms-3"><i class="fab fa-facebook fa-2xl"></i></a>
-                    <a href="#" class="ms-3"><i class="fab fa-twitter fa-2xl"></i></a>
-                    <a href="#" class="ms-3"><i class="fab fa-instagram fa-2xl"></i></a>
+                <div class="text-md-end text-center">
+                    <a href="#" class="ms-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="ms-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="ms-3"><i class="fab fa-instagram fa-lg"></i></a>
                 </div>
         </footer>
 
