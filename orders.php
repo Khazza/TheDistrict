@@ -36,7 +36,7 @@ if (isset($_SESSION['order_success'])) {
             <!-- Carte du plat -->
             <?php if ($plat) : ?>
                 <div class="plat-card2">
-                    <img src="src/img/food/<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>">
+                    <img src="src/img/food/<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>" class="order-img-fluid">
                     <div class="card-body">
                         <h2 class="card-title"><?= $plat['libelle'] ?></h2>
                         <p class="card-text"><?= $plat['description'] ?></p>
