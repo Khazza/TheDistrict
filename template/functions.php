@@ -49,6 +49,16 @@ function render_header()
                         <a class="nav-link <?php echo $current_page === 'contact.php' ? 'active' : ''; ?>" href="contact.php">Contact</a>
                     </li>
                 </ul>
+                <!-- Search bar hidden on larger screens -->
+                <form action="search.php" method="get" class="d-lg-none my-3">
+                    <div class="input-group">
+                        <input type="text" name="query" class="form-control" placeholder="Recherche..." aria-label="Recherche...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+
                 <ul class="navbar-nav ms-auto">
                     <?php if (isset($_SESSION['user'])) : ?>
                         <li class="nav-item d-flex align-items-center">

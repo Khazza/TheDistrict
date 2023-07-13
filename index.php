@@ -33,7 +33,7 @@ if (isset($_SESSION['register_success'])) {
 ?>
 
 <!-- Search Bar Background Image -->
-<div class="search-bar">
+<div class="search-bar d-none d-lg-block">
     <div class="container text-center">
         <form action="search.php" method="get">
             <input type="text" name="query" class="search-input" placeholder="Recherche...">
