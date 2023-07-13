@@ -1,5 +1,5 @@
 -- Création de la base de données
-USE mahe;
+USE the_district;
 
 -- Création des tables
 
