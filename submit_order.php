@@ -19,7 +19,7 @@ $database = new Database();
 $db = $database->getConnection();
 
 // Récupération des données du plat
-$plat = get_plat_by_id($db, $plat_id);
+$plat = get_plat_by_id($plat_id);
 
 // Récupération du prix du plat
 $prix = get_plat_prix($db, $plat_id);
@@ -39,7 +39,7 @@ $order_summary .= "Nom: $nom_client <br>";
 $order_summary .= "Email: $email_client <br>";
 $order_summary .= "Téléphone: $telephone_client <br>";
 $order_summary .= "Adresse: $adresse_client <br>";
-$order_summary .= "Plat commandé: " . $plat['libelle'] . "<br>"; // Ajout du nom du plat
+$order_summary .= "Plat commandé: " . $plat['libelle'] . "<br>"; 
 $order_summary .= "Quantité: $quantite <br>";
 $order_summary .= "Prix unitaire: $prix € <br>";
 $order_summary .= "Total: $total €<br>";
