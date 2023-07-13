@@ -71,7 +71,7 @@ function render_header()
                         <?php endif; ?>
 
                         <li class="nav-item d-flex align-items-center">
-                            <a class="btn custom-logoff-btn" href="logout.php">Se déconnecter</a>
+                            <a class="btn custom-logoff-btn my-1" href="logout.php">Se déconnecter</a>
                         </li>
                     <?php else : ?>
                         <li class="nav-item">
