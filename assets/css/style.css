@@ -774,6 +774,16 @@ label {
   color: white;
 }
 
+.plat-img-container {
+  max-height: 200px; /* Ou toute autre hauteur appropriée à votre conception */
+  overflow: hidden;
+}
+
+.plat-img-fluid {
+  height: 100%;
+  object-fit: cover; 
+}
+
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Responsive--------------------------------- */
 /* ---------------------------------------------------------------------------- */
