@@ -19,15 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     } else {
         
-        $_SESSION['error_message'] = "Invalid identifier or password";
+        $_SESSION['errors'][] = "Identifiant ou mot de passe incorrect.";
         
         header("Location: login.php");
         exit();
         
     }
-    
-} else {
-    header("Location: login.php");
-    exit();
-}
+}    
 ?>

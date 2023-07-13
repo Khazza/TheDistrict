@@ -31,6 +31,7 @@ render_header();
                 unset($_SESSION['errors']);
             }
             ?>
+
             <form method="POST" action="login_handler.php">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email:</label>
