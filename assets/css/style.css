@@ -875,6 +875,11 @@ label {
   }
 }
 
+@media screen and (max-width: 1225px) {
+  .footer {
+    height: 100%;
+    width: 100%; /* Réduire la largeur du background du footer */  }
+}
 @media screen and (min-width: 768px) {
   .plat-card img {
     height: 100%; /* Hauteur à 100% de la carte sur les grands écrans */
