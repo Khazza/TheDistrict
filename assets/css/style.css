@@ -519,6 +519,11 @@ color: white;
   color: #ffffff;
   margin-bottom: 8px;
 }
+.labelquant{
+  display: block;
+  color: #000000 !important; 
+  margin-bottom: 8px;
+}
 
 .order-form input,
 .order-form textarea {

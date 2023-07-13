@@ -41,8 +41,8 @@ if (isset($_SESSION['order_success'])) {
                         <h2 class="card-title"><?= $plat['libelle'] ?></h2>
                         <p class="card-text"><?= $plat['description'] ?></p>
                         <p class="card-text">Prix: <?= $plat['prix'] ?> €</p>
-                        <div class="quant text-end">
-                            <label for="quantite">Quantité:</label>
+                        <div class="quant text-dark text-end">
+                            <label class="labelquant" for="quantite">Quantité:</label>
                             <input type="number" id="quantite" name="quantite" min="1" max="25" value="1">
                         </div>
                     </div>
