@@ -202,19 +202,16 @@ $plats = get_all_plats();
                                 <td><input type='text' name='prix' class='form-control' value='{$plat['prix']}'></td>
                                 
                                 <td>
-                                    <select name='active' class='form-control'>
+                                    <select name='active' class='form-select'>
                                         <option value='Yes'" . ($plat['active'] === 'Yes' ? ' selected' : '') . ">Yes</option>
                                         <option value='No'" . ($plat['active'] === 'No' ? ' selected' : '') . ">No</option>
                                     </select>
                                 </td>
                                 <td>
-                                <label for='id_categorie'>Catégorie:</label>
-                                <select name='id_categorie' class='form-control'>";
-
+                                <select name='id_categorie' class='form-select'>";
                             foreach ($categories as $cat) {
                                 echo "<option value='" . $cat['id'] . "'" . ($plat['id_categorie'] === $cat['id'] ? ' selected' : '') . ">" . $cat['libelle'] . "</option>";
                             }
-
                             echo "  </select>
                             </td>
                                 <td>
