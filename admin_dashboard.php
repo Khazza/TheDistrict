@@ -74,10 +74,7 @@ $plats = get_all_plats();
                         <option value="No">No</option>
                     </select>
                 </div>
-                <input type="submit" value="Ajouter" class="btn btn-primary">
-            </form>
-
-            <!-- Tableau des catégories existantes -->
+                <input type="submit" value="Ajouter" class="btn btn-primary">Pizza Bianca
             <div class="table-responsive">
                 <table class="table dashboard-table">
                     <thead>
