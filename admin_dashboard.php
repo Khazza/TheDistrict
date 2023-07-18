@@ -69,7 +69,7 @@ $plats = get_all_plats();
                 </div>
                 <div class="form-group mb-2">
                     <label for="active">Active:</label>
-                    <select name="active" class="form-control">
+                    <select name="active" class="form-select">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
@@ -96,7 +96,7 @@ $plats = get_all_plats();
                                     <td><?php echo $categorie['id']; ?></td>
                                     <td><input type="text" name="libelle" class="form-control" value="<?php echo $categorie['libelle']; ?>"></td>
                                     <td>
-                                        <select name="active" class="form-control">
+                                        <select name="active" class="form-select">
                                             <option value="Yes" <?php if ($categorie['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
                                             <option value="No" <?php if ($categorie['active'] === 'No') echo 'selected'; ?>>No</option>
                                         </select>
@@ -147,14 +147,14 @@ $plats = get_all_plats();
                 </div>
                 <div class="form-group mb-2">
                     <label for="active">Active:</label>
-                    <select name="active" class="form-control">
+                    <select name="active" class="form-select">
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
                 </div>
                 <div class="form-group mb-2">
                     <label for="id_categorie">Catégorie:</label>
-                    <select name="id_categorie" class="form-control">
+                    <select name="id_categorie" class="form-select">
                         <?php foreach ($categories as $categorie) : ?>
                             <option value="<?php echo $categorie['id']; ?>"><?php echo $categorie['libelle']; ?></option>
                         <?php endforeach; ?>
