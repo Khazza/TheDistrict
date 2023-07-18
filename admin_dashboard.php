@@ -179,14 +179,14 @@ $plats = get_all_plats();
                         echo "<table class='table dashboard-table'>
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Libelle</th>
-                                <th>Description</th>
-                                <th>Prix</th>
-                                <th>Active</th>
-                                <th>Catégorie</th>
-                                <th>Image</th>
-                                <th>Actions</th>
+                            <th class='col-id'>ID</th>
+                            <th class='col-libelle'>Libelle</th>
+                            <th class='col-description'>Description</th>
+                            <th class='col-prix'>Prix</th>
+                            <th class='col-active'>Active</th>
+                            <th class='col-categorie'>Catégorie</th>
+                            <th class='col-image'>Image</th>
+                            <th class='col-actions'>Actions</th>
                             </tr>
                         </thead>
                         <tbody>";
