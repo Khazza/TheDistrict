@@ -794,7 +794,7 @@ label {
 }
 
 .col-libelle {
-  width: 10%;
+  width: 12%;
 }
 
 .col-description {
@@ -802,7 +802,7 @@ label {
 }
 
 .col-prix {
-  width: 10%;
+  width: 8%;
 }
 
 .col-active {
