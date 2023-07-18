@@ -20,7 +20,6 @@ $plats = get_all_plats();
 ?>
 
 <div class="container dashboard my-5">
-
     <!-- Affichage du message s'il existe -->
     <?php if (isset($_SESSION['message'])) : ?>
         <div class="alert alert-success">
@@ -55,7 +54,6 @@ $plats = get_all_plats();
             <h2>Gestion des catégories</h2>
         </div>
         <div class="card-body">
-
             <!-- Ajout de la section pour ajouter une nouvelle catégorie -->
             <h3 class="mb-3">Ajouter une nouvelle catégorie</h3>
             <form action="add_category.php" method="post" enctype="multipart/form-data" class="mb-4">
@@ -75,45 +73,43 @@ $plats = get_all_plats();
                     </select>
                 </div>
                 <input type="submit" value="Ajouter" class="btn btn-primary">Pizza Bianca
-            <div class="table-responsive">
-                <table class="table dashboard-table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Libelle</th>
-                            <th>Active</th>
-                            <th>Image</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($categories as $categorie) : ?>
+                <div class="table-responsive">
+                    <table class="table dashboard-table">
+                        <thead>
                             <tr>
-                                <form action="update_category.php" method="post" enctype="multipart/form-data">
-                                    <td><?php echo $categorie['id']; ?></td>
-                                    <td><input type="text" name="libelle" class="form-control" value="<?php echo $categorie['libelle']; ?>"></td>
-                                    <td>
-                                        <select name="active" class="form-select">
-                                            <option value="Yes" <?php if ($categorie['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
-                                            <option value="No" <?php if ($categorie['active'] === 'No') echo 'selected'; ?>>No</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <label for="image">Image: </label>
-                                        <input type="file" name="image" class="form-control-file">
-                                    </td>
-                                    <td>
-                                        <input type="hidden" name="id" value="<?php echo $categorie['id']; ?>">
-                                        <input type="submit" value="Modifier" class="btn btn-secondary mb-1">
-                                        <a href="delete_category.php?id=<?php echo $categorie['id']; ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette catégorie?');">Supprimer</a>
-                                    </td>
-                                </form>
+                                <th>ID</th>
+                                <th>Libelle</th>
+                                <th>Active</th>
+                                <th>Image</th>
+                                <th>Actions</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-
+                        </thead>
+                        <tbody>
+                            <?php foreach ($categories as $categorie) : ?>
+                                <tr>
+                                    <form action="update_category.php" method="post" enctype="multipart/form-data">
+                                        <td><?php echo $categorie['id']; ?></td>
+                                        <td><input type="text" name="libelle" class="form-control" value="<?php echo $categorie['libelle']; ?>"></td>
+                                        <td>
+                                            <select name="active" class="form-select">
+                                                <option value="Yes" <?php if ($categorie['active'] === 'Yes') echo 'selected'; ?>>Yes</option>
+                                                <option value="No" <?php if ($categorie['active'] === 'No') echo 'selected'; ?>>No</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input type="file" name="image" class="form-control-file">
+                                        </td>
+                                        <td>
+                                            <input type="hidden" name="id" value="<?php echo $categorie['id']; ?>">
+                                            <input type="submit" value="Modifier" class="btn btn-secondary mb-1">
+                                            <a href="delete_category.php?id=<?php echo $categorie['id']; ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette catégorie?');">Supprimer</a>
+                                        </td>
+                                    </form>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
         </div>
     </div>
 
@@ -212,7 +208,6 @@ $plats = get_all_plats();
                             echo "  </select>
                             </td>
                                 <td>
-                                    <label for='image'>Image:</label>
                                     <input type='file' name='image' class='form-control-file'>
                                 </td>
                                 <td>

@@ -26,7 +26,7 @@ function render_header()
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-            <a class="navbar-brand ms-3" href=""><img src="../src/img/the_district_brand/logo_transp.png" alt="Logo" height="60"></a>
+            <a class="navbar-brand ms-3" href="index.php"><img src="../src/img/the_district_brand/logo_transp.png" alt="Logo" height="60"></a>
 
             <!-- Bouton de basculement -->
             <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
