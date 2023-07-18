@@ -184,6 +184,7 @@ $plats = get_all_plats();
                                 <th>Description</th>
                                 <th>Prix</th>
                                 <th>Active</th>
+                                <th>Catégorie</th>
                                 <th>Image</th>
                                 <th>Actions</th>
                             </tr>
@@ -197,13 +198,25 @@ $plats = get_all_plats();
                                 <td>{$plat['id']}</td>
                                 <td><input type='text' name='libelle' class='form-control' value='{$plat['libelle']}'></td>
                                 <td><textarea name='description' class='form-control' >{$plat['description']}</textarea></td>
+                                
                                 <td><input type='text' name='prix' class='form-control' value='{$plat['prix']}'></td>
+                                
                                 <td>
                                     <select name='active' class='form-control'>
                                         <option value='Yes'" . ($plat['active'] === 'Yes' ? ' selected' : '') . ">Yes</option>
                                         <option value='No'" . ($plat['active'] === 'No' ? ' selected' : '') . ">No</option>
                                     </select>
                                 </td>
+                                <td>
+                                <label for='id_categorie'>Catégorie:</label>
+                                <select name='id_categorie' class='form-control'>";
+
+                            foreach ($categories as $cat) {
+                                echo "<option value='" . $cat['id'] . "'" . ($plat['id_categorie'] === $cat['id'] ? ' selected' : '') . ">" . $cat['libelle'] . "</option>";
+                            }
+
+                            echo "  </select>
+                            </td>
                                 <td>
                                     <label for='image'>Image:</label>
                                     <input type='file' name='image' class='form-control-file'>
@@ -234,4 +247,5 @@ $plats = get_all_plats();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
